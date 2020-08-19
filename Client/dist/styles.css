@@ -1,0 +1,71 @@
+.openingImage {
+    height: 450px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.name {
+    font-size: 120px;
+    color: rgba(68, 67, 67, 0.918);
+    z-index: -1;
+    position: relative;
+    line-height: 1;
+    padding: 3mm;
+    font-family: 'Manrope', sans-serif;
+}
+.title {
+    text-align: center;
+}
+.slide {
+    width: 900px;
+}
+.projectContainerOne {
+    z-index: 2;
+    margin-top: 0mm;
+    height: max-content;
+    color: white;
+    text-align: center;
+    padding: 6mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.projectContainerTwo {
+    z-index: 2;
+    margin-top: 0mm;
+    height: max-content;
+    color: white;
+    text-align: center;
+    padding: 6mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#project {
+    margin: 3mm;
+    align-content: center;
+    height: 800px;
+    width: 90%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+}
+.projectPrrget {
+    background-image: url('https://landescape.s3.amazonaws.com/shoppingcart.png');
+    background-size: cover;
+}
+
+.projectSharity {
+    background-image: url('https://landescape.s3.amazonaws.com/sharity.gif');
+    background-size: cover;
+}
+.subheader {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 100px;
+}
