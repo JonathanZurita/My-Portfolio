@@ -14,30 +14,28 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
 
             {/* CATEGORY DROP DOWN */}
           <div className="leftSide">
-            <span id="left" 
-              className="category" 
-            >
-              <button className="searchBtn" onClick={() => handleToolsDrop()}>
-                tools
+            <span id="left" className="searchBtn1">
+              <button  className="navBtn" onClick={() => handleToolsDrop()}>
+                Toolbox
               </button>
             </span>
-            
-              {/* on Mobile Delete options */}
-            <span 
-              id="left"  
-              className="deals"
-            >
-            projects
+
+            <span id="left" className="searchBtn2">
+            <button className="navBtn" onClick={() => handleToolsDrop()}>
+                Projects
+              </button>
             </span>
-            <span id="left" 
-              className="deleteOnMobile"
-            >
-              about
+
+            <span id="left" className="searchBtn3" >
+              <button className="navBtn" onClick={() => handleToolsDrop()}>
+                About
+              </button>
             </span>
-            <span id="left" className="deleteOnMobile"
-              onClick={() => handleContactInfoModal()}
-            >
-              contact
+
+            <span id="left" className="searchBtn4">
+              <button  className="navBtn" onClick={() => handleContactInfoModal()}>
+                Contact
+              </button>
             </span>
           </div>
   

@@ -46,16 +46,24 @@ const App = () => {
             <div>
                 <Welcome /> 
             </div>
+            <Projects />
             <div>
                 <Grid /> 
             </div>
 
             
-            <Projects />
             <Modal 
                 contactInfoModal={contactInfoModal}
                 handleContactInfoModal={toggleContactInfoModal} 
             />
+            <div className="footer">
+                <div className="footerContent">
+                    <div>LN</div>
+                    <div>GITHUB</div>
+                    <div>email</div>
+                </div>
+                
+            </div>
         </div>
     )
 }

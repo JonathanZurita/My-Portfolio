@@ -1,10 +1,25 @@
 body {
-    background-color:rgba(128, 128, 128, 0.438) ;
+    background-color:rgba(255, 247, 247, 0.835) ;
     margin: 0;
+}
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 15px;
+    height: 300px;
+    color: white;
+    background-color: black;
+}
+.footerContent {
+    display: flex;
+    flex-direction: row;
+    padding-top: 140px;
 }
 .container {
     display: grid;
-    
+    background-color: black;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat( 6, 1fr);
     grid-template-areas: 
@@ -24,8 +39,9 @@ body {
     background-position-x: center;
     background-repeat: no-repeat;
     margin: 0;
-    margin-bottom: -74px;
+    margin-bottom: -75px;
     padding: 0;
+    border: none;
 }
 /* .wrap {
     grid-column: span 7;
@@ -50,11 +66,13 @@ body {
     
     font-family: 'Assistant', sans-serif;
     font-weight: 200;
-    z-index: 3;
+    width: 80%;
+    height: 50px;
+    font-size: 19px;
 }
 .subheader {
     font-family: 'Assistant', sans-serif;
-    font-size: 3vw;
+    font-size: 30px;;
     font-weight: 400;
 }
 @keyframes mymove {
@@ -137,77 +155,94 @@ body {
 ###################################           PROJECTS PROJECTS PROJECTS                ###########################################################
 ###################################################################################################################################################
 ################################################################################################################################################### */
+.projectsWrapper {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 
+}
 .projectContainer {
     display: grid;
 
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat( 4, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat( 6, 1fr);
     grid-template-areas: 
-        "q q q p p p"
-        "q q q p p p"
-        "q q q p p p"
-        "q q q r r r"
+        "o o o o o o o o o"
+        "d d d d p p p p p"
+        "q q q q p p p p p"
+        "q q q q p p p p p"
+        "q q q q p p p p p"
+        "r r r r r r r r r"
         ;
     align-items: center;
-    margin: 3mm;
+    justify-content: center;
+    margin: 2vw;
     align-content: center;
-    height: 800px;
-    width: 90%;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
+    height: 99vh;
+    width: 100%;
     font-size: 30px;
+    font-family: 'Assistant', sans-serif;
 }
-.prrgetVid {
-    padding: 10px;
-    grid-area: p;
-}
-.sharityVid {
-    padding: 10px;
-    grid-area: q;
-}
-.landescapeVid {
-    padding: 10px;
-    grid-area: p;
 
-}
-.prrgetData {
+.proInfo {
     grid-area: q;
-    text-align: center;
-    /* width: 40; */
+    justify-content: center;
+    align-self: center;
+    width: 85%;
+    margin-left: 5%;
+    padding-right: 5%;
 }
-.sharityData {
-    grid-area: p;
+.proDate {
+    grid-area: d;
     text-align: center;
-    /* width: 40; */
+    font-size: 108%;
+    font-family: 'Pacifico', cursive;
 }
-.landescapeData {
-    grid-area: q;
-    text-align: center;
-    /* width: 40; */
+.projectBullets {
+    font-size: 70%;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: left;
+    line-height: 1.6;
 }
+
+#sharityData {
+    background-color: black;
+    color: white;
+}
+
 .proTech {
     grid-area: r;
-    font-size: 20px;
-}
-
-#projectInfo {
-    font-size: 80px;
-    color: black;
+    font-size: 1.5vw;
     text-align: center;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+
+}
+.proTitle {
+    grid-area: o;
+    font-size: 8vh;
+    height: 10vh;
+    font-weight: bold;
+    width: 90%;
+    text-align: right;
+    padding-right: 5%;
+    font-family: 'Pacifico', cursive;
 }
 
 #project {
+    grid-area: p;
     align-items: center;
-    margin: 3mm;
     align-content: center;
-    height: 650px;
-    width: 100%;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
+    /* height: 100%;
+    width: 100%; */
     font-size: 30px;
+}
+
+.landescapeVid {
+    width: 60%;
+    margin-left: 25%;
 }
 
 
@@ -320,42 +355,7 @@ body {
         animation-iteration-count: 1;
     }
 
-    /*??//////////////// photos Grid ////////////////*/
-
-    .photoRow {
-        padding: 1px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    .imgTile {
-        padding: 2px;
-        width: 30%;
-        height: 30%;
-        overflow: hidden;
-    }
-    .imgTile:hover {
-        background-color: darkmagenta;
-        
-    }
-    .imgTile:hover .photoBtns {
-        opacity: 1;
-
-    }
-    .photo:hover {
-        z-index: 1;
-        filter:
-            opacity(0.6);
-    }
-    .photoBtns {
-        
-        top: 20%;
-        left: 20%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        opacity:0;
-    }
+    
 
 /* ###################################### */
 /* //////////////// MODAL  //////////////*/
@@ -383,42 +383,132 @@ body {
     font-family: 'Assistant', sans-serif;
 }
 
-
-
-/* ###################################### */
-/* //////////////// GRID  //////////////*/
-/* ###################################### */
-/* ###################################### */
+/* ############################################################################################################# */
+/* //////////////HEADERS HEADERSSSS HEADERRR  /#################################################################*/
+/* ############################################################################################################# */
+/* ############################################################################################################### */
 
 .pageHeader {
-    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+        "v"
+        "v"
+        "v"
+        "v"
+        "s"
+        "n";  
+    justify-content: center;
+
+    height: 600px;
     min-width: 100%;
-    
+    margin-top: -1px;
     text-align: center;
     justify-content: center;
     align-content: center;
-    display: flex;
-    flex-direction: column;
     color: white;
+    border: none;
     font-family: 'Pacifico', cursive;
     font-weight: bold;
-    background-color: black;
+    background-image: linear-gradient(rgb(25, 29, 40), black);
 }
+
+
 .pageHeader h1 {
+    grid-area: v;
+    margin-top: 200px;
     font-size: 580%;
 }
 .pageHeader p {
+    grid-area: s;
     font-size: 180%;
+    font-family: 'Assistant', sans-serif;
 }
 
+.projectLinks {
+    grid-area: n;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: 
+        ". z . b . w .";  
+    justify-content: center;  
+    
+    width: 100%;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    font-family: 'Assistant', sans-serif;
+    padding-top: 20px;
+
+}
+.linkName1 {
+    grid-area: z;
+}
+.linkName2 {
+    grid-area: b;
+}
+.linkName3 {
+    grid-area: w;
+}
+
+/* ############################################################################################################# */
+/* //////////////// GRID  //////////////######################################################################*/
+/* ############################################################################################################# */
+/* ############################################################################################################### */
+
+.gridWrap {
+    border: none;
+    margin-top: -2px;
+}
+.photo {
+    width: 100%;
+    height: 100%;
+}
+
+.photoRow {
+    padding: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.imgTile {
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.imgTile:hover {
+    background-color: darkmagenta;
+    
+}
+.imgTile:hover .photoBtns {
+    opacity: 1;
+
+}
+.photo:hover {
+    z-index: 1;
+    filter:
+        opacity(0.6);
+}
+/* .photoBtns {
+    
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity:0;
+} */
 
 
 
 
-/* ###################################### */
-/* ///////////MOBILE DEVICES /////////////*/
-/* ###################################### */
-/* ###################################### */
+
+/* ############################################################################ */
+/* ################///////////MOBILE DEVICES ////////////######################*/
+/* ############################################################################ */
+/* ############################################################################ */
 
 @media only screen and (max-width: 1230px) {
     .wrap {
@@ -426,9 +516,6 @@ body {
     }
     .moon {
         margin-top: 130px;
-    }
-    .fireworksContainer {
-    
     }
     
     .fireworks2 {
@@ -475,11 +562,6 @@ body {
         line-height: 1;
     }
 
-    .about {
-        font-size: 150%;
-        width: 80%;
-        word-break: break-word;
-    }
     .bridgeContainer {
         justify-content: center;
     }
@@ -497,20 +579,144 @@ body {
     }
 }
 @media only screen and (max-width: 600px) {
+
+    /* /////////   DROP DOWN MODAL ///////////// */
     .modalWrap {
         top: 100px;
+    }
+
+    /* /////////////    PROJECTS SECTION / ///////////////////////// */
+    .projectContainer {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat( 7, 1fr);
+        grid-template-areas: 
+    
+            "o o o o"
+            "d d d d"
+            "q q q q"
+            "q q q q"
+            "p p p p"
+            "p p p p"
+            "r r r r"
+            ;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        align-content: center;
+        height: 750px;
+        width: 100%;
+
+        font-size: 14px;
+
+    }
+    .proInfo {
+        grid-area: p;
+        justify-content: center;
+        align-self: center;
+        margin-top: 14px;
+        margin-bottom: -20px;
+        padding: 10px;
+        /* width: 85%; */
+        margin-left: 0;
+       
+    }
+    .proTech {
+        grid-area: r;
+        font-size: 17px;
+        margin-top: -15%;
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+
+    }
+    .projectBullets {
+        margin-left: 1px;
+        width: 100%;
+        font-size: 13px;
+    }
+    .proTitle {
+        grid-area: o;
+        font-size: 60px;
+        line-height: .9;
+        font-weight: bold;
+        margin-left: 5%;
+        margin-top: 14px;
+        /* width: 99%; */
+        height: fit-content;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .landescapeVid {
+        margin-left: 25%;
+        padding: 0px;
+        height: 100%;
+        width: 50%;
+
+    }
+
+    #project {
+        grid-area: q;
+        margin: 0;
+        justify-content: center;
+        font-size: 12px;
+        height: 250px;
+        width: inherit;
+        font-size: 30px;
+    
+    }
+    #sharityData {
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        background-color: black;
+        color: white;
+    }
+    .projectLinks {
+        font-size: 19px;
+        padding-top: 10px;
+    }
+
+/* /////////////////////PAGE HEADER AND PHOTO GRID //////////////// */
+    .pageHeader {
+        height: 300px;
+    }
+    .pageHeader h1 {
+        margin-top: 5%;
+        font-size: 452%;
+    }
+    .pageHeader p {
+        font-size: 125%;
+        margin: 0 55px 0 55px;
+    }
+    .imgTile {
+        margin: 1px;
+        padding: 1px;
+        width: 138px;
+        height: 100px;
+        overflow: hidden;
+    }
+    .photo {
+        width: 138px;
+        height: 100px;
     }
 }
 
 @media only screen and (max-width: 450px) {
     
-    .title {
-        margin-top: 140px;
-    }
     .hobTable {
         margin-right: 100px;
     }
     .container {
         max-height: 812px;
+    }
+    .footer {
+        height: 100px;
+    }
+    .footerContent {
+        padding-top: 30px;
     }
 }

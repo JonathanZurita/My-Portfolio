@@ -13,15 +13,15 @@ const Grid = () => {
       {Photos.map((photo, i) =>
         <div key={i} className='photoRow'>
           <div className="imgTile">
-            <img className="photo" src={photo[0]} width={width} height={height}/>
-            <button className="photoBtns">heart</button>
-            <button className="photoBtns">view</button>
+            <img className="photo" src={photo[0]} />
+            {/* <button className="photoBtns">heart</button>
+            <button className="photoBtns">view</button> */}
           </div>
           <div className="imgTile">
-            <img className="photo"  src={photo[1]} width={width} height={height}/>
+            <img className="photo"  src={photo[1]}/>
           </div>
           <div className="imgTile">
-            <img  className="photo" src={photo[2]} width={width} height={height}/>
+            <img  className="photo" src={photo[2]}/>
           </div>
         </div>
       )}

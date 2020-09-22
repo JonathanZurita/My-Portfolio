@@ -8,10 +8,10 @@ return (
                     <span className="name">Jonathan Zurita</span>
                     <span className="subheader">Full Stack Software Engineer</span>
                     <span className="about">
-                    I'm passionate about creating User Interfaces that are not just functional, <br/>
-                    but beautiful, in which people can enjoy interacting with.<br/>
-                    I care deeply about helping people through my craft, and learning about all things tech.<br/>
-                    Currently, Im looking to join a diverse and inclusive team where ideas are welcomed <br/>
+                    I'm passionate about creating User Interfaces that are not just functional,
+                    but beautiful, in which people can enjoy interacting with.
+                    I care deeply about helping people through my craft, and learning about all things tech.
+                    Currently, Im looking to join a diverse and inclusive team where ideas are welcomed
                     and I can contribute my experience of carting, scaling and maintainig applications.
                     </span>
                 </div>

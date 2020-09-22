@@ -33,6 +33,11 @@ code {
   background-color: black;
   /* display: inlign-block; */
 }
+.navBtn {
+  background: transparent;
+  border: none;
+  color: white
+}
 
 .selectArrow {
   background: none;
@@ -66,10 +71,8 @@ button.searchBtn {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
   margin-left: 25px;
-
-  font-size: 18px;
+  font-size: 20px;
 
   color: white;
   
@@ -79,8 +82,11 @@ button.searchBtn {
 }
 
 span#left {
-  margin-right: 10px;
+  margin-right: 25px;
   color:white;
+  background-color: transparent;
+  border: none;
+  color: white;
 }
 
 /* ################################################################################
@@ -93,7 +99,7 @@ span#left {
 .searchBarWrap {
   grid-area: y;
   width: 100%;
-  justify-items: center;
+  justify-self: center;
   align-items: center;
 }
 
@@ -106,33 +112,66 @@ input.search {
   font-size: 16px;
   border-color: none;
 }
+@media only screen and (max-width: 870px) {
+  span#left {
+    margin-right: 5px;
+    font-size: 14px;
+  }
 
+}
 @media only screen and (max-width: 600px) {
   .navWrapper {
+    opacity: .8;
     min-width: inherit;
     max-width: inherit;
     height: 100px;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 2fr;
     grid-template-areas:
-    ". y y y y y y y ."
-    ". x x x x x x x .";
+    "y y y y"
+    "x x x x";
     align-items: stretch;
-
+  }
+  .leftSide {
+    display: grid;
+    grid-area: x;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a b c d";
+    align-items: stretch;
+  }
+  .navBtn {
+    background: transparent;
+    border: none;
+  }
+  .searchBtn1 {
+    
+    grid-area: a;
+  }
+  .searchBtn2 {
+    grid-area: b;
+  }
+  .searchBtn3 {
+    grid-area: c;
+  }
+  .searchBtn4 {
+    grid-area: d;
   }
   .searchBarWrap {
     height: 50px;
     margin-top: 20px;
     margin-bottom: -20px;
+    width: 90%;
  
   }
   .leftSide {
     height: 50px;
-    font-size: 14px;
     align-items: center;
     justify-content: center;
-    margin-left: -10px;
+  }
+  span#left {
+    margin-right: 15px;
+    font-size: 18px;
   }
 
 }
