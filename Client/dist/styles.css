@@ -131,31 +131,25 @@ body {
 .slide {
     width: 900px;
 }
-.projectContainerOne {
-    z-index: 2;
-    margin-top: 0mm;
-    height: max-content;
-    color: white;
-    text-align: center;
-    padding: 6mm;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+/* ###################################################################################################################################################
+###################################################################################################################################################
+###################################           PROJECTS PROJECTS PROJECTS                ###########################################################
+###################################################################################################################################################
+################################################################################################################################################### */
+
+.projectContainer {
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat( 4, 1fr);
+    grid-template-areas: 
+        "q q q p p p"
+        "q q q p p p"
+        "q q q p p p"
+        "q q q r r r"
+        ;
     align-items: center;
-}
-.projectContainerTwo {
-    z-index: 2;
-    margin-top: 0mm;
-    height: max-content;
-    color: white;
-    text-align: center;
-    padding: 6mm;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#project {
     margin: 3mm;
     align-content: center;
     height: 800px;
@@ -163,15 +157,57 @@ body {
     border-width: 2px;
     border-style: solid;
     border-color: white;
+    font-size: 30px;
 }
-.projectPrrget {
-    background-image: url('https://youtu.be/LqqZ-tMqGM4');
-    background-size: cover;
+.prrgetVid {
+    padding: 10px;
+    grid-area: p;
+}
+.sharityVid {
+    padding: 10px;
+    grid-area: q;
+}
+.landescapeVid {
+    padding: 10px;
+    grid-area: p;
+
+}
+.prrgetData {
+    grid-area: q;
+    text-align: center;
+    /* width: 40; */
+}
+.sharityData {
+    grid-area: p;
+    text-align: center;
+    /* width: 40; */
+}
+.landescapeData {
+    grid-area: q;
+    text-align: center;
+    /* width: 40; */
+}
+.proTech {
+    grid-area: r;
+    font-size: 20px;
 }
 
-.projectSharity {
-   /* background-image: url('https://landescape.s3.amazonaws.com/sharity.gif'); */
-    background-size: cover;
+#projectInfo {
+    font-size: 80px;
+    color: black;
+    text-align: center;
+}
+
+#project {
+    align-items: center;
+    margin: 3mm;
+    align-content: center;
+    height: 650px;
+    width: 100%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    font-size: 30px;
 }
 
 
