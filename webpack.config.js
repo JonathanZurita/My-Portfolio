@@ -1,4 +1,8 @@
 const path = require('path');
+const webpack = require('webpack');
+const dotenv = require('dotenv').config( {
+  path: path.join(__dirname, '.env')
+} );
 const SRC_DIR = path.join(__dirname, '/client/src');
 const DIST_DIR = path.join(__dirname, '/client/dist');
 module.exports = {
@@ -44,5 +48,10 @@ module: {
     contentBase: DIST_DIR,
     compress: true,
     port: 9000
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin( {
+      "process.env": dotenv.parsed
+    } ),
+  ],
 };

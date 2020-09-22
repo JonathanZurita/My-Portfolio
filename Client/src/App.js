@@ -2,38 +2,60 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Search from './components/search.js';
 import "../dist/styles.css";
+import Tools from './components/ToolsDropDown.js';
+import Welcome from './components/Welcome.js';
+import Grid from './components/Grid.jsx';
+import Modal from './components/Modal.jsx';
+import Projects from './components/Projects.jsx';
 
 const App = () => {
     const [data, setData] = useState([])
+    const [toolsDrop, setToolsDrop] = useState(false);
+    const [contactInfoModal, setContactInfoModal] = useState(false);
+    const toggleToolsDropModal = ()=> {
+        if(toolsDrop) {
+            console.log('false')
+            setToolsDrop(false)
+        } else {
+            setToolsDrop(true)
+            console.log('true')
+        }
+    }
+    const toggleContactInfoModal = ()=> {
+        if(contactInfoModal) {
+            console.log('false')
+            setContactInfoModal(false)
+        } else {
+            setContactInfoModal(true)
+            console.log('true')
+        }
+    }
 
     return (
-        <div>
-            <Search />
-            
-            <div className="openingImage">
-                <div className="name">
-                    <div className="title">
-                        <div>Jonathan Zurita</div>
-                        <div className="subheader">--Full Stack Developer</div>
-                    </div>
-                </div>
+        <div className="wrap">
+
+            <Search 
+                handleToolsDrop={toggleToolsDropModal} 
+                handleContactInfoModal={toggleContactInfoModal}
+            />
+
+            <Tools 
+                toolsDrop={toolsDrop} 
+                handleToolsDrop={toggleToolsDropModal}
+            />
+            <div>
+                <Welcome /> 
             </div>
-            <div className="projectContainerOne">
-                <h1>Projects</h1>
-                <div id="project" className="projectPrrget">
-                </div>
-                <div id="project" className="projectBackEnd">
-                    back end scalability
-                </div>
+            <div>
+                <Grid /> 
             </div>
 
-            <div className="projectContainerTwo">
-                <div id="project" className="projectLandescape">
-                    MVP
-                </div>
-                <div id="project" className="projectSharity">
-                </div>
-            </div>
+            
+            <Projects />
+            <Modal 
+                contactInfoModal={contactInfoModal}
+                handleContactInfoModal={toggleContactInfoModal} 
+            />
         </div>
     )
 }

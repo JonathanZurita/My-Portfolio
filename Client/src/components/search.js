@@ -1,43 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import Modal from './Modal.jsx';
 
-const Search = ({ onSearch }) => {
+const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
     const [search, setSearch] = useState('');
     const [dropDown, setDropDown] = useState('')
     const [cartQTY, setCartQTY] = useState('');
+    const [contactModal, setContactModal] = useState('');
     //cartQty, cartDropDown, searchDropdown, categoryDropdown, getSearchedCat, catChange,
 
     return (
         <div className="navWrapper">
-        <nav className="navBar">
-  
-          <span className="targetLogo">
-            {/* make a LOGO IMAGE */}
-           
-          </span>
-  
+
             {/* CATEGORY DROP DOWN */}
-          <li className="leftSide">
+          <div className="leftSide">
             <span id="left" 
               className="category" 
-              //onClick={() => categoryDropdown()}
-              >
-              <i className="fa fa-cogs" aria-hidden="true"></i>
-              <select className="selectArrow"></select>
+            >
+              <button className="searchBtn" onClick={() => handleToolsDrop()}>
+                tools
+              </button>
             </span>
             
               {/* on Mobile Delete options */}
-            <span id="left"  className="deals">
-            <i className="fa fa-folder" aria-hidden="true"></i>
-              <select className="selectArrow"></select>
+            <span 
+              id="left"  
+              className="deals"
+            >
+            projects
             </span>
-            <span id="left" className="deleteOnMobile">
-            <i className="fa fa-info-circle" aria-hidden="true"></i>
-              <select id="deleteOnMobile" className="selectArrow"></select>
+            <span id="left" 
+              className="deleteOnMobile"
+            >
+              about
             </span>
-            <span id="left" className="deleteOnMobile"><i className="fa fa-address-book" aria-hidden="true"></i>
-</span>
-          </li>
+            <span id="left" className="deleteOnMobile"
+              onClick={() => handleContactInfoModal()}
+            >
+              contact
+            </span>
+          </div>
   
               {/* SEARCH BAR */}
           <span className="searchBarWrap">
@@ -61,24 +63,6 @@ const Search = ({ onSearch }) => {
               </span>
             </form>
           </span>
-      
-            <li className="rightSide">
-                      {/* user icon image */}
-              <span className="userIcon">
-                
-              </span>
-              {/* shopping cart image */}
-              <span 
-                className="shoppingCart"
-                //onClick={() => cartDropDown()}
-                >
-                
-                  <span 
-                  //className="cartQty"
-                  >{cartQTY}</span>
-              </span>
-          </li>
-        </nav>
       </div>
     )
 }

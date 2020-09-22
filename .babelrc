@@ -3,6 +3,9 @@
   "env": {
     "test": {
       "plugins": ["@babel/plugin-transform-runtime"]
+    },
+    "development": {
+      "presets": [["@babel/preset-react", { "development": true }]]
     }
   }
 }

@@ -2,3 +2,4 @@ node_modules
 .DS_STORE
 .config
 .env
+Client/src/components/photos.js
