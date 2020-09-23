@@ -26,13 +26,23 @@ code {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid rgb(68, 58, 58);
 
   z-index: 2000;
-  /* margin-top: -4mm; */
-  background-color: black;
-  /* display: inlign-block; */
 }
+.background {
+  position: fixed;
+  top: 0px;
+  margin-top: -1px;
+  height: 60px;
+  z-index: 500;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.952), rgba(0, 0, 0, 0.774));
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  width: 100%;
+
+}
+
 .navBtn {
   background: transparent;
   border: none;
@@ -133,6 +143,13 @@ input.search {
     "x x x x";
     align-items: stretch;
   }
+
+  .background {
+    background: linear-gradient(rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.582));
+    height: 100px;
+   
+  }
+
   .leftSide {
     display: grid;
     grid-area: x;

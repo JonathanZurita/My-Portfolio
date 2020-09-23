@@ -10,8 +10,7 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
     //cartQty, cartDropDown, searchDropdown, categoryDropdown, getSearchedCat, catChange,
 
     return (
-        <div className="navWrapper">
-
+        <div className="navWrapper" >
             {/* CATEGORY DROP DOWN */}
           <div className="leftSide">
             <span id="left" className="searchBtn1">

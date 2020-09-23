@@ -33,7 +33,7 @@ const App = () => {
 
     return (
         <div className="wrap">
-
+            <div className="background" />
             <Search 
                 handleToolsDrop={toggleToolsDropModal} 
                 handleContactInfoModal={toggleContactInfoModal}
