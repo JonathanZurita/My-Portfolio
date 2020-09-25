@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
 import Search from './components/search.js';
 import "../dist/styles.css";
 import Tools from './components/ToolsDropDown.js';
@@ -7,6 +6,10 @@ import Welcome from './components/Welcome.js';
 import Grid from './components/Grid.jsx';
 import Modal from './components/Modal.jsx';
 import Projects from './components/Projects.jsx';
+
+import { BrowserRouter, Route } from 'react-router-dom';
+
+
 
 const App = () => {
     const [data, setData] = useState([])
@@ -33,6 +36,7 @@ const App = () => {
 
     return (
         <div className="wrap">
+
             <div className="background" />
             <Search 
                 handleToolsDrop={toggleToolsDropModal} 

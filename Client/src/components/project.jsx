@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 const Project = ({url, data, vidclass, dataclass}) => {
   const [projectData, setProjData] = useState(data);
 
-
-
   const makeBullets = () => {
     var sentences = projectData.info.split('\n');
     return (
@@ -19,10 +17,10 @@ const Project = ({url, data, vidclass, dataclass}) => {
   }
 
   return (
-    <div className="projectContainer" id={dataclass}>
+    <div className="projectContainer" id={projectData.title}>
       <div className="proTitle">{projectData.title}</div>
     
-      <div className="proDate">{projectData.exp}</div>
+      <div className="proDate">{projectData.explanation}</div>
 
       <div className="proInfo">
           {makeBullets()}

@@ -7,6 +7,7 @@ const Modal = ({ contactInfoModal, handleContactInfoModal }) => {
     return (
       <div 
         className="modalWrap" 
+        id="contactModal"
         onClick={()=> handleContactInfoModal()}
       >
         <div className="modalBody">

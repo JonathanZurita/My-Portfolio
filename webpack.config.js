@@ -42,6 +42,12 @@ module: {
           },
         ],
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
     ],
   },
   devServer: {
