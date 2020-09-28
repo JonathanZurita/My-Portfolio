@@ -1,10 +1,18 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import Grid from './Grid.jsx';
+import Projects from './Projects.jsx';
 
 const toolData = ['JavaScript', 'React', 'React Native', 'PostgreSQL', 'MongoDB', 'MySQL', 'Hooks', 'Express', 'lodash']
-const projects = ['Landescape', 'Prrget', 'Back End Testing', 'Sharity']
+const projects = ['Landescape', 'Prrget', 'Sharity']
 const education = ["Hack Reactor Software Engineering Grad: 2020", "Arizona State University", "Masters in Teaching English to Speakers of Other Languages", 'Texas State University', 'Business Admi/Mgmt with Entrepreneurial Concentration']
 const hobbies = ["landscape photography", 'traveling', 'hiking'];
+
+import {
+    NavLink
+} from "react-router-dom";
+
+
 const Tools = ({toolsDrop, handleToolsDrop}) => {
 
     if(toolsDrop) {
@@ -17,8 +25,8 @@ const Tools = ({toolsDrop, handleToolsDrop}) => {
                         <th className="table">tools</th></tr>
                     </thead>
                     <tbody>
-                        {toolData.map(row => 
-                            <tr className="table">
+                        {toolData.map((row, i) => 
+                            <tr key={i} className="table">
                                 <td>{row}</td>
                             </tr>
                         )}  
@@ -26,20 +34,21 @@ const Tools = ({toolsDrop, handleToolsDrop}) => {
                 </Table>
                 </span>
                 <span>
-
+            
                 <Table className='projTable'  >
                     <thead>
                         <tr>
-                        <th className="table">projects</th></tr>
+                        <th className="table"><NavLink to="/projects">Projects</NavLink></th></tr>
                     </thead>
                     <tbody>
-                        {projects.map(row => 
-                            <tr className="table">
-                                <td>{row}</td>
+                        {projects.map((row, i) => 
+                            <tr key={i} className="table">
+                                <td><NavLink to={`/${row}`}>{row}</NavLink></td>
                             </tr>
                         )}  
                     </tbody>
                 </Table>
+              
                 </span>
                 <span>
                 <Table className='eduTable'  >
@@ -48,8 +57,8 @@ const Tools = ({toolsDrop, handleToolsDrop}) => {
                         <th className="table">education</th></tr>
                     </thead>
                     <tbody>
-                        {education.map(row => 
-                            <tr className="table">
+                        {education.map((row, i) => 
+                            <tr key={i} className="table">
                                 <td>{row}</td>
                             </tr>
                         )}  
@@ -57,6 +66,7 @@ const Tools = ({toolsDrop, handleToolsDrop}) => {
                 </Table>
                 </span>
                 <span >
+                <NavLink to="/pics" >
                 <Table className='hobTable'>
                     <thead>
                         <tr>
@@ -65,14 +75,18 @@ const Tools = ({toolsDrop, handleToolsDrop}) => {
                     </thead>
                     <tbody>
                         {hobbies.map((row, i) => 
-                            <tr>
+                            <tr key={i}>
                                 <td className="table">{row}</td>
                             </tr>
-                        )}  
+                        )}
                     </tbody>
                 </Table>
+                </NavLink>
                 </span>
+            
+          
             </div>
+            
         )
     } else return null;
 }

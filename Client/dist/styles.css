@@ -1,5 +1,5 @@
 body {
-    background-color:rgba(255, 247, 247, 0.835) ;
+    background: black;
     margin: 0;
 }
 .footer {
@@ -10,13 +10,23 @@ body {
     font-size: 15px;
     height: 300px;
     color: white;
-    background-color: black; 
+    background-image: linear-gradient(rgb(25, 29, 40), rgb(25, 29, 40), black);
 }
 .footerContent {
     display: flex;
     flex-direction: row;
-    padding-top: 140px;
+    padding-top: 240px;
+    font-size: 24px;
 }
+.icon {
+    margin-right: 30px;
+}
+.icon:hover {
+    cursor: pointer;
+    font-size: 27px;
+}
+
+
 .container {
     display: grid;
     background-color: black;
@@ -57,6 +67,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -106px;
 }
 .name {
     font-size: 480%;
@@ -82,6 +93,7 @@ body {
 
 .bridgeContainer {
     grid-area: b;
+    display: flex;
 }
 .fireworksContainer {
     grid-area: c;
@@ -100,17 +112,18 @@ body {
     bottom: 57%;
     width: 75%;
     -webkit-animation: hue 20s infinite linear;
-
 }
+
 .bridge:hover {
     -webkit-animation: hue .6s infinite linear;
     cursor: pointer;
 }
+
 .fireworks2:hover {
-  
     -webkit-animation: hue .3s infinite linear; 
     cursor: pointer;
 }
+
 .fireworks:hover {
     -webkit-animation: hue .4s infinite linear; 
     cursor: pointer;
@@ -177,13 +190,14 @@ body {
         ;
     align-items: center;
     justify-content: center;
-    margin: 2vw;
     align-content: center;
     height: 99vh;
     width: 100%;
     font-size: 30px;
     font-family: 'Assistant', sans-serif;
+    background-color: white;
 }
+
 
 .proInfo {
     grid-area: q;
@@ -195,7 +209,8 @@ body {
 .proDate {
     grid-area: d;
     text-align: center;
-    font-size: 108%;
+    font-size: 95%;
+    margin-bottom: 48px;
     font-family: 'Assistant', sans-serif;
 }
 .projectBullets {
@@ -207,10 +222,12 @@ body {
 }
 
 
-
 #Landescape {
-    background-color: black;
+    background-image: linear-gradient( rgb(25, 29, 40), black, rgb(25, 29, 40));
     color: white;
+}
+#landescapeData {
+    grid-area: p;
 }
 
 .proTech {
@@ -229,21 +246,26 @@ body {
     width: 90%;
     text-align: right;
     padding-right: 5%;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Architects Daughter', cursive;
 }
 
-#project {
+.prrgetVid {
     grid-area: p;
     align-items: center;
     align-content: center;
-    /* height: 100%;
-    width: 100%; */
+    font-size: 30px;
+}
+.sharityVid {
+    grid-area: p;
+    align-items: center;
+    align-content: center;
     font-size: 30px;
 }
 
 .landescapeVid {
-    width: 60%;
-    margin-left: 25%;
+    grid-area: q;
+    height: 120%;
+   
 }
 
 
@@ -313,7 +335,10 @@ body {
         border-color: none;
         font-family: 'Assistant', sans-serif;
     }
-    .table:hover {
+    .projTable:hover {
+        cursor: pointer;
+    }
+    .hobTable:hover {
         cursor: pointer;
     }
 
@@ -369,7 +394,7 @@ body {
     border-width: 2px;
     width: 500px;
     height: 400px;
-    background-color: rgb(118, 79, 121);
+    background-color: rgb(47, 44, 44);
     color: white;
     text-align: center;
     display: flex;
@@ -387,6 +412,9 @@ body {
 #photoModal {
     justify-content: center;
 }
+a {
+    color: white;
+}
 
 /* ############################################################################################################# */
 /* //////////////HEADERS HEADERSSSS HEADERRR  /#################################################################*/
@@ -396,17 +424,16 @@ body {
 .pageHeader {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 
-        "v"
-        "v"
         "v"
         "v"
         "s"
         "n";  
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-
-    height: 600px;
+    height: 350px;
     min-width: 100%;
     margin-top: -1px;
     text-align: center;
@@ -416,18 +443,29 @@ body {
     border: none;
     font-family: 'Pacifico', cursive;
     font-weight: bold;
-    background-image: linear-gradient(rgb(25, 29, 40), rgb(25, 29, 40), black);
+    background-image: linear-gradient( black, rgb(25, 29, 40), rgb(25, 29, 40));
 }
-
+.projectsTitle {
+    color: white;
+    width: fit-content;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
 
 .pageHeader h1 {
     grid-area: v;
-    margin-top: 200px;
-    font-size: 80px;
+    margin-top: 88px;
+    margin-bottom: 20px;
+    font-size: 116px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     /* align-items: center; */
-    align-self: end;
+    align-self: center;
+    width: fit-content;
 }
 .pageHeader p {
     font-family: 'Righteous';
@@ -449,13 +487,17 @@ body {
     font-family: 'Assistant', sans-serif;
 
 }
+
 .linkName1 {
+    color: white;
     grid-area: z;
 }
 .linkName2 {
+    color: white;
     grid-area: b;
 }
 .linkName3 {
+    color: white;
     grid-area: w;
 }
 
@@ -518,6 +560,13 @@ body {
 /* ############################################################################ */
 
 @media only screen and (max-width: 1230px) {
+    .prrgetVid {
+        height: 67%;
+    }
+    .sharityVid {
+        height: 67%;
+    }
+
     .wrap {
         max-width: inherit;
     }
@@ -569,14 +618,6 @@ body {
         line-height: 1;
     }
 
-    .bridgeContainer {
-        justify-content: center;
-    }
-    .bridge {
-        align-items: center;
-        width: 90%;
-    }
-
     .subheader {
         font-size: 30px;
     } 
@@ -588,12 +629,43 @@ body {
         margin-left: 10%;
         margin-right: 10%;
     }
+    .footer {
+        margin-top: -1px;
+    }
 }
+
+
+@media only screen and (max-width: 850px) {
+    .projectContainer {
+        font-size: 24px;
+        height: 800px;
+    }
+    .prrgetVid {
+        height: 50%;
+    }
+    .sharityVid {
+        height: 50%;
+    }
+
+}
+
+
 @media only screen and (max-width: 600px) {
+
+    .modalBody {
+       
+        width: 443px;
+        height: 300px;
+        font-size: 12px;
+    }
+    .modalBody img {
+        height: 50%;
+        width: 46%;
+    }
 
     /* /////////   DROP DOWN MODAL ///////////// */
     .modalWrap {
-        top: 100px;
+        top: 70px;
     }
 
     /* /////////////    PROJECTS SECTION / ///////////////////////// */
@@ -631,7 +703,6 @@ body {
         padding: 10px;
         /* width: 85%; */
         margin-left: 0;
-       
     }
     .proTech {
         grid-area: r;
@@ -650,6 +721,7 @@ body {
     .proTitle {
         grid-area: o;
         font-size: 60px;
+        
         line-height: .9;
         font-weight: bold;
         margin-left: 5%;
@@ -661,13 +733,7 @@ body {
         align-items: center;
         display: flex;
     }
-    .landescapeVid {
-        margin-left: 25%;
-        padding: 0px;
-        height: 100%;
-        width: 50%;
 
-    }
 
     #project {
         grid-area: q;
@@ -679,12 +745,18 @@ body {
         font-size: 30px;
     
     }
+    .landescapeVid {
+
+        margin-left: 25%;
+        padding: 0px;
+        height: 100%;
+        width: 50%;
+
+    }
     #sharityData {
         width: 100%;
         padding: 0;
         justify-content: center;
-        background-color: black;
-        color: white;
     }
     .projectLinks {
         font-size: 19px;
@@ -714,6 +786,11 @@ body {
     }
     .photoRow {
         margin: 0;
+    }
+
+    .bridge {
+        align-self: center;
+        width: 100%;
     }
 }
 

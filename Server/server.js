@@ -1,6 +1,4 @@
 const express = require('express')
-const cors = require('cors');
-
 const path = require('path');
 const query = require('../Database/query.js');
 
@@ -8,14 +6,15 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded( {extended: true}));
-app.use(express.static(path.join(__dirname, './Client/dist')));
-
+app.use(express.static(path.join(__dirname, '../Client/dist')));
 
 app.get(`/project`, (req, res) => {
-  query.getProjects((err, results) => {
+  var name = req.query.name;
+  console.log('req query:', req.query.name)
+  
+  query.getProjects(name, (err, results) => {
     if(err) {
         console.log('error getting from server: ', err)
       res.sendStatus(404);
@@ -37,6 +36,14 @@ app.get(`/photos`, (req, res) => {
     }
   })
 });
+
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, '../Client/dist/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
 
 app.listen(PORT, () => {
   console.log(`connected to port: ${PORT}`);

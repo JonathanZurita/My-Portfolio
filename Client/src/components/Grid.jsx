@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Photo from './Photo.jsx';
 
-const path = process.env.PATH || 'http://localhost:3000';
 const Grid = () => {
   
   const [photos, setPhotos] = React.useState([]);
@@ -24,7 +23,7 @@ const Grid = () => {
   }
 
   const getPhotos = () => {
-    axios.get(`${path}/photos/`)
+    axios.get(`/photos`)
       .then(res => {
         var row = [];
         var grid = [];

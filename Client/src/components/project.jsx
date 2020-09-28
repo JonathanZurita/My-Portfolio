@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Project = ({url, data, vidclass, dataclass}) => {
+const Project = ({ data }) => {
   const [projectData, setProjData] = useState(data);
 
   const makeBullets = () => {
@@ -15,24 +15,24 @@ const Project = ({url, data, vidclass, dataclass}) => {
       </ul>
     )
   }
-
+ 
   return (
     <div className="projectContainer" id={projectData.title}>
       <div className="proTitle">{projectData.title}</div>
     
       <div className="proDate">{projectData.explanation}</div>
 
-      <div className="proInfo">
+      <div id={projectData.dataclass} className="proInfo">
           {makeBullets()}
       </div>
         
       <iframe id="project"
-          className={vidclass}
+          className={projectData.vidclass}
           width="98%" height="90%"
           marginWidth="0" 
-          src={`${url}`}
-          frameborder="0" allow="accelerometer; fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen
+          src={`${projectData.url}`}
+          frameBorder="0" allow="accelerometer; fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen
       > </iframe>
     
       <div className="proTech">{projectData.tech}</div>

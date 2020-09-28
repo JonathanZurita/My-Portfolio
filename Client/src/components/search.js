@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Modal from './Modal.jsx';
+import { NavLink } from "react-router-dom";
 
 const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
     const [search, setSearch] = useState('');
@@ -20,15 +21,12 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
             </span>
 
             <span id="left" className="searchBtn2">
-            <button className="navBtn" onClick={() => handleToolsDrop()}>
-                Projects
-              </button>
+            <NavLink className="navBtn" to="/projects">Projects</NavLink>
+
             </span>
 
             <span id="left" className="searchBtn3" >
-              <button className="navBtn" onClick={() => handleToolsDrop()}>
-                About
-              </button>
+            <NavLink className="navBtn" to="/pics">Hobbies</NavLink>
             </span>
 
             <span id="left" className="searchBtn4">
@@ -37,9 +35,10 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
               </button>
             </span>
           </div>
+          <span className="searchBarWrap">My Portfolio</span>
   
               {/* SEARCH BAR */}
-          <span className="searchBarWrap">
+          {/* <span className="searchBarWrap">
             <form className="form" //onSubmit={(event) => getSearchedCat(event)}
             >
               <input
@@ -59,7 +58,14 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
                 <span className="glyphicon glyphicon-search"/>
               </span>
             </form>
-          </span>
+          </span> */}
+          <div className="home">
+            <NavLink to="/">
+              <button className="homeBtn" >
+              <i className="fas fa-home"></i>
+              </button>
+            </NavLink>
+          </div>
       </div>
     )
 }

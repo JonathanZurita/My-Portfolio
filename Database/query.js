@@ -17,9 +17,17 @@ connection.connect(err => {
 });
 
 
-const getProjects = (cb) => {
+const getProjects = (name, cb) => {
+  console.log(name)
+  
+  var qryStr = '';
 
-  connection.query('select * from project', (err, results) => {
+  if(name === undefined) {
+    qryStr = 'select * from project';
+  } else {
+    qryStr = `select * from project where title =(?) `;
+  }
+  connection.query(qryStr, [name], (err, results) => {
     if(err) {
       console.log(err);
       cb(err, null);

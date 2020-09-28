@@ -18,7 +18,12 @@ create table project(
 
 create table photo(
   id INT Auto_INCREMENT PRIMARY KEY,
-  url varchar(255)
+  url varchar(255),
+  description varchar(255),
+  alt varchar(255),
+  date varchar(255),
+  city varchar(255),
+  state varchar(255)
 )
 
 INSERT into project(title, timeline, info, tech, url, explanation, dataclass, vidclass) VALUES (
@@ -53,6 +58,27 @@ INSERT into project(title, timeline, info, tech, url, explanation, dataclass, vi
   "sharityVid"
 );
 
-INSERT into photo(url) VALUES ('https://lh3.googleusercontent.com/9U54cumz_3OUSeJTu0Pm0cHweyLD4jTLnCrfwpyUa-J_LR0zbJL79xf1FInIOgJ2fKw7yN-3kYKR5Lvstn2dKO_B9zeYPJ7g46EJCZ02TLGKiSFbTYqerYKKtpi2TePK0NyrK6Ry8pY=w1000-h1000');
-INSERT into photo(url) VALUES ('https://lh3.googleusercontent.com/jrOhF8pP876-wVI8JuG6OzwnnAYoLKU1HtouG8ErKdyfN_ed2XpdyDsByQ36HJEr1h0ohqjNOk7IYCbR8Cmv4ZB1RVQnJoqOXLPzs7ih6zq6ZwGkT1aS-PDoeWg5h0QkAo0IhGws3zA=w1000-h1000');
-INSERT into photo(url) VALUES ('https://lh3.googleusercontent.com/dXR5hTCevsNBaE-caR5HOArE2NdviG_sxDaq2JkgCxh9k1cJSHpjA_EtMWbJmAmbNHvBPSoghLBz_lZtJoHX0j7AI9shqRq5pOdA4uMtovxQ9CP_hwwfFZxR_LmU_Ky1vPI0utlG290=w1000-h1000');
+INSERT into photo(url, description, alt, date, city, state) VALUES (
+  'https://lh3.googleusercontent.com/9U54cumz_3OUSeJTu0Pm0cHweyLD4jTLnCrfwpyUa-J_LR0zbJL79xf1FInIOgJ2fKw7yN-3kYKR5Lvstn2dKO_B9zeYPJ7g46EJCZ02TLGKiSFbTYqerYKKtpi2TePK0NyrK6Ry8pY=w1000-h1000',
+  'Austin, Texas is the city I call home. This city is a safehaven for outcasts and wonderers like myself. This photo was taken in the fall at dawn. The State Capitol is siloughetted by the glow of the fall sunset.',
+  'Photo of the Texas State Capitol siloughetted by a fall sunset.',
+  'October 24th, 2018',
+  'Austin',
+  'Texas'
+);
+INSERT into photo(url, description, alt, date, city, state) VALUES (
+  'https://lh3.googleusercontent.com/jrOhF8pP876-wVI8JuG6OzwnnAYoLKU1HtouG8ErKdyfN_ed2XpdyDsByQ36HJEr1h0ohqjNOk7IYCbR8Cmv4ZB1RVQnJoqOXLPzs7ih6zq6ZwGkT1aS-PDoeWg5h0QkAo0IhGws3zA=w1000-h1000',
+  'Gwangan Bridge has quickly become a globally known landmark after being featured on The Black Panther. This beach was my escape while living in Busan. The bridge glows in LED lights at night in Korean fashion, and every year the city puts on an epic fireworks show behind it.',
+  'The Gwangang Bridge is off focus in the background with a close up of a sand filled beach scene',
+  'September of 2017',
+  'Busan',
+  'South Korea'
+);
+INSERT into photo(url, description, alt, date, city, state) VALUES (
+  'https://lh3.googleusercontent.com/dXR5hTCevsNBaE-caR5HOArE2NdviG_sxDaq2JkgCxh9k1cJSHpjA_EtMWbJmAmbNHvBPSoghLBz_lZtJoHX0j7AI9shqRq5pOdA4uMtovxQ9CP_hwwfFZxR_LmU_Ky1vPI0utlG290=w1000-h1000',
+  'This was the scene from the balcony of the teacher\'s lounge of the school where I worked at. I came out here to relax, but the sounds of children laughing in the distance could still be heard.',
+  'Buildings stacked against a mountain in a crowded neighborhood in Busan, South Korea',
+  'September of 2016',
+  'Busan',
+  'South Korea'
+);
