@@ -6,7 +6,8 @@ const Grid = () => {
   
   const [photos, setPhotos] = React.useState([]);
   const [modalToggle, setModalToggle] = React.useState(false);
-  const [photoUrl, setUrl] = React.useState('');
+  const [photoModalData, setPhotoModalData] = React.useState([]);
+  const [allPhotos, setAllPhotos] = React.useState([]);
 
   React.useEffect(()=> {
     getPhotos();
@@ -16,7 +17,14 @@ const Grid = () => {
     if(modalToggle) {
       setModalToggle(false);
     } else {
-      setUrl(e.target.src);
+      var setModalPhoto = '';
+      for(var i = 0; i < allPhotos.length; i++) {
+        if(allPhotos[i].id == e.target.id) {
+            setModalPhoto = allPhotos[i];
+        }
+      }
+      console.log(e.target.id)
+      setPhotoModalData(setModalPhoto);
       setModalToggle(true);
     }
 
@@ -29,7 +37,7 @@ const Grid = () => {
         var grid = [];
         for(var i = 0; i < res.data.length; i++) {
 
-          row.push(res.data[i].url);
+          row.push(res.data[i]);
 
           if(row.length === 3) {
             grid.push(row);
@@ -38,6 +46,7 @@ const Grid = () => {
 
         }
         setPhotos(grid);
+        setAllPhotos(res.data);
       })
 
       .catch(err => {
@@ -54,36 +63,46 @@ const Grid = () => {
 
       <Photo 
           handleToggle={togglePhoto} 
-          photoUrl={photoUrl} 
+          photoData={allPhotos} 
+          photoID={photoModalData}
           bool={modalToggle}
         />
       {photos.map((photo, i) =>
         <div key={i} className='photoRow'>
 
-          <div className="imgTile">
-            <img 
+          <div 
+            className="imgTile" 
+            onClick={() => togglePhoto(event)}
+          >
+            <img
+              id={photo[0].id}
               className="photo"  
-              src={photo[0]} 
-              onClick={() => togglePhoto(event)}
+              src={photo[0].url} 
             />
           </div>
+
+
           <div 
-            value={photo[1]} 
-            className="imgTile" 
-            //onClick={() => togglePhoto(event)}
+            className="imgTile"
+            onClick={() => togglePhoto(event)}
           >
             <img 
+              id={photo[1].id}
               className="photo"  
-              src={photo[1]}
-              onClick={() => togglePhoto(event)}
+              src={photo[1].url}
             />
           </div>
-          <div value={photo[2]} className="imgTile" >
+
+
+          <div
+            className="imgTile" 
+            onClick={() => togglePhoto(event)}
+          >
             <img 
+              id={photo[2].id}
               className="photo" 
-              src={photo[2]}
-              onClick={() => togglePhoto(event)}
-              />
+              src={photo[2].url}
+            />
           </div>
         </div>
       )}

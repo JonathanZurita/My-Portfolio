@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Photo = ({ handleToggle, bool, photoUrl}) => {
+const Photo = ({ handleToggle, bool, photoID}) => {
 
   if(bool) {
     return(
@@ -9,8 +9,12 @@ const Photo = ({ handleToggle, bool, photoUrl}) => {
           id="photoModal"
           onClick={()=> handleToggle()}
         >
-          <div className="modalBody">
-            <img src={photoUrl} />
+          <div className="modalBody" id="photoModalBody">
+            <img className="imageOnModal" src={photoID.url} />
+            <p className="photoDeats" id="picDesc">{photoID.description}</p>
+            <p className="photoDeats" id="picDate">{photoID.date}</p>
+            <p className="photoDeats" id="picLoc">{photoID.city}, {photoID.state}</p>
+          
           </div>
         </div>
 

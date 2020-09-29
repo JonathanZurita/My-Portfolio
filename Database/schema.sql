@@ -19,12 +19,12 @@ create table project(
 create table photo(
   id INT Auto_INCREMENT PRIMARY KEY,
   url varchar(255),
-  description varchar(255),
+  description varchar(1000),
   alt varchar(255),
   date varchar(255),
   city varchar(255),
   state varchar(255)
-)
+);
 
 INSERT into project(title, timeline, info, tech, url, explanation, dataclass, vidclass) VALUES (
   "Prrget", 

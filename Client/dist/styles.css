@@ -30,12 +30,12 @@ body {
 .container {
     display: grid;
     background-color: black;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(auto-fit, min-max(10px, 60px));
     grid-template-rows: repeat( 6, 1fr);
     grid-template-areas: 
         "x x x x x x x x x x x x"
-        ". . . a . . d d d d d d"           
-        ". c c c c c d d d d d d"
+        ". . . a . . . d d d d d"           
+        ". c c c c c . d d d d d"
         ". c c c c c . . . . . ."
         ". c c c c c . . . . . ."            
         ". b b b b b b b . . . .";
@@ -45,11 +45,10 @@ body {
     background-size: contain;
     max-height: 100vh;
     max-width: 100%;
-    
     background-position-x: center;
     background-repeat: no-repeat;
     margin: 0;
-    margin-bottom: -75px;
+    margin-bottom: -80px;
     padding: 0;
     border: none;
 }
@@ -59,31 +58,55 @@ body {
 } */
 .title {
     grid-area: d;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Archivo Black', sans-serif;
     text-align: center;
     color: white;
     animation: mymove 1s;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-top: -106px;
+    margin-right: 20px;
+    width: 50vw;
+}
+.titleWrap {
+    max-width: 80%;
+    height: fit-content;
+}
+div .aboutWrap {
+    display: none;
+    color: white;
+    float: write;
+}
+.aboutWrap:hover {
+    display: flex;
+}
+.aboutBtn {
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    text-decoration-color: white;
+    text-decoration: underline;
+    
+    cursor: pointer;
+}
+.aboutBtn:hover + div {
+    display: flex;
+    cursor: pointer;
 }
 .name {
-    font-size: 480%;
+    font-size: 3.5vw;
     line-height: 1;
+    font-family: 'Archivo Black', sans-serif;
 }
 .about {    
-    
     font-family: 'Assistant', sans-serif;
-    font-weight: 200;
-    width: 80%;
-    height: 50px;
-    font-size: 19px;
+    font-size: 1vw;
+    margin: 0;
+    
 }
 .subheader {
     font-family: 'Assistant', sans-serif;
-    font-size: 30px;;
+    font-size: 1.2vw;
     font-weight: 400;
 }
 @keyframes mymove {
@@ -106,22 +129,26 @@ body {
 .fireworks2 {
     width: 100%;
     opacity: .6;
+    margin-left: 20%;
 }
 .bridge {
     position: relative;
     bottom: 57%;
-    width: 75%;
+    width: 70%;
+    left: 7%;
     -webkit-animation: hue 20s infinite linear;
 }
 
 .bridge:hover {
     -webkit-animation: hue .6s infinite linear;
     cursor: pointer;
+    
 }
 
 .fireworks2:hover {
     -webkit-animation: hue .3s infinite linear; 
     cursor: pointer;
+    
 }
 
 .fireworks:hover {
@@ -550,6 +577,49 @@ a {
     opacity:0;
 } */
 
+/* ############################################################################################################# */
+/* //////////////// PHOTO MODAL //////////////######################################################################*/
+/* ############################################################################################################# */
+/* ############################################################################################################### */
+#photoModalBody {
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+        "p p p p p c"
+        "p p p p p t"
+        "p p p p p d"
+        "p p p p p d"
+        "p p p p p d";
+    font-size: 26px;
+    background-color: black;
+
+}
+
+.imageOnModal {
+    grid-area: p;
+    width: 100%;
+}
+.photoDeats {
+    padding: 5px;
+}
+#picLoc {
+    grid-area: c;
+    font-size: 32px;
+    font-family: 'Pacifico', cursive;
+}
+#picDesc {
+    grid-area: d;
+    font-family: 'Assistant', sans-serif;
+
+}
+#picDate {
+    grid-area: t;
+    font-family: 'Righteous', cursive;
+}
+
 
 
 
@@ -571,13 +641,8 @@ a {
         max-width: inherit;
     }
     .moon {
+        grid-area: a;
         margin-top: 130px;
-    }
-    
-    .fireworks2 {
-        margin-left: 20%;
-        width: 60%;
-        height: 60%;
     }
     .container {
         display: grid;
@@ -601,21 +666,30 @@ a {
         background-size: cover;
     }
     .title {
+        grid-area: d;
         font-size: 60%;
-        justify-content: center;
-        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0px;
     }
-    .fireworksContainer {
-     
+    .titleWrap {
+        height: 227px;
     }
-    .fireworks2 {
-        width: 40%;
 
+    .fireworks2 {
+        grid-area: c;
+        width: 40%;
+        margin-left: 20%;
+        height: 60%;
         height: 40%;
     }
 
     .name {
         line-height: 1;
+    }
+    .about {
+        margin: 0 13%;
+        font-size: 2vw;
     }
 
     .subheader {
@@ -787,10 +861,16 @@ a {
     .photoRow {
         margin: 0;
     }
+    .name {
+        font-size: 9vw;
+    }
+    .about {
+        font-size: 4vw;
+    }
 
     .bridge {
         align-self: center;
-        width: 100%;
+        width: 90%;
     }
 }
 

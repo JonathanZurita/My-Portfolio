@@ -35,7 +35,6 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
               </button>
             </span>
           </div>
-          <span className="searchBarWrap">My Portfolio</span>
   
               {/* SEARCH BAR */}
           {/* <span className="searchBarWrap">
