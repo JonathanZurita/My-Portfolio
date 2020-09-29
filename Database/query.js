@@ -18,7 +18,6 @@ connection.connect(err => {
 
 
 const getProjects = (name, cb) => {
-  console.log(name)
   
   var qryStr = '';
 
@@ -32,7 +31,7 @@ const getProjects = (name, cb) => {
       console.log(err);
       cb(err, null);
     } else {
-      console.log(results);
+      //console.log(results);
       cb(null, results);
     }
   })
@@ -45,7 +44,7 @@ const getPhotos = (cb) => {
       console.log(err);
       cb(err, null);
     } else {
-      console.log(results);
+      //console.log(results);
       cb(null, results);
     }
   })

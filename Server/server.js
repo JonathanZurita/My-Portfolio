@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '../Client/dist')));
 
 app.get(`/project`, (req, res) => {
   var name = req.query.name;
-  console.log('req query:', req.query.name)
+  //console.log('req query:', req.query.name)
   
   query.getProjects(name, (err, results) => {
     if(err) {

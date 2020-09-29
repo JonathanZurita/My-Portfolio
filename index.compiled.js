@@ -4,7 +4,7 @@ var express = require('express');
 
 var path = require('path');
 
-var query = require('./Database/query.js');
+var query = require('../Database/query.js');
 
 var PORT = process.env.PORT || 3000;
 var app = express();
@@ -12,10 +12,10 @@ app.use(express.json());
 app.use(express.urlencoded({
   extended: true
 }));
-app.use(express["static"](path.join(__dirname, './Client/dist')));
+app.use(express["static"](path.join(__dirname, '../Client/dist')));
 app.get("/project", function (req, res) {
-  var name = req.query.name;
-  console.log('req query:', req.query.name);
+  var name = req.query.name; //console.log('req query:', req.query.name)
+
   query.getProjects(name, function (err, results) {
     if (err) {
       console.log('error getting from server: ', err);
@@ -25,7 +25,6 @@ app.get("/project", function (req, res) {
     }
   });
 });
-
 app.get("/photos", function (req, res) {
   query.getPhotos(function (err, results) {
     if (err) {
