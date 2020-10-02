@@ -797,7 +797,6 @@ a {
     }
     .bridgeContainer {
         grid-area: z;
-      
         margin: 0;
     }
     .bridge {
@@ -812,7 +811,6 @@ a {
 @media only screen and (max-width: 600px) {
 
     .modalBody {
-       
         width: 443px;
         height: 300px;
         font-size: 12px;
@@ -939,29 +937,41 @@ a {
         padding: 1px;
         overflow: hidden;
     }
+
     .photo {
         width: 135px;
         height: 119px;
     }
+
     .photoRow {
         margin: 0;
     }
+
     .name {
         font-size: 15vw;
     }
+
     .title {
-    z-index: 40;
-    margin-top: -40%;
+        z-index: 40;
+        margin-top: -100px;
     }
+
     .titleWrap {
         text-align: center;
         max-width: 100%;
         justify-content: center;
         align-items: center;
     }
+
     .about {
         font-size: 4.5vw;
         margin: 0 3% 0 3%;
+    }
+
+    .moon {
+        position: absolute;
+        left: 2%;
+        top: 14%;
     }
 
     .bridge {
@@ -978,21 +988,25 @@ a {
     .container {
         max-height: 712px;
     }
+    .bridge {
+        bottom: 6%;
+        left: 2%;
+    }
     .fireworks2 {
-        width: 400px;
+        width: 500px;
         height: 300px;
     }
     .fireworksContainer{
         display: flex;
-        position: fixed;
+        position: absolute;
         bottom: 30%;
-        left: 1%;
-
+        left: 25%;
+        -webkit-transform: scale(0.4, 0.4);
     }
     .footer {
         height: 100px;
     }
     .footerContent {
-        padding-top: 30px;
+        padding-top: 45px;
     }
 }
