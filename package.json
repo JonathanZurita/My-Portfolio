@@ -2,13 +2,13 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "description": "some of my recent projects displayed",
-  "main": "index.js",
+  "main": "index.compiled.js",
   "scripts": {
     "setup": "npm install && webpack --mode=production",
     "test": "cd ./client && npm test",
     "dev-s": "nodemon server/server.js",
     "dev-c": "webpack -d -w",
-    "start": "node index.compiled.js",
+    "start": "node ./index.compiled.js",
     "compile": "babel Server/server.js --out-file index.compiled.js"
   },
   "repository": {
