@@ -39,8 +39,8 @@ return (
         
             <div className="fireworksContainer">
             <Animated animationIn="flash" animationOut="fadeOut" isVisible={true}>
-                    <img className="fireworks2" 
-                        src="https://interviewstuffjonathanzurita.s3.us-east-2.amazonaws.com/firework2.gif" 
+                    <iframe className="fireworks2" 
+                        src="https://interviewstuffjonathanzurita.s3.us-east-2.amazonaws.com/ezgif.com-gif-maker+(1).gif"
                     />
                 </Animated>
                 </div>

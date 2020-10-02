@@ -30,13 +30,13 @@ body {
 .container {
     display: grid;
     background-color: black;
-    grid-template-columns: repeat(auto-fit, min-max(10px, 60px));
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat( 6, 1fr);
     grid-template-areas: 
         "x x x x x x x x x x x x"
         ". . . a . . . . . . . ."           
-        ". c c c c c . d d d d d"
-        ". c c c c c . d d d d d"
+        ". c c c c c d d d d d ."
+        ". c c c c c d d d d d ."
         ". c c c c c . . . . . ."            
         ". b b b b b b b . . . .";
     align-items: stretch;
@@ -121,16 +121,27 @@ div .aboutWrap {
 }
 .fireworksContainer {
     grid-area: c;
-    width: 100%;
+  /* 16:9 aspect ratio */
+  padding-top: 62.5%;
+  position: relative;
 
 }
 .moon {
     grid-area: a;
 }
 .fireworks2 {
-    width: 55%;
-    margin-left: 40%;
+    border: 0;
+    display: flex;
+    margin-left: 20%;
+    height: 500px;
+    width: 500px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    object-fit: scale-down;
+
     filter: contrast(2);
+    
 }
 .bridge {
     position: relative;
@@ -691,13 +702,14 @@ a {
     .titleWrap {
         height: 227px;
     }
+    .fireworksContainer {
+        grid-area: c;
+    }
 
     .fireworks2 {
-        grid-area: c;
-        width: 40%;
-        margin-left: 20%;
-        height: 60%;
-        height: 40%;
+        border: none;
+        
+        
     }
 
     .name {
@@ -741,6 +753,60 @@ a {
     }
 
 }
+
+@media only screen and (min-width: 800px) and (max-width: 815px) {
+    .container {
+        
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat( 4, 1fr);
+        grid-template-areas: 
+        ". . x . . . . ."
+        "c c c c b b b b"
+        "c c c c b b b b"
+        "z z z z . . . ."
+        ;
+        height: 450px;
+
+    }
+    .moon {
+        grid-area: x;
+        margin: 0;
+        margin-top: 35%;
+    }
+    .fireworks2 {
+        height: 300px;
+        top: 20%;
+    }
+    .fireworksContainer {
+        
+        display: flex;
+        position: static;
+        margin: 0;
+    }
+    .title {
+        grid-area: b;
+        margin: 0;
+        z-index: 2;
+    }
+    .aboutWrap {
+        width: 350px;
+    }
+    .about {
+        margin: 0;
+    }
+    .bridgeContainer {
+        grid-area: z;
+      
+        margin: 0;
+    }
+    .bridge {
+        bottom: -40%;
+    }
+    .footer { height: 60px;}
+    .footerContent {padding-top: 20px; font-size: 19px;}
+}
+
 
 
 @media only screen and (max-width: 600px) {
@@ -881,10 +947,21 @@ a {
         margin: 0;
     }
     .name {
-        font-size: 9vw;
+        font-size: 15vw;
+    }
+    .title {
+    z-index: 40;
+    margin-top: -40%;
+    }
+    .titleWrap {
+        text-align: center;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
     }
     .about {
-        font-size: 4vw;
+        font-size: 4.5vw;
+        margin: 0 3% 0 3%;
     }
 
     .bridge {
@@ -899,7 +976,18 @@ a {
         margin-right: 100px;
     }
     .container {
-        max-height: 812px;
+        max-height: 712px;
+    }
+    .fireworks2 {
+        width: 400px;
+        height: 300px;
+    }
+    .fireworksContainer{
+        display: flex;
+        position: fixed;
+        bottom: 30%;
+        left: 1%;
+
     }
     .footer {
         height: 100px;
