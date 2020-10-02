@@ -6,7 +6,7 @@ var path = require('path');
 
 var query = require('./Database/query.js');
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 4000;
 var app = express();
 app.use(express.json());
 app.use(express.urlencoded({
