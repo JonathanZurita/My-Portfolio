@@ -999,7 +999,7 @@ a {
     .fireworksContainer{
         display: flex;
         position: absolute;
-        bottom: 30%;
+        bottom: 20%;
         left: 25%;
         -webkit-transform: scale(0.4, 0.4);
     }
