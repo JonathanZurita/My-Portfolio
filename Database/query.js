@@ -50,8 +50,20 @@ const getPhotos = (cb) => {
   })
 };
 
+const getSearch = (search, cb) => {
+  const queryString = `select * from project where info like "%${search}%" OR tech like "%${search}%" OR title like "%${search}%"`;
+  connection.query(queryString, (err, results) => {
+    if(err) {
+      cb(err, null);
+    } else {
+      cb(null, results);
+    }
+  })
+};
+
 
 module.exports = {
   getProjects,
-  getPhotos
+  getPhotos,
+  getSearch
 }

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Search from './components/search.js';
-import "../dist/styles.css";
 import Tools from './components/ToolsDropDown.js';
 import Welcome from './components/Welcome.js';
 import Grid from './components/Grid.jsx';
 import Modal from './components/Modal.jsx';
 import Projects from './components/Projects.jsx';
+import SearchSuggest from './components/searchSuggestions.jsx';
 
 import {
     BrowserRouter as Router,
@@ -43,6 +43,7 @@ const App = () => {
                 handleToolsDrop={toggleToolsDropModal} 
                 handleContactInfoModal={toggleContactInfoModal}
             />
+            <SearchSuggest />
                 <Switch>
                 <div>
                     <Route path="/projects" component={Projects} />

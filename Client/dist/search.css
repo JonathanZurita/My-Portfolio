@@ -22,12 +22,14 @@ code {
   font-family: 'Assistant', sans-serif;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 1fr;
-  grid-template-areas: "x x x x x y y y y z";
+  grid-template-rows: 60px 80px 80px 80px;
+  grid-template-areas: "x x x x x y y y y z"
+                       ". . . . . j j j j ."
+                       ". . . . . j j j j ."
+                       ". . . . . j j j j .";
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
   z-index: 2000;
 }
 
@@ -126,11 +128,9 @@ span#left {
   color: white;
 
   /* //for my 'portfolio placeholder' test */
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   font-family: 'Architects Daughter', cursive;
-  
-
   width: 100%;
   justify-self: center;
   align-items: center;
@@ -141,10 +141,70 @@ input.search {
   border-radius: 5mm;
   padding-top: 1mm;
   padding-bottom: 1mm;
+  padding-left: 14px;
   border-style: none;
   font-size: 16px;
   border-color: none;
 }
+
+.searchInfoWrap {
+  grid-area: j;
+  display: none;
+  height: fit-content;
+  margin-top: -14px;
+  margin-left: 11px;
+  width: 95%;
+  background-color: none;
+  align-self: flex-start;
+}
+
+
+.searchBarWrap:hover + div.searchInfoWrap {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.952), rgba(0, 0, 0, 0.774));
+}
+.searchBarWrap:hover + div.searchInfoWrap + div.searchInfoRow {
+  display: flex;
+  flex-direction: column;
+}
+.searchInfoWrap:hover {
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.952), rgba(0, 0, 0, 0.774));
+  overflow: hidden;
+  flex-direction: column;
+}
+.searchInfoWrap:hover + div.searchInfoRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchInfoRow {
+  display: inherit;
+  background-color: transparent;
+  border-bottom: lawngreen;
+  color: black;
+  margin-bottom: 3px;
+  font-size: 16px;
+  width: 100%;
+  height: 75px;
+  align-items: center;
+  flex-direction: row;
+}
+.searchInfoLink {
+  color: white;
+  overflow: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 10px 0 10px;
+}
+.searchInfoTech {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 880px) {
   span#left {
     margin-right: 5px;
@@ -159,20 +219,28 @@ input.search {
     height: 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 2fr;
+    grid-template-rows: repeat(2, 1fr) 200px;
     grid-template-areas:
+    "x x x x"
     "y y y z"
-    "x x x x";
+    "r r r ."
+    "r r r ."
+    "r r r ."
+    "r r r .";
     align-items: stretch;
   }
   .home {
-    padding-top: 10px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     font-size: 24px;
     grid-area: z;
+  }
+  .searchInfoWrap {
+    grid-area: r;
+
   }
 
   .background {
@@ -207,8 +275,6 @@ input.search {
   }
   .searchBarWrap {
     height: 50px;
-    margin-top: 10px;
-    margin-bottom: -20px;
     width: 90%;
  
   }

@@ -1,17 +1,45 @@
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import Modal from './Modal.jsx';
 import { NavLink } from "react-router-dom";
+import SearchSuggest from './searchSuggestions.jsx';
 
 const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
-    const [search, setSearch] = useState('');
-    const [dropDown, setDropDown] = useState('')
-    const [cartQTY, setCartQTY] = useState('');
-    const [contactModal, setContactModal] = useState('');
-    //cartQty, cartDropDown, searchDropdown, categoryDropdown, getSearchedCat, catChange,
+  const [search, setSearch] = useState('');
+  const [modal, setModal] = useState('');
+  const [data, setData] = useState([]);
+  const [searchBool, setSearchBool] = useState(false);
+  const handleSearch = () => {
+    axios.get('/search', {params: {search: search}})
+      .then(res => {
+        setData(res.data)
+      })
+      .catch(err => console.log(err))
+  }
 
+  const toggleDrop = () => {
+    if(searchBool) {
+      setSearchBool(false)
+      setModal('')
+    } else {
+      setModal(
+        <div 
+          className="modalWrap" 
+          id="contactModal"
+          onClick={() => toggleDrop()}
+        ></div>
+      );
+      setSearchBool(true);
+    }
+  }
+
+  const changeSearch = (val) => {
+    setSearch(val);
+    handleSearch();
+  }
     return (
-        <div className="navWrapper" >
+        <div className="navWrapper">
+
             {/* CATEGORY DROP DOWN */}
           <div className="leftSide">
             <span id="left" className="searchBtn1">
@@ -35,20 +63,18 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
               </button>
             </span>
           </div>
-  
-              {/* SEARCH BAR */}
-          {/* <span className="searchBarWrap">
-            <form className="form" //onSubmit={(event) => getSearchedCat(event)}
-            >
+
+          {/* SEARCH BAR */}
+          <span className="searchBarWrap" type="checkbox" >
+            <form className="form">
               <input
-                //onClick={() => searchDropdown()}
                 autoCorrect="off"
                 autoComplete="off"
                 className="search"
-                //onChange={catChange}
+                onChange={(e) => changeSearch(e.target.value)}
                 type="search"
                 id="search"
-                placeholder="Search"
+                placeholder="Search for a tool or project..."
                 name="catName"
                 value={search}
                 aria-label="Search: suggestions appear below"
@@ -57,7 +83,8 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
                 <span className="glyphicon glyphicon-search"/>
               </span>
             </form>
-          </span> */}
+          </span>
+          <SearchSuggest toggleDrop={toggleDrop} searchWord={search} data={data} />
           <div className="home">
             <NavLink to="/">
               <button className="homeBtn" >

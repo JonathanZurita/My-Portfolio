@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {Animated} from "react-animated-css";
- 
+
 
 const WelcomePage = () => {
 

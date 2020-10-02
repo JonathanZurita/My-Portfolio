@@ -25,6 +25,18 @@ app.get(`/project`, (req, res) => {
   })
 });
 
+app.get('/search', (req, res) => {
+  var search = req.query.search;
+  query.getSearch(search, (err, results) => {
+    if(err) {
+        console.log('server error', err)
+        res.sendStatus(404)
+      } else {
+        res.status(200).send(results);
+      }
+  })
+});
+
 app.get(`/photos`, (req, res) => {
   query.getPhotos((err, results) => {
     if(err) {
