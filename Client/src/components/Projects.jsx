@@ -18,7 +18,7 @@ const Projects = ({ projectNamefromRouter }) => {
 
   //sets project data state from the DB
   const getProjects = () => {
-
+    console.log('axios get req initiated', projectName)
     axios.get(`/project`, {params : {name: projectName}})
       .then(res => {
         setProjectData(res.data);

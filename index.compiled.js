@@ -13,7 +13,7 @@ app.use(express.urlencoded({
   extended: true
 }));
 app.use(express["static"](path.join(__dirname, './Client/dist')));
-app.get("/project", function (req, res) {
+app.get('/project', function (req, res) {
   var name = req.query.name; //console.log('req query:', req.query.name)
 
   query.getProjects(name, function (err, results) {
@@ -36,7 +36,8 @@ app.get('/search', function (req, res) {
     }
   });
 });
-app.get("/photos", function (req, res) {
+app.get('/photos', function (req, res) {
+  console.log('server photos get request')
   query.getPhotos(function (err, results) {
     if (err) {
       console.log('error getting from server: ', err);

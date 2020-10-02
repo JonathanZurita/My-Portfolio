@@ -38,6 +38,7 @@ app.get('/search', (req, res) => {
 });
 
 app.get(`/photos`, (req, res) => {
+  console.log('server photos get request')
   query.getPhotos((err, results) => {
     if(err) {
         console.log('error getting from server: ', err)

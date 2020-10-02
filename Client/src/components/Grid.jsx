@@ -31,6 +31,7 @@ const Grid = () => {
   }
 
   const getPhotos = () => {
+    console.log('axios get photo initiated');
     axios.get(`/photos`)
       .then(res => {
         var row = [];
