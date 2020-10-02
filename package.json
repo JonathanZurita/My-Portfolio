@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "some of my recent projects displayed",
   "main": "index.compiled.js",
+  "private": true,
   "scripts": {
     "setup": "npm install && webpack --mode=production",
     "test": "cd ./client && npm test",
@@ -11,6 +12,7 @@
     "start": "node ./index.compiled.js",
     "compile": "babel Server/server.js --out-file index.compiled.js"
   },
+  "engines": { "node" : "12.16.1" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JonathanZurita/My-Portfolio.git"
@@ -25,13 +27,15 @@
     "@ant-design/icons": "^4.2.1",
     "@fortawesome/fontawesome-free": "^5.14.0",
     "antd": "^4.5.1",
-    "aws-sdk": "^2.724.0",
+    "aws-sdk": "latest",
     "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "bootstrap": "^4.5.2",
     "css-loader": "^4.0.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "latest",
+    "ejs": "latest",
+    "body-parser": "latest",
     "file-loader": "^6.1.0",
     "hooks": "^0.3.2",
     "mysql": "^2.18.1",
