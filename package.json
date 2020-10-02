@@ -9,7 +9,7 @@
     "test": "cd ./client && npm test",
     "dev-s": "nodemon server/server.js",
     "dev-c": "webpack -d -w",
-    "start": "node ./Server/index.compiled.js",
+    "start": "node ./index.compiled.js",
     "compile": "babel Server/server.js --out-file index.compiled.js"
   },
   "engines": {
