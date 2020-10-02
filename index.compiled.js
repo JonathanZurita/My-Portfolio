@@ -14,6 +14,8 @@ app.use(express.urlencoded({
 }));
 app.use(express["static"](path.join(__dirname, './Client/dist')));
 app.get('/project', function (req, res) {
+
+  console.log('server getting project', req.query.name)
   var name = req.query.name; //console.log('req query:', req.query.name)
 
   query.getProjects(name, function (err, results) {

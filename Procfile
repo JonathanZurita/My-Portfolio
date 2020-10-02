@@ -1,1 +1,1 @@
-web: node index.compiled.js
+web: node ./index.compiled.js
