@@ -3,6 +3,7 @@ node_modules
 .config
 .env
 Client/src/components/photos.js
+.gitignore
 
 .DS_Store
 
@@ -12,4 +13,3 @@ Client/src/components/photos.js
 !.elasticbeanstalk/*.global.yml
 
 node_modules/
-.elasticbeanstalk/
