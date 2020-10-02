@@ -995,12 +995,11 @@ a {
     .fireworks2 {
         width: 500px;
         height: 300px;
+        margin-left: 0;
     }
     .fireworksContainer{
         display: flex;
-        position: absolute;
-        bottom: 20%;
-        left: 25%;
+        position: relative;
         -webkit-transform: scale(0.4, 0.4);
     }
     .footer {
