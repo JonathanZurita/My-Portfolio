@@ -5,7 +5,8 @@ const connection = mysql.createConnection({
   user: process.env.RDS_USERNAME || 'root',
   password: process.env.RDS_PASSWORD || 'password123',
   port: process.env.RDS_PORT || 3306,
-  database: 'portfolio'
+  database: process.env.RDS_DB || 'portfolio',
+  name: process.env.RDS_DB_NAME || null
 } );
 
 connection.connect(err => {
