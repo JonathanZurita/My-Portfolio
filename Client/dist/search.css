@@ -33,17 +33,19 @@ code {
   z-index: 2000;
 }
 
+
 .background {
   position: fixed;
   top: 0px;
-  margin-top: -1px;
   height: 60px;
   z-index: 500;
 
   background: linear-gradient(rgba(0, 0, 0, 0.952), rgba(0, 0, 0, 0.774));
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
   width: 100%;
+
+  border-top: black;
+  border-top-style: solid;
+  border-top-width: 30px;
 
 }
 
