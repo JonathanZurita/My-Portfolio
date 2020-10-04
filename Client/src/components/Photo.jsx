@@ -10,7 +10,9 @@ const Photo = ({ handleToggle, bool, photoID}) => {
           onClick={()=> handleToggle()}
         >
           <div className="modalBody" id="photoModalBody">
-            <img className="imageOnModal" src={photoID.url} />
+            <div className="imageOnModalWrap">
+              <img className="imageOnModal" src={photoID.url} />
+            </div>
             <p className="photoDeats" id="picDesc">{photoID.description}</p>
             <p className="photoDeats" id="picDate">{photoID.date}</p>
             <p className="photoDeats" id="picLoc">{photoID.city}, {photoID.state}</p>
