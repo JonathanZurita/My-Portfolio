@@ -82,3 +82,148 @@ INSERT into photo(url, description, alt, date, city, state) VALUES (
   'Busan',
   'South Korea'
 );
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0107.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0121.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0190.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0217.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0275.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0279.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0293.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0346.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0375.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0420.jpg'
+);
+
+
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_2693.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_2623.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_2617.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_1536.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_1489.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_1488.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_1457.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_0549.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_0519.mov'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/FullSizeRender.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_1435.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_1423.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_1399.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0540.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0533.jpg'
+);
+INSERT into photo(url) VALUES (
+  'https://landscapefavpics.s3-us-west-2.amazonaws.com/DSC_0524.jpg'
+);
+
+INSERT into photo(url) VALUES (
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_2877.jpg"
+);
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_2910.jpg"
+);
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_2911.jpg"
+);
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_2912.jpg"
+);
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_2999.jpg"
+);
+INSERT into photo(url) VALUES (
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_2876.jpg"
+);
+
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_3041.jpg"
+);
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_3224.jpg"
+);
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_3483.jpg"
+);
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_3582.jpg"
+);
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_3707.jpg"
+);
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_4151.jpg"
+);
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_4824.jpg"
+);
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_5496.jpg"
+);
+INSERT into photo(url) VALUES (
+
+"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_5525.jpg"
+);
+
+
+
+
+
