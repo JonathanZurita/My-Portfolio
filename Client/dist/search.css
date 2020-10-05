@@ -40,12 +40,12 @@ code {
   height: 60px;
   z-index: 500;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.952), rgba(0, 0, 0, 0.774));
+  background: black;
   width: 100%;
 
-  border-top: black;
-  border-top-style: solid;
-  border-top-width: 30px;
+  -webkit-box-shadow:0px 4px 4px rgba(8, 8, 8, 0.637);
+    -moz-box-shadow:0px 4px 4px rgba(7, 6, 6, 0.623);
+    box-shadow:0px 4px 4px rgba(2, 1, 1, 0.623);
 
 }
 
@@ -285,8 +285,10 @@ input.search {
 }
 
   .background {
-    background: linear-gradient(rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.582));
     height: 100px;
+    -webkit-box-shadow:0px 4px 4px rgba(8, 8, 8, 0.637);
+    -moz-box-shadow:0px 4px 4px rgba(7, 6, 6, 0.623);
+    box-shadow:0px 4px 4px rgba(2, 1, 1, 0.623);
    
   }
 
