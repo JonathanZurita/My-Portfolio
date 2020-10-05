@@ -101,8 +101,6 @@ button.searchBtn {
   flex-wrap: wrap;
   margin-left: 25px;
   font-size: 20px;
-
-  color: white;
   
   border: none;
 
@@ -111,10 +109,8 @@ button.searchBtn {
 
 span#left {
   margin-right: 25px;
-  color:white;
   background-color: transparent;
   border: none;
-  color: white;
 }
 
 /* ################################################################################
@@ -240,10 +236,53 @@ input.search {
     font-size: 24px;
     grid-area: z;
   }
+
+  .searchInfoTech {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .searchInfoLink {
+    font-size: 24px;
+  }
+
   .searchInfoWrap {
     grid-area: r;
+    width: 100vw;
+    margin-left: 0;
 
   }
+
+  .searchInfoWrap div:first-child {
+    background: rgb(255, 93, 247);
+  }
+  .searchInfoWrap div:nth-child(2) {
+    background: rgb(189, 8, 180);
+  }
+  .searchInfoWrap div:last-child {
+    background: rgb(194, 41, 255);
+  }
+
+  .searchInfoRow {
+   margin-bottom: 0;
+    height: 112px;
+
+  }
+  .searchInfoWrap:hover {
+
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+  
+  }
+
+  .searchBarWrap:hover + div.searchInfoWrap{
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+
+}
 
   .background {
     background: linear-gradient(rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.582));
@@ -261,6 +300,13 @@ input.search {
   .navBtn {
     background: transparent;
     border: none;
+    color: rgb(72, 234, 172);
+    font-weight: bold;
+  }
+
+  .homeBtn {
+    color: deepskyblue;
+    font-size: 20px;
   }
   .searchBtn1 {
     
