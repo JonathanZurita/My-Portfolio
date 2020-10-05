@@ -1,4 +1,8 @@
+html, body {
+    overflow-x: hidden;
+}
 body {
+    position: relative;
     background: black;
     margin: 0;
 }
@@ -1046,7 +1050,7 @@ a {
     .moon {
         position: absolute;
         left: 2%;
-        top: 14%;
+        top: 2%;
     }
 
     .bridge {
