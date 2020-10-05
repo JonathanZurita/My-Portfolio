@@ -57,7 +57,11 @@ const App = () => {
                         <Route path="/prrget">
                             <Projects projectNamefromRouter={"Prrget"} />
                         </Route>
-                    <Route path="/" component={Welcome} exact/>
+                    <Route path="/" exact>
+                        <Welcome />
+                        <Projects />
+                        <Grid />
+                    </Route>
                     </div>
                 </Switch>
             

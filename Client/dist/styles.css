@@ -15,7 +15,7 @@ body {
 .footerContent {
     display: flex;
     flex-direction: row;
-    padding-top: 240px;
+    padding-top: 103px;
     font-size: 24px;
 }
 .icon {
@@ -834,7 +834,7 @@ a {
         bottom: -40%;
     }
     .footer { height: 60px;}
-    .footerContent {padding-top: 20px; font-size: 19px;}
+    .footerContent {padding-top: 10px; font-size: 19px;}
 }
 
 
@@ -1081,6 +1081,6 @@ a {
         height: 100px;
     }
     .footerContent {
-        padding-top: 45px;
+        padding-top: 15px;
     }
 }
