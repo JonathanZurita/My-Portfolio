@@ -32,7 +32,7 @@ const Projects = ({ projectNamefromRouter }) => {
     <div>
       <div className="pageHeader">
         <NavLink className="projectsTitle" to="/projects">
-          <h1>Projects</h1>
+          <h1 id="title">Projects</h1>
         </NavLink>
         <div  className="projectLinks">
             <NavLink className="linkName1" to="/landescape">

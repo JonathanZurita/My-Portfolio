@@ -302,13 +302,18 @@ input.search {
   .navBtn {
     background: transparent;
     border: none;
-    color: rgb(72, 234, 172);
     font-weight: bold;
+    color: lightsteelblue;
+    font-family: ui-rounded;
   }
 
   .homeBtn {
-    color: deepskyblue;
-    font-size: 20px;
+    color: greenyellow;
+    font-size: 30px;
+    display: flex;
+    position: relative;
+    top: -21%;
+    right: 6%;
   }
   .searchBtn1 {
     

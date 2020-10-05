@@ -100,7 +100,7 @@ div .aboutWrap {
 .name {
     font-size: 3.5vw;
     line-height: 1;
-    font-family: 'Archivo Black', sans-serif;
+    font-family: "righteous";
 }
 .about {    
     font-family: 'Assistant', sans-serif;
@@ -486,7 +486,7 @@ a {
     border: none;
     font-family: 'Pacifico', cursive;
     font-weight: bold;
-    background-image: linear-gradient( black, rgb(25, 29, 40), rgb(25, 29, 40));
+    background-image: linear-gradient(rgb(25, 29, 40), black, rgb(25, 29, 40));
 }
 .projectsTitle {
     color: white;
@@ -532,15 +532,15 @@ a {
 }
 
 .linkName1 {
-    color: white;
+   
     grid-area: z;
 }
 .linkName2 {
-    color: white;
+    
     grid-area: b;
 }
 .linkName3 {
-    color: white;
+  
     grid-area: w;
 }
 
@@ -552,7 +552,7 @@ a {
 .gridWrap {
     border: none;
     margin-top: -2px;
-    background: rgba(194, 41, 255, .65);
+    background: lightslategray;
 }
 .photo {
     width: 136%;
@@ -994,23 +994,47 @@ a {
         padding: 0;
         justify-content: center;
     }
-    .projectLinks {
-        font-size: 19px;
-        padding-top: 10px;
-    }
 
 /* /////////////////////PAGE HEADER AND PHOTO GRID //////////////// */
     .pageHeader {
-        height: 337px;
+        height: 237px;
     }
     .pageHeader h1 {
-        margin-top: 5%;
+        position: relative;
+        top: 20%;
         font-size: 452%;
+        margin: 0;
+        color: lightsalmon;
     }
     .pageHeader p {
+        position: relative;
+        top: 19%;
         font-size: 125%;
         margin: 0 55px 0 55px;
+        line-height: 1;
     }
+    #title {
+        top: -5%;
+        color: lightblue;
+    }
+    .projectLinks {
+        color: lightcoral;
+        font-size: 19px;
+        padding-top: 10px;
+        position: relative;
+        top: 20%;
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-color: darkmagenta;
+    }
+    .projectLinks a {
+        color: lightcoral;
+    }
+    .projectsTitle {
+        position: relative;
+        top: 20%;
+    }
+
     .imgTile {
         margin: 1px;
         padding: 1px;
@@ -1027,7 +1051,7 @@ a {
     }
 
     .name {
-        font-size: 15vw;
+        font-size: 21vw;
     }
 
     .title {
