@@ -313,6 +313,8 @@ div .aboutWrap {
     align-items: center;
     align-content: center;
     font-size: 30px;
+    height: 87%;
+    width: 90%;
 }
 
 .landescapeVid {
@@ -925,16 +927,16 @@ a {
         display: grid;
 
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat( 7, 1fr);
+        grid-template-rows: 80px 20px repeat( 5, 1fr);
         grid-template-areas: 
     
             "o o o o"
             "d d d d"
             "q q q q"
             "q q q q"
-            "p p p p"
-            "p p p p"
             "r r r r"
+            "p p p p"
+            "p p p p"
             ;
         align-items: center;
         justify-content: center;
@@ -950,20 +952,21 @@ a {
         grid-area: p;
         justify-content: center;
         align-self: center;
-        margin-top: 14px;
-        margin-bottom: -20px;
-        padding: 10px;
-        /* width: 85%; */
-        margin-left: 0;
+        /* margin-top: 32px; */
+        /* margin-bottom: 0; */
+        padding: 0;
+        width: 95%;
+        margin: 0;
+        margin-top: 10%;
     }
     .proTech {
         grid-area: r;
         font-size: 17px;
-        margin-top: -15%;
-        font-size: 16px;
+        /* margin-top: -20%; */
+        font-size: 14px;
         width: 100%;
         text-align: center;
-        padding: 0 50px 0 50px;
+        padding: 0;
 
     }
     .projectBullets {
@@ -990,19 +993,15 @@ a {
         margin: 0;
         justify-content: center;
         font-size: 12px;
-        height: 250px;
-        width: inherit;
-        font-size: 30px;
-    
+        height: 227px;
+        width: 93%;
+        top: 0;
+        justify-self: center;
     }
-    .landescapeVid {
-
-        margin-left: 25%;
-        padding: 0px;
-        height: 100%;
-        width: 50%;
-
+    #landescapeData {
+        margin-top: 0;
     }
+
     #sharityData {
         width: 100%;
         padding: 0;
