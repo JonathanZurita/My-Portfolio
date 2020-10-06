@@ -2,9 +2,9 @@ import React from 'react';
 
 const Photo = ({ handleToggle, bool, photoID}) => {
   var icons = [];
-  
+
   if(bool) {
-    if(photoID.city.length > 0 && photoID.state.length > 0) {
+    if(photoID.city !== null) {
       icons.push("fas fa-calendar-day", "fas fa-map-marker-alt");
       
     }
