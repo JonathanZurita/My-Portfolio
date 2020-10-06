@@ -21,7 +21,7 @@ return (
                                 but beautiful, in which people can enjoy interacting with.
                                 I care deeply about helping people through my craft, and learning about all things tech.
                                 Currently, Im looking to join a diverse and inclusive team where ideas are welcomed
-                                and I can contribute my experience of carting, scaling and maintainig applications.
+                                and I can contribute my experience of carting, scaling and maintaining applications.
                                 </p>
                             </Animated>
                         </div>

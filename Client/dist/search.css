@@ -113,7 +113,7 @@ code {
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: 25px;
-  font-size: 20px;
+  font-size: 18px;
   
   border: none;
 
@@ -328,7 +328,7 @@ input.search {
   }
 
   .homeBtn {
-    color: greenyellow;
+    color: rgba(144, 87, 87);
     font-size: 24px;
     /* display: flex; */
     /* position: relative; */
@@ -337,6 +337,7 @@ input.search {
     margin: 0;
     width: 100%;
     text-align: center;
+    -webkit-animation: hue 3s infinite linear; 
   }
   .searchBtn1 {
     

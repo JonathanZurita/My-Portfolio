@@ -106,7 +106,7 @@ div .aboutWrap {
     /* font-family: 'Major Mono Display', monospace;  */
     font-family: 'Space Mono', monospace;
     font-size: 1vw;
-    margin: 0;
+    margin: 10px 20px 0 20px;
     
 }
 .subheader {
@@ -262,12 +262,14 @@ div .aboutWrap {
     margin-left: 2%;
     margin-right: 2%;
     text-align: left;
-    line-height: 1.6;
+    line-height: 1.1;
     font-family: monospace;
     font-weight: 400;
     position: relative;
     top: -18%;
-
+}
+.bullet {
+    margin-bottom: 30px;
 }
 
 
@@ -287,7 +289,7 @@ div .aboutWrap {
     grid-area: r;
     font-size: 1.5vw;
     text-align: center;
-    font-family: 'Major Mono Display', monospace;
+    font-family: 'Space Mono', monospace;
 }
 .proTitle {
     grid-area: o;
@@ -448,8 +450,8 @@ div .aboutWrap {
     border-radius: 2px;
     border-color: white;
     border-width: 2px;
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 350px;
     background-color: rgb(47, 44, 44);
     color: white;
     text-align: center;
@@ -461,6 +463,8 @@ div .aboutWrap {
     font-size: 16px;
     font-weight: bold;
     font-family: 'Assistant', sans-serif;
+    border: 0.5px solid;
+    border-radius: 26px;
 }
 #contactModal {
     justify-content: center;
@@ -585,6 +589,7 @@ a {
 .imgTile {
     margin: 10px;
     overflow: hidden;
+    border-radius: 8px;
 }
 .imgTile:hover {
     background-color: rgb(199, 192, 199);
@@ -601,11 +606,10 @@ a {
 }
 .imageOnModalWrap {
     grid-area: p;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+.imageOnModal {
+    width: 75%;
+    height: 70%;
 }
 /* .photoBtns {
     
@@ -633,16 +637,10 @@ a {
         "p p p p p p"
         ". d d d d .";
     font-size: 16px;
-    background-color: lightslategray;
-    border: .5px solid white;
+    background-color: transparent;
+    border: none;
 }
 
-.imageOnModal {
-    grid-area: p;
-    display: flex;
-    width: 80%;
-    height: 80%;
-}
 .photoDeats {
     padding: 5px;
 }
@@ -780,7 +778,7 @@ a {
 }
 
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 945px) {
     #photoModalBody {
         font-size: 14px;
         width: 100%;
@@ -791,10 +789,10 @@ a {
         ". d d d d .";
         
     }
-    /* .imageOnModalWrap {
-        width: 70%;
-        height: 99%;;
-    } */
+    .leftSide {
+        margin-top: 1mm;
+        font-size: 16px;
+    }
     .projectContainer {
         font-size: 24px;
         height: 800px;
@@ -806,19 +804,64 @@ a {
         height: 50%;
     }
 
+    .projectBullets {
+        font-size: 64%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
 }
 
 @media only screen and (min-width: 800px) and (max-width: 815px) {
     .modalWrap {
         padding: 0;
-        
+        background-color: black;
+        background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
+        animation: none;
     }
-    .imageOnModalWrap {
-        grid-area: p;
+    .pageHeader {
+        height: 150px;
+    }
+    .pageHeader h1 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+        font-size: 48px;
+    }
+    
+    #photoModalBody {
+        font-size: 14px;
         width: 100%;
-        height: 100%;
-        overflow: scroll;
+        height: 90%;
+        overflow-y: scroll;
+        grid-template-columns: 110px repeat(4, 125px) 180px;
+        grid-template-rows: 80px 80px 100px;
+        grid-template-areas:
+            "c p p p p d"
+            ". p p p p d"
+            "t p p p p d";
 
+    }
+    #picLoc {
+        font-size: 17px;
+    }
+    .pageHeader p {
+        font-size: 14px;
+    }
+    .pageHeader #title {
+        margin-top: 32px;
+        margin-bottom: -9px;
+        font-size: 46px;
+    }
+    .imageOnModal {
+        width: 100%;
+    }
+    .projectContainer {
+        grid-template-rows: 10px repeat( 3, 120px) 60px;
+        height: 500px;
+        font-size: 19px;
+    }
+    .projectLinks {
+        font-size: 16px;
     }
     .container {
         
@@ -868,15 +911,28 @@ a {
         bottom: -40%;
     }
     .footer { height: 60px;}
-    .footerContent {padding-top: 10px; font-size: 19px;}
+
+
+    .footerContent {padding-top: 2px; font-size: 16px;}
+    
+    .projectBullets {
+        font-size: 64%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
 }
 
 
 
 @media only screen and (max-width: 600px) {
+
+     /* /////////   DROP DOWN MODAL ///////////// */
+    
     .modalWrap {
+        top: 70px;
         padding: 0;
-        padding-top: 20px;
+        background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
+    overflow-x: scroll;
     }
 
     #photoModalBody {
@@ -893,6 +949,8 @@ a {
             "x x x x";
         font-size: 14px;
         border: 0;
+        background-image: linear-gradient(to bottom right, rgba(80, 2, 100, 0.979), rgb(51, 11, 144), rgb(2, 98, 107));
+        overflow-y: scroll;
     }
 
     .imageOnModalWrap {
@@ -906,10 +964,11 @@ a {
     .imageOnModal {
         width: 179%;
         height: 493px;
-        border-color: white;
+        border-color: rgb(177, 161, 161);
         border-style: solid;
-        border-width: .5px 0 .5px 0;
+        border-width: .1px 0 .1px 0;
     }
+
     .photoDeats {
         padding: 1px;
         display: flex;
@@ -937,24 +996,20 @@ a {
     }
 
     .modalBody {
-        width: 95%;
-        height: 43%;
+        width: 258px;
+        height: 254px;
         font-size: 12px;
-        border: 3px solid limegreen;
+        border: 3px solid white;
+        border-radius: 0;
     }
 
-
-    /* /////////   DROP DOWN MODAL ///////////// */
-    .modalWrap {
-        top: 70px;
-    }
 
     /* /////////////    PROJECTS SECTION / ///////////////////////// */
     .projectContainer {
         display: grid;
 
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 80px 20px repeat( 5, 1fr);
+        grid-template-rows: 80px 20px 100px 100px 120px 150px 150px;
         grid-template-areas: 
     
             "o o o o"
@@ -994,6 +1049,9 @@ a {
         width: 100%;
         text-align: center;
         padding: 0;
+        background: rosybrown;
+        -webkit-animation: hue 15s infinite linear; 
+
 
     }
     .projectBullets {
@@ -1020,10 +1078,11 @@ a {
         margin: 0;
         justify-content: center;
         font-size: 12px;
-        height: 227px;
-        width: 93%;
+        height: 190px;
+        width: 89%;
         top: 0;
         justify-self: center;
+        border-radius: 4px;
     }
     #landescapeData {
         margin-top: 0;
@@ -1051,9 +1110,9 @@ a {
     }
     .pageHeader p {
         position: relative;
-        top: 19%;
-        font-size: 125%;
-        margin: 0 55px 0 55px;
+        top: 23%;
+        font-size: 83%;
+        margin: 0px 14px 0 14px;
         line-height: 1;
     }
     #title {
@@ -1069,7 +1128,8 @@ a {
         text-decoration-color: darkmagenta;
     }
     .projectLinks a {
-        color: limegreen;
+        color: rgba(144, 87, 87);
+        -webkit-animation: hue 3s infinite linear; 
     }
     .projectLinks a:hover {
         color: white;
@@ -1113,7 +1173,7 @@ a {
 
     .about {
         font-size: 3.5vw;
-        margin: 0 5% 0 5%;
+        margin: 1% 5% 0 5%;
     }
 
     .moon {

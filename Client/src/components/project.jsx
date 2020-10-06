@@ -8,7 +8,7 @@ const Project = ({ data }) => {
     return (
       <ul className="projectBullets">
         {sentences.map((sentence, i) => 
-          <li 
+          <li className="bullet"
             key={i}>{sentence}</li>
         )}
         
