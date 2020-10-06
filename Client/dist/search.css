@@ -229,13 +229,13 @@ input.search {
   .navWrapper {
     min-width: inherit;
     max-width: inherit;
-    height: 100px;
+    height: 70px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr) 200px;
     grid-template-areas:
-    "x x x x"
     "y y y z"
+    "x x x x"
     "r r r ."
     "r r r ."
     "r r r ."
@@ -255,13 +255,15 @@ input.search {
   }
 
   .searchInfoTech {
-    font-size: 15px;
+    font-size: 12px;
+    margin-top: 1mm;
     font-weight: bold;
     color: white;
   }
 
   .searchInfoLink {
     font-size: 24px;
+    text-decoration: underline;
   }
 
   .searchInfoWrap {
@@ -302,11 +304,17 @@ input.search {
 }
 
   .background {
-    height: 100px;
+    height: 70px;
     -webkit-box-shadow:0px 4px 4px rgba(8, 8, 8, 0.637);
     -moz-box-shadow:0px 4px 4px rgba(7, 6, 6, 0.623);
     box-shadow:0px 4px 4px rgba(2, 1, 1, 0.623);
    
+  }
+  .searchBarWrap {
+    height: 29px;
+    margin-top: 3mm;
+    font-size: 0;
+    width: 90%;
   }
 
   .leftSide {
@@ -326,10 +334,13 @@ input.search {
   .homeBtn {
     color: greenyellow;
     font-size: 24px;
-    display: flex;
-    position: relative;
-    top: -21%;
-    right: 6%;
+    /* display: flex; */
+    /* position: relative; */
+    /* top: -21%; */
+    /* right: 6%; */
+    margin: 0;
+    width: 100%;
+    text-align: center;
   }
   .searchBtn1 {
     
@@ -344,13 +355,9 @@ input.search {
   .searchBtn4 {
     grid-area: d;
   }
-  .searchBarWrap {
-    height: 50px;
-    width: 90%;
- 
-  }
+  
   .leftSide {
-    height: 50px;
+    height: 25px;
     align-items: center;
     justify-content: center;
   }

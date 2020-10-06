@@ -587,7 +587,7 @@ a {
     overflow: hidden;
 }
 .imgTile:hover {
-    background-color: darkmagenta;
+    background-color: rgb(199, 192, 199);
     
 }
 .imgTile:hover .photoBtns {
@@ -618,25 +618,24 @@ a {
 /* ############################################################################################################# */
 /* ############################################################################################################### */
 #photoModalBody {
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 80px fit-content 100px;
     grid-template-areas: 
-        "p p p p p c"
-        "p p p p p t"
-        "p p p p p d"
-        "p p p p p d"
-        "p p p p p d";
+        ". c . . t ."
+        "p p p p p p"
+        ". d d d d .";
     font-size: 16px;
     background-color: black;
-
+    border: 1px solid white;
 }
 
 .imageOnModal {
     grid-area: p;
-    width: 100%;
+    width: 70%;
+    height: 95%;
 }
 .photoDeats {
     padding: 5px;
@@ -771,13 +770,12 @@ a {
     #photoModalBody {
         font-size: 14px;
         width: 100%;
-        height: 100%;
+        height: 90%;
         grid-template-areas:
-        "p p p p c c"
-        "p p p p t t"
-        "p p p p d d"
-        "p p p p d d"
-        "p p p p d d";
+        ". c . . t ."
+        "p p p p p p"
+        ". d d d d .";
+        
     }
     /* .imageOnModalWrap {
         width: 70%;
@@ -872,50 +870,64 @@ a {
         height: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 170px 170px 170px 40px 150px;
+        grid-template-rows: 70px 170px 170px 170px 150px;
         grid-template-areas: 
-            "p p p p"
-            "p p p p"
-            "p p p p"
             "l l d d"
+            "p p p p"
+            "p p p p"
+            "p p p p"
             "x x x x";
         font-size: 14px;
+        border: 0;
     }
 
     .imageOnModalWrap {
         grid-area: p;
         width: 100%;
         height: 100%;
-        overflow: scroll;
+        overflow-x: scroll;
+        overflow-y: scroll;
+        border: lightgray;
+        border-style: solid;
+        border-width: 1px 0 1px 0;
     }
 
     .imageOnModal {
         width: 150%;
         height: 100%;
+        overflow-x: scroll;
+        overflow-y: scroll;
     }
     .photoDeats {
         padding: 1px;
+        display: flex;
+        flex-direction: column;
     }
     #picLoc {
         grid-area: l;
-        font-size: 12px;
-        font-family: 'Pacifico', cursive;
+        font-size: 23px;
+        line-height: 1;
+        
     }
     #picDesc {
         grid-area: x;
         font-family: 'Assistant', sans-serif;
+        padding: 18px;
 
     }
     #picDate {
         grid-area: d;
+        font-size: 18px;
         font-family: 'Righteous', cursive;
     }
 
     .modalBody {
-        width: 443px;
-        height: 300px;
+        width: 95%;
+        height: 43%;
         font-size: 12px;
+        border: 3px solid limegreen;
     }
+
 
     /* /////////   DROP DOWN MODAL ///////////// */
     .modalWrap {
@@ -1002,6 +1014,10 @@ a {
         margin-top: 0;
     }
 
+    .landescapeVid {
+        position: static;
+    }
+
     #sharityData {
         width: 100%;
         padding: 0;
@@ -1017,7 +1033,6 @@ a {
         top: 20%;
         font-size: 6vh;
         margin: 0;
-        color: lightsalmon;
     }
     .pageHeader p {
         position: relative;
@@ -1028,10 +1043,8 @@ a {
     }
     #title {
         top: -5%;
-        color: lightblue;
     }
     .projectLinks {
-        color: lightcoral;
         font-size: 19px;
         padding-top: 10px;
         position: relative;
@@ -1041,8 +1054,12 @@ a {
         text-decoration-color: darkmagenta;
     }
     .projectLinks a {
-        color: lightcoral;
+        color: limegreen;
     }
+    .projectLinks a:hover {
+        color: white;
+    }
+
     .projectsTitle {
         position: relative;
         top: 20%;
@@ -1080,8 +1097,8 @@ a {
     }
 
     .about {
-        font-size: 4.5vw;
-        margin: 0 3% 0 3%;
+        font-size: 3.5vw;
+        margin: 0 5% 0 5%;
     }
 
     .moon {
