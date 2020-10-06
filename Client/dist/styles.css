@@ -622,8 +622,8 @@ a {
 /* ############################################################################################################### */
 #photoModalBody {
     
-    width: 62%;
-    min-height: 700px;
+    width: 83%;
+    min-height: 88%;
     position: absolute;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -639,8 +639,9 @@ a {
 
 .imageOnModal {
     grid-area: p;
-    width: 70%;
-    height: 95%;
+    display: flex;
+    width: 80%;
+    height: 80%;
 }
 .photoDeats {
     padding: 5px;
@@ -669,6 +670,13 @@ a {
 /* ############################################################################ */
 /* ############################################################################ */
 @media only screen and (min-width: 2310px) {
+    #photoModalBody {
+        max-height: 88%;
+    }
+    .imageOnModal {
+        max-width: 1400px;
+        max-height: 1000px;
+    }
     .name {
         font-size: 2.5vw;
     }
@@ -678,6 +686,7 @@ a {
     .bridge {
         bottom: 1%;
     }
+
 
 }
 @media only screen and (max-width: 1302px) {
@@ -753,7 +762,7 @@ a {
     } 
     .modalWrap {
         background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.938), rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.3));
-        overflow: scroll;
+       
     }
     .photoRow {
         margin-left: 10%;
