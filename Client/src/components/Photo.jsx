@@ -15,7 +15,7 @@ const Photo = ({ handleToggle, bool, photoID}) => {
             </div>
             <p className="photoDeats" id="picDesc">{photoID.description}</p>
             <p className="photoDeats" id="picDate">{photoID.date}</p>
-            <p className="photoDeats" id="picLoc">{photoID.city}, {photoID.state}</p>
+            <p className="photoDeats" id="picLoc">{photoID.city} {photoID.state}</p>
           
           </div>
         </div>

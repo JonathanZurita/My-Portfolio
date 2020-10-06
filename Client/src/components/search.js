@@ -43,9 +43,9 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
             {/* CATEGORY DROP DOWN */}
           <div className="leftSide">
             <span id="left" className="searchBtn1">
-              <button  className="navBtn" onClick={() => handleToolsDrop()}>
+              <a  className="navBtn" onClick={() => handleToolsDrop()}>
                 Toolbox
-              </button>
+              </a>
             </span>
 
             <span id="left" className="searchBtn2">
@@ -58,9 +58,9 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
             </span>
 
             <span id="left" className="searchBtn4">
-              <button  className="navBtn" onClick={() => handleContactInfoModal()}>
+              <a  className="navBtn" onClick={() => handleContactInfoModal()}>
                 Contact
-              </button>
+              </a>
             </span>
           </div>
 
@@ -88,7 +88,7 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
           <div className="home">
             <NavLink to="/">
               <button className="homeBtn" >
-              <i className="fas fa-home"></i>
+              <i class="fas fa-grip-lines"></i>
               </button>
             </NavLink>
           </div>

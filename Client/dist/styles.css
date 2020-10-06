@@ -34,17 +34,17 @@ body {
 .container {
     display: grid;
     background-color: black;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat( 6, 1fr);
+    grid-template-columns: 40px repeat(10, 1fr) 40px;
+    grid-template-rows: repeat( 5, 1fr) 50px;
     grid-template-areas: 
         "x x x x x x x x x x x x"
-        ". . . a . . . . . . . ."           
-        ". c c c c c d d d d d ."
-        ". c c c c c d d d d d ."
-        ". c c c c c . . . . . ."            
-        ". b b b b b b b . . . .";
+        ". . . a . . d d d d d ."           
+        ". . c c c c d d d d d ."
+        ". . c c c c . . . . . ."            
+        ". . b b b b . . . . . ."
+        ". . . . . . . . . . . .";
     align-items: stretch;
-    
+    background-color: rgb(25, 29, 40);
     background-image: url("https://interviewstuffjonathanzurita.s3.us-east-2.amazonaws.com/AAADF6BA-C408-4761-B9C1-27D0B371A6BC.jpeg");
     background-size: contain;
     max-height: 100vh;
@@ -52,7 +52,7 @@ body {
     background-position-x: center;
     background-repeat: no-repeat;
     margin: 0;
-    margin-bottom: -80px;
+    margin-bottom: -120px;
     padding: 0;
     border: none;
 }
@@ -62,7 +62,7 @@ body {
 } */
 .title {
     grid-area: d;
-    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Space Mono', monospace;
     text-align: center;
     color: white;
     animation: mymove 1s;
@@ -100,10 +100,11 @@ div .aboutWrap {
 .name {
     font-size: 3.5vw;
     line-height: 1;
-    font-family: "righteous";
+    font-family: 'Major Mono Display', monospace;
 }
-.about {    
-    font-family: 'Assistant', sans-serif;
+.about {   
+    /* font-family: 'Major Mono Display', monospace;  */
+    font-family: 'Space Mono', monospace;
     font-size: 1vw;
     margin: 0;
     
@@ -149,9 +150,8 @@ div .aboutWrap {
 }
 .bridge {
     position: relative;
-    bottom: 57%;
-    width: 70%;
-    left: 7%;
+    width: 95%;
+    left: 13%;
     -webkit-animation: hue 20s infinite linear;
 }
 
@@ -222,22 +222,20 @@ div .aboutWrap {
     display: grid;
 
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat( 6, 1fr);
+    grid-template-rows: 100px repeat( 3, 180px) 60px;
     grid-template-areas: 
-        "o o o o o o o o o"
-        "d d d d p p p p p"
-        "q q q q p p p p p"
-        "q q q q p p p p p"
-        "q q q q p p p p p"
-        "r r r r r r r r r"
-        ;
+    "o o o o o o o o o"
+    "d d d d p p p p p" 
+    "q q q q p p p p p"
+    "q q q q p p p p p"
+    "r r r r r r r r r";
+
     align-items: center;
     justify-content: center;
     align-content: center;
-    height: 99vh;
+    height: 88vh;
     width: 100%;
-    font-size: 30px;
-    font-family: 'Assistant', sans-serif;
+    font-size: 25px;
     background-color: white;
 }
 
@@ -246,22 +244,30 @@ div .aboutWrap {
     grid-area: q;
     justify-content: center;
     align-self: center;
-    margin-left: 5%;
+    margin-left: 8%;
+    width: 83%;
     padding-right: 2px;
 }
 .proDate {
     grid-area: d;
     text-align: center;
     font-size: 95%;
-    margin-bottom: 48px;
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    position: relative;
+    top: -24%;
 }
 .projectBullets {
-    font-size: 70%;
+    font-size: 76%;
     margin-left: 2%;
     margin-right: 2%;
     text-align: left;
     line-height: 1.6;
+    font-family: monospace;
+    font-weight: 400;
+    position: relative;
+    top: -18%;
+
 }
 
 
@@ -272,14 +278,16 @@ div .aboutWrap {
 #landescapeData {
     grid-area: p;
 }
+#landescapeData .projectBullets {
+    position: relative;
+    top: 0%;
+}
 
 .proTech {
     grid-area: r;
-    font-size: 24px;
+    font-size: 1.5vw;
     text-align: center;
-    font-family: 'Assistant', sans-serif;
-    font-weight: 700;
-
+    font-family: 'Major Mono Display', monospace;
 }
 .proTitle {
     grid-area: o;
@@ -289,7 +297,7 @@ div .aboutWrap {
     width: 90%;
     text-align: right;
     padding-right: 5%;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Major Mono Display', monospace;
 }
 
 .prrgetVid {
@@ -297,6 +305,8 @@ div .aboutWrap {
     align-items: center;
     align-content: center;
     font-size: 30px;
+    height: 87%;
+    width: 90%;
 }
 .sharityVid {
     grid-area: p;
@@ -308,7 +318,8 @@ div .aboutWrap {
 .landescapeVid {
     grid-area: q;
     height: 120%;
-   
+    position: relative;
+    top: -15%;
 }
 
 
@@ -322,7 +333,7 @@ div .aboutWrap {
   
     position: fixed;
     transition: all 1s ease;
-    top: 50px;
+    top: 40px;
     left: 0px;
     right: 0px;
     bottom: 0px;
@@ -484,7 +495,7 @@ a {
     align-content: center;
     color: white;
     border: none;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Major Mono Display', monospace;
     font-weight: bold;
     background-image: linear-gradient(rgb(25, 29, 40), black, rgb(25, 29, 40));
 }
@@ -502,7 +513,7 @@ a {
     grid-area: v;
     margin-top: 88px;
     margin-bottom: 20px;
-    font-size: 116px;
+    font-size: 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -511,7 +522,7 @@ a {
     width: fit-content;
 }
 .pageHeader p {
-    font-family: 'Righteous';
+    font-family: 'Space Mono', monospace;
     font-size: 30px;
 }
 
@@ -525,10 +536,11 @@ a {
     
     width: 100%;
     color: white;
-    font-family: 'Pacifico', cursive;
-    font-size: 40px;
-    font-family: 'Assistant', sans-serif;
-
+    font-family: 'Space Mono', monospace;
+    text-decoration: underline;
+    font-size: 25px;
+    position: relative;
+    top: 8%;
 }
 
 .linkName1 {
@@ -662,7 +674,7 @@ a {
     }
 
 }
-@media only screen and (max-width: 1230px) {
+@media only screen and (max-width: 1302px) {
     .name {
         font-size: 4.5vw;
     }
@@ -720,8 +732,6 @@ a {
 
     .fireworks2 {
         border: none;
-        
-        
     }
 
     .name {
@@ -746,6 +756,12 @@ a {
     .footer {
         margin-top: -1px;
     }
+    .bridge {
+        width: 60%;
+        left: 13%;
+        bottom: 55%;  
+    }
+    
 }
 
 
@@ -947,6 +963,7 @@ a {
         font-size: 16px;
         width: 100%;
         text-align: center;
+        padding: 0 50px 0 50px;
 
     }
     .projectBullets {
@@ -956,18 +973,15 @@ a {
     }
     .proTitle {
         grid-area: o;
-        font-size: 60px;
-        
-        line-height: .9;
+        font-size: 39px;
         font-weight: bold;
-        margin-left: 5%;
-        margin-top: 14px;
-        /* width: 99%; */
         height: fit-content;
         text-align: center;
         justify-content: center;
         align-items: center;
         display: flex;
+        padding: 0;
+        width: 100%;
     }
 
 
@@ -1002,7 +1016,7 @@ a {
     .pageHeader h1 {
         position: relative;
         top: 20%;
-        font-size: 452%;
+        font-size: 6vh;
         margin: 0;
         color: lightsalmon;
     }
@@ -1051,7 +1065,7 @@ a {
     }
 
     .name {
-        font-size: 21vw;
+        font-size: 12vw;
     }
 
     .title {
@@ -1093,7 +1107,8 @@ a {
     }
     .bridge {
         bottom: 6%;
-        left: 2%;
+        left: 0;
+        width: 100%;
     }
     .fireworks2 {
         width: 500px;
