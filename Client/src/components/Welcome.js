@@ -7,9 +7,11 @@ const WelcomePage = () => {
 
 return (
     <div className="container">
-        <div className="name"> 
-            Hi, my name is Jonathan Zurita and
-            I am a Full Stack Software Developer... 
+        <div className="name1"> 
+            Hi, my name is Jonathan Zurita 
+        </div>
+        <div className="name2">  
+          and I'm a Full Stack Software Developer.
         </div>
         <Animated className="welcomeBtnAnimation"  animationIn="flipInX" animationOut="fadeOut" isVisible={true} animationInDelay={5000}>
             <NavLink className="welcomeBtn" to='/projects'> ...check out my work</NavLink>

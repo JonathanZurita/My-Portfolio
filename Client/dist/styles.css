@@ -85,29 +85,53 @@ div .aboutWrap {
     cursor: pointer;
 }
 
-.name {
+.name1 {
     position: absolute;
-    top: 40%;
-    width: 1258px;
+    width: fit-content;
     font-size: 40px;
     overflow: hidden;
     white-space: nowrap;
     flex-direction: row;
-    top: 39%;
-    left: 4%;
+    top: 36%;
+    left: 18%;
     position: absolute;
     color: white;
-    border-right: .15em solid rgb(0, 47, 255);
+    border-right: .15em solid transparent;
     margin: 0 auto;
     animation: 
-    typing 4.5s steps(40, end),
-    blink-caret .65s step-end infinite;
+    typing 2.5s steps(40, end),
+    blink-caret .65s step-end;
+    animation-fill-mode: before;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 650px;  }
+}
+
+.name2 {
+  position: absolute;
+  font-size: 40px;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-direction: row;
+  top: 40%;
+  left: 18%;
+  position: absolute;
+  color: white;
+  border-right: .15em solid transparent;
+  margin: 0 auto;
+  animation: 
+  typing 2.5s steps(40, end) 2.5s,
+  blink-caret .65s step-end 2.5s infinite;
+  animation-fill-mode: forwards;
 }
 .welcomeBtnAnimation {
     position: absolute;
     color: white;
     bottom: 54%;
-    left: 29%;
+    left: 18%;
     
 }
 .welcomeBtn {
@@ -127,13 +151,10 @@ div .aboutWrap {
     
 
 }
-
-
-
 @keyframes typing {
-    from { width: 0 }
-    to { width: 1231px }
-  }
+  from { width: 0; }
+  to { width: 690px;  }
+}
 
   @keyframes blink-caret {
     from, to { border-color: transparent }
@@ -894,11 +915,9 @@ a {
     .welcomeBtn {
         font-size: 19px;
         height: 32px;
-        width: 205px;
     }
     .welcomeBtnAnimation {
         bottom: 47%;
-        left: 23%;
     }
     .modalWrap {
         padding: 0;
@@ -1011,7 +1030,7 @@ a {
     }
     .welcomeBtnAnimation {
         bottom: 59%;
-        left: 25%;
+        left: 3%;
     }
     .bridgeContainer {
         bottom: 11%;
@@ -1245,26 +1264,27 @@ a {
         margin: 0;
     }
 
-    .name {
-      top: 37%;
-      left: 10%;
-      font-size: 22px;
-      height: 26px;
-      width: 301px;
-        
-        text-align: center;
-        word-break: break-word;
-        line-break: normal;
+    .name1 {
+      top: 33%;
+      left: 3%;
+      font-size: 18px;
+      height: 24px;
+      animation:
+        typing 3.5s steps(40, end),
+        blink-caret .65s step-end infinite;
+      animation-fill-mode: forwards;
     }
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 313px }
-      }
-
-    @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: rgb(255, 217, 0); }
-      }
+    .name2 {
+      top: 37%;
+      left: 3%;
+      font-size: 18px;
+      height: 24px;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      animation: 
+        typing 3.4s steps(40, end) 2.1s,
+        blink-caret .65s step-end 2.1s infinite ;
+      animation-fill-mode: forwards;
+    }
 
     .title {
         z-index: 40;
