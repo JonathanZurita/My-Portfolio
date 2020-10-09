@@ -2,11 +2,9 @@ import React from 'react';
 import Project from './project.jsx';
 import axios from 'axios';
 import {Animated} from "react-animated-css";
-
 import { NavLink } from "react-router-dom";
-
-const path = process.env.PATH || 'http://localhost:3000';
-
+import Search from './search.js';
+import Footer from './footer.jsx';
 const Projects = ({ projectNamefromRouter }) => {
   // console.log(projectName)
 
@@ -19,18 +17,26 @@ const Projects = ({ projectNamefromRouter }) => {
 
   //sets project data state from the DB
   const getProjects = () => {
-    console.log('axios get req initiated', projectName)
+
     axios.get(`/project`, {params : {name: projectName}})
-      .then(res => {
-        setProjectData(res.data);
-      })
-      .catch(err => {
-        console.log('axios error getting project info: ', err);
-      })
+    .then(res => {
+      setProjectData(res.data);
+    })
+    .catch(err => {
+      console.log('axios error getting project info: ', err);
+    })
   }
 
   return (
     <div>
+
+      <Search />
+
+      <Animated
+        animationIn="fadeInUp"
+        animationOut="fadeOut"
+        isVisible={true}
+      >
       <div className="pageHeader">
         <NavLink className="projectsTitle" to="/projects">
           <h1 id="title">Projects</h1>
@@ -49,7 +55,6 @@ const Projects = ({ projectNamefromRouter }) => {
       </div>
 
       <div className="projectsWrapper">
-        
         {projectData.map((project, i) => 
           <Animated animationIn="fadeInUp" animationOut="fadeOut" isVisible={true}>
             <Project key={i}
@@ -58,6 +63,8 @@ const Projects = ({ projectNamefromRouter }) => {
           </Animated>
         )}
       </div>
+      <Footer />
+      </Animated>
     </div>
   )
 }

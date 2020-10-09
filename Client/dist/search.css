@@ -41,7 +41,8 @@ code {
   height: 40px;
   z-index: 2000;
 
-  background: black;
+  background-image: linear-gradient(to right, rgba(22, 2, 27, 0.994), rgba(22, 2, 27, 0.994), rgba(31, 4, 93, 0.994));
+
   width: 100%;
 
   -webkit-box-shadow:0px 4px 4px rgba(8, 8, 8, 0.637);
