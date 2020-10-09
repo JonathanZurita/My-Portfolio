@@ -960,18 +960,21 @@ a {
 
 
 @media only screen and (max-width: 600px) {
+    .water {
+        height: 100px;
+    }
 
     .welcomeBtn {
         font-size: 16px;
         height: 27px;
-        width: 177px;
+        width: 183px;
     }
     .welcomeBtnAnimation {
         bottom: 47%;
         left: 25%;
     }
     .bridgeContainer {
-        bottom: 5%;
+        bottom: 11%;
         left: 0%;
         width: 100%;
     }
@@ -1269,7 +1272,7 @@ a {
     .fireworksContainer{
         display: flex;
         position: relative;
-        top: 56%;
+        top: 46%;
         left: -16%;
         bottom: 0%;
     }
