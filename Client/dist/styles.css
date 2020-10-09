@@ -968,9 +968,10 @@ a {
         font-size: 16px;
         height: 27px;
         width: 183px;
+        z-index: 5000;
     }
     .welcomeBtnAnimation {
-        bottom: 47%;
+        bottom: 59%;
         left: 25%;
     }
     .bridgeContainer {
