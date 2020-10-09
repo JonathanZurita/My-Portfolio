@@ -411,7 +411,7 @@ div .aboutWrap {
 
 /* tools dropdown */
   .modalWrap {
-     background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
+    background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
     color: rgb(51,51,51);
     z-index: 5000;
     display: flex;
@@ -630,7 +630,7 @@ a {
     align-content: center;
     color: white;
     border: none;
-    font-family: 'CCOverbyteOff', regular;
+    font-family: 'Staatliches', cursive;
     letter-spacing: 3px;
     font-weight: bold;
     background-image: linear-gradient(rgb(25, 29, 40), black, rgb(25, 29, 40));
@@ -660,6 +660,7 @@ a {
 .pageHeader p {
     font-family: 'Space Mono', monospace;
     font-size: 30px;
+    letter-spacing: 1px;
 }
 
 .projectLinks {
@@ -889,8 +890,8 @@ a {
         
     }
     .leftSide {
-        margin-top: 1mm;
-        font-size: 16px;
+      margin: 0 0 0 13px;
+      font-size: 16px;
     }
     .projectContainer {
         font-size: 24px;
@@ -916,9 +917,17 @@ a {
     .welcomeBtn {
         font-size: 19px;
         height: 32px;
+        width: 207px;
     }
     .welcomeBtnAnimation {
         bottom: 47%;
+    }
+    .name1 {
+      font-size: 20px;
+    }
+    .name2 {
+      font-size: 20px;
+      top: 43%;
     }
     .modalWrap {
         padding: 0;
@@ -970,42 +979,19 @@ a {
     .projectLinks {
         font-size: 16px;
     }
-   
-    .moon {
-        grid-area: x;
-        margin: 0;
-        margin-top: 35%;
-    }
-    .fireworks2 {
-        height: 300px;
-        top: 20%;
-    }
-    .fireworksContainer {
-        
-        display: flex;
-        position: static;
-        margin: 0;
-    }
-    .title {
-        grid-area: b;
-        margin: 0;
-        z-index: 2;
-    }
-    .aboutWrap {
-        width: 350px;
-    }
-    .about {
-        margin: 0;
-    }
-    .bridgeContainer {
-        grid-area: z;
-        margin: 0;
-    }
-    .bridge {
-        bottom: -40%;
-    }
+
     .footer { height: 60px;}
 
+    .fireworksContainer {
+      bottom: 17%;
+      left: 45%;
+    }
+
+    .bridgeContainer {
+      bottom: 13%;
+      left: 48%;
+      width: 86%;
+    }
 
     .footerContent {padding-top: 2px; font-size: 16px;}
     
@@ -1013,6 +999,13 @@ a {
         font-size: 64%;
         margin-left: 0%;
         margin-right: 0%;
+    }
+    .leftSide {
+      margin-top: 1.5mm;
+    }
+
+    span#left {
+      margin-right: 25px;
     }
 }
 
@@ -1044,13 +1037,32 @@ a {
     .modalWrap {
         top: 70px;
         padding: 0;
-        background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
+        font-size: 22px;
+        align-items: center;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.964), rgba(2, 98, 107, 0.919));
         overflow-x: scroll;
+        width: 100%;
+        animation: none;
     }
-
+    thead {
+      background: mediumpurple;
+      font-size: 27px;
+      font-weight: bold;
+    }
+    tbody {
+      font-size: 18px;
+      font-weight: 100;
+    }
+    
+    .table {
+      text-align: center;
+      width: 100vw;
+      margin: 0;
+    }
     #photoModalBody {
         width: 100vw;
-        height: 100%;
+        height: 100vh;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 90px 170px 170px 170px 250px;
@@ -1064,6 +1076,7 @@ a {
         border: 0;
         background-image: linear-gradient(to bottom right, rgba(80, 2, 100, 0.979), rgb(51, 11, 144), rgb(2, 98, 107));
         overflow-y: scroll;
+        padding-top: 40px;
     }
 
     .imageOnModalWrap {
@@ -1317,9 +1330,6 @@ a {
 
 @media only screen and (max-width: 450px) {
     
-    .hobTable {
-        margin-right: 100px;
-    }
     .bridge {
         width: 100%;
         box-shadow: none;

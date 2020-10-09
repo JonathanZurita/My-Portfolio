@@ -16,9 +16,9 @@ const toolData = [
 const projects = ["Landescape", "Prrget", "Sharity"];
 const education = [
   "Hack Reactor Software Engineering Grad: 2020",
-  "Arizona State University",
+  "Arizona State University:",
   "Masters in Teaching English to Speakers of Other Languages",
-  "Texas State University",
+  "Texas State University:",
   "Business Admi/Mgmt with Entrepreneurial Concentration",
 ];
 const hobbies = ["landscape photography", "traveling", "hiking"];
@@ -33,7 +33,7 @@ const Tools = ({ toolsDrop, handleToolsDrop }) => {
             <Table className="toolsTable">
               <thead>
                 <tr>
-                  <th className="table">tools</th>
+                  <th className="table">My Toolbox</th>
                 </tr>
               </thead>
               <tbody>
@@ -69,7 +69,7 @@ const Tools = ({ toolsDrop, handleToolsDrop }) => {
             <Table className="eduTable">
               <thead>
                 <tr>
-                  <th className="table">education</th>
+                  <th className="table">Education</th>
                 </tr>
               </thead>
               <tbody>
@@ -86,7 +86,7 @@ const Tools = ({ toolsDrop, handleToolsDrop }) => {
               <Table className="hobTable">
                 <thead>
                   <tr>
-                    <th>hobbies</th>
+                    <th>Hobbies</th>
                   </tr>
                 </thead>
                 <tbody>
