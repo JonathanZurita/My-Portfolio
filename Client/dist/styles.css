@@ -6,6 +6,7 @@ body {
     background-color: rgb(51, 50, 50);
     background-image: linear-gradient(to bottom right, rgba(22, 2, 27, 0.994), rgba(22, 2, 27, 0.994), rgba(31, 4, 93, 0.994), rgba(99, 119, 54, 0.819));
     margin: 0;
+    height: 100vh;
 }
 .footer {
     width: 100%;
