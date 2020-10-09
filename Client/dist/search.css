@@ -175,7 +175,7 @@ input.search {
 .searchBarWrap:hover + div.searchInfoWrap {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(rgba(0, 0, 0, 0.952), rgba(0, 0, 0, 0.774));
+  background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
 }
 .searchBarWrap:hover + div.searchInfoWrap + div.searchInfoRow {
   display: flex;
@@ -183,7 +183,7 @@ input.search {
 }
 .searchInfoWrap:hover {
   display: flex;
-  background: linear-gradient(rgba(0, 0, 0, 0.952), rgba(0, 0, 0, 0.774));
+  background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
   overflow: hidden;
   flex-direction: column;
 }
@@ -195,7 +195,6 @@ input.search {
 .searchInfoRow {
   display: inherit;
   background-color: transparent;
-  border-bottom: lawngreen;
   color: black;
   margin-bottom: 3px;
   font-size: 16px;
@@ -210,6 +209,11 @@ input.search {
   font-size: 18px;
   font-weight: bold;
   margin: 0 10px 0 10px;
+}
+.searchInfoLink:hover {
+  color: purple;
+  font-size: 22px;
+
 }
 .searchInfoTech {
   font-size: 12px;

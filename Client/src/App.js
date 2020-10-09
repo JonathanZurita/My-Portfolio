@@ -7,6 +7,8 @@ import Modal from './components/Modal.jsx';
 import Projects from './components/Projects.jsx';
 import SearchSuggest from './components/searchSuggestions.jsx';
 
+import {Animated} from "react-animated-css";
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -37,30 +39,69 @@ const App = () => {
 
     return (
         <div className="wrap">
+            
         <Router>
-            <div className="background" />
+            {/* <div className="background" />
             <Search 
                 handleToolsDrop={toggleToolsDropModal} 
                 handleContactInfoModal={toggleContactInfoModal}
-            />
+            /> */}
             <SearchSuggest />
                 <Switch>
                 <div>
-                    <Route path="/projects" component={Projects} />
-                    <Route path="/pics" component={Grid} />
+                    <Route path="/projects">
+                    <Animated animationIn="fadeInUp" animationOut="fadeOut" isVisible={true} >
+                            <div className="background" />
+                            <Search 
+                            handleToolsDrop={toggleToolsDropModal} 
+                            handleContactInfoModal={toggleContactInfoModal}
+                            />
+                        <SearchSuggest />
+                        <Projects />
+                    </Animated>
+                    </Route>
+                    <Route path="/pics">
+                    <Animated animationIn="fadeInUp" animationOut="fadeOut" isVisible={true} >
+                    <div className="background" />
+                            <Search 
+                            handleToolsDrop={toggleToolsDropModal} 
+                            handleContactInfoModal={toggleContactInfoModal}
+                            />
+                            <Grid />
+                            </Animated>
+                    </Route>
                         <Route path="/sharity">
+                        
+                        <div className="background" />
+                            <Search 
+                            handleToolsDrop={toggleToolsDropModal} 
+                            handleContactInfoModal={toggleContactInfoModal}
+                            />
+
                             <Projects projectNamefromRouter={"Sharity"} />
                         </Route>
                         <Route path="/landescape">
+                        <div className="background" />
+                            <Search 
+                            handleToolsDrop={toggleToolsDropModal} 
+                            handleContactInfoModal={toggleContactInfoModal}
+                            />
                             <Projects projectNamefromRouter={"Landescape"} />
                         </Route>
                         <Route path="/prrget">
+                        <div className="background" />
+                            <Search 
+                            handleToolsDrop={toggleToolsDropModal} 
+                            handleContactInfoModal={toggleContactInfoModal}
+                            />
                             <Projects projectNamefromRouter={"Prrget"} />
                         </Route>
                     <Route path="/" exact>
+                    <Animated animationOut="fadeOut" isVisible={true} >
                         <Welcome />
-                        <Projects />
-                        <Grid />
+                        </Animated>
+                        {/* <Projects />
+                        <Grid /> */}
                     </Route>
                     </div>
                 </Switch>
@@ -74,14 +115,14 @@ const App = () => {
                 contactInfoModal={contactInfoModal}
                 handleContactInfoModal={toggleContactInfoModal} 
             />
-            <div className="footer">
+            {/* <div className="footer">
                 <div className="footerContent">
                     <a href="https://www.linkedin.com/in/jonathanzurita123/" className="icon"><i className="fab fa-linkedin"></i></a>
                     <a href="https://github.com/JonathanZurita" className="icon"><i className="fab fa-github-alt"></i></a>
                     <a href="https://www.instagram.com/trail_less_traveled/" className="icon"><i className="fab fa-instagram"></i></a>
                 </div>
                 
-            </div>
+            </div> */}
             </Router>
         
         </div>

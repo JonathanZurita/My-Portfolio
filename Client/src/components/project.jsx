@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 const Project = ({ data }) => {
   const [projectData, setProjData] = useState(data);
 
@@ -18,10 +19,11 @@ const Project = ({ data }) => {
  
   return (
     <div className="projectContainer" id={projectData.title}>
+      
       <div className="proTitle">{projectData.title}</div>
     
       <div className="proDate">{projectData.explanation}</div>
-
+    
       <div id={projectData.dataclass} className="proInfo">
           {makeBullets()}
       </div>

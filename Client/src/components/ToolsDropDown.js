@@ -17,7 +17,9 @@ const Tools = ({toolsDrop, handleToolsDrop}) => {
 
     if(toolsDrop) {
         return (
-            <div className="modalWrap" onClick={() => handleToolsDrop()}>
+            <div onClick={() => handleToolsDrop()}>
+                <div className="emptySpaceModalNavSection"></div>
+                <div className="modalWrap" onClick={() => handleToolsDrop()}>
                 <span>
                 <Table className='toolsTable' >
                     <thead>
@@ -84,7 +86,7 @@ const Tools = ({toolsDrop, handleToolsDrop}) => {
                 </NavLink>
                 </span>
             
-          
+                </div>
             </div>
             
         )

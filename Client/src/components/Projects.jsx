@@ -1,6 +1,7 @@
 import React from 'react';
 import Project from './project.jsx';
 import axios from 'axios';
+import {Animated} from "react-animated-css";
 
 import { NavLink } from "react-router-dom";
 
@@ -48,10 +49,13 @@ const Projects = ({ projectNamefromRouter }) => {
       </div>
 
       <div className="projectsWrapper">
+        
         {projectData.map((project, i) => 
-          <Project key={i}
-            data={project} 
-          />
+          <Animated animationIn="fadeInUp" animationOut="fadeOut" isVisible={true}>
+            <Project key={i}
+              data={project} 
+            />
+          </Animated>
         )}
       </div>
     </div>

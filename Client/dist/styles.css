@@ -3,7 +3,8 @@ html, body {
 }
 body {
     position: relative;
-    background: black;
+    background-color: rgb(51, 50, 50);
+    background-image: linear-gradient(to bottom right, rgba(22, 2, 27, 0.994), rgba(22, 2, 27, 0.994), rgba(31, 4, 93, 0.994), rgba(99, 119, 54, 0.819));
     margin: 0;
 }
 .footer {
@@ -31,59 +32,45 @@ body {
 }
 
 
+
 .container {
-    display: grid;
-    background-color: black;
-    grid-template-columns: 40px repeat(10, 1fr) 40px;
-    grid-template-rows: repeat( 5, 1fr) 50px;
-    grid-template-areas: 
-        "x x x x x x x x x x x x"
-        ". . . a . . d d d d d ."           
-        ". . c c c c d d d d d ."
-        ". . c c c c . . . . . ."            
-        ". . b b b b . . . . . ."
-        ". . . . . . . . . . . .";
-    align-items: stretch;
-    background-color: rgb(25, 29, 40);
-    background-image: url("https://interviewstuffjonathanzurita.s3.us-east-2.amazonaws.com/AAADF6BA-C408-4761-B9C1-27D0B371A6BC.jpeg");
-    background-size: contain;
-    max-height: 100vh;
-    max-width: 100%;
-    background-position-x: center;
-    background-repeat: no-repeat;
+    
+    background-color: rgb(51, 50, 50);
+    min-width: 100%;
+    height: 100vh;
+    justify-self: center;
+    display: flex;
+    background-image: linear-gradient(to bottom right, rgba(22, 2, 27, 0.994), rgba(22, 2, 27, 0.994), rgba(31, 4, 93, 0.994), rgba(99, 119, 54, 0.819));
     margin: 0;
-    margin-bottom: -120px;
+    z-index: -3;
     padding: 0;
-    border: none;
 }
-/* .wrap {
-    grid-column: span 7;
-    grid-row: span 5;
-} */
+
 .title {
-    grid-area: d;
-    font-family: 'Space Mono', monospace;
     text-align: center;
     color: white;
     animation: mymove 1s;
     display: flex;
-    flex-direction: column;
+    position: absolute;
+    top: 39%;
     align-items: center;
-    margin-right: 20px;
-    width: 50vw;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
 }
 .titleWrap {
     max-width: 80%;
-    height: fit-content;
+    height: 100px;
 }
+
 div .aboutWrap {
     display: none;
     color: white;
     float: write;
+    border-radius: 90px 0 90px 0;
+    padding: 20px;
 }
-.aboutWrap:hover {
-    display: flex;
-}
+
 .aboutBtn {
     background: transparent;
     color: white;
@@ -97,18 +84,62 @@ div .aboutWrap {
     display: flex;
     cursor: pointer;
 }
+
 .name {
-    font-size: 3.5vw;
-    line-height: 1;
-    font-family: 'Major Mono Display', monospace;
+    position: absolute;
+    top: 40%;
+    width: 1258px;
+    font-size: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    flex-direction: row;
+    top: 39%;
+    left: 4%;
+    position: absolute;
+    color: white;
+    border-right: .15em solid rgb(0, 47, 255);
+    margin: 0 auto;
+    animation: 
+    typing 4.5s steps(40, end),
+    blink-caret .65s step-end infinite;
 }
-.about {   
-    /* font-family: 'Major Mono Display', monospace;  */
-    font-family: 'Space Mono', monospace;
-    font-size: 1vw;
-    margin: 10px 20px 0 20px;
+.welcomeBtnAnimation {
+    position: absolute;
+    color: white;
+    bottom: 54%;
+    left: 29%;
     
 }
+.welcomeBtn {
+    font-size: 29px;
+    height: 48px;
+    position: absolute;
+    width: 289px;
+    border: .5px solid;
+    border-radius: 4px;
+    padding: 0px 12px;
+
+}
+.welcomeBtn:hover {
+    -webkit-animation: hue 6s infinite linear;
+    background-color: rgba(137, 43, 226, 0.726);
+    color: white;
+    
+
+}
+
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 1231px }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(0, 47, 255); }
+  }
+
 .subheader {
     font-family: 'Assistant', sans-serif;
     font-size: 1.2vw;
@@ -119,40 +150,67 @@ div .aboutWrap {
     to {filter: blur(0px)}
 }
 
-.bridgeContainer {
-    grid-area: b;
-    display: flex;
-    filter: contrast(2);
-}
-.fireworksContainer {
-    grid-area: c;
-  /* 16:9 aspect ratio */
-  padding-top: 62.5%;
-  position: relative;
 
+.fireworksContainer {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    position: absolute;
+    bottom: 25%;
+    left: 59%;
 }
 .moon {
-    grid-area: a;
+    opacity: .7;
+    position: absolute;
+    top: 9%;
+    left: 25%;
+}
+.flashAnimation {
+    height: 250px;
 }
 .fireworks2 {
     border: 0;
     display: flex;
-    margin-left: 20%;
-    height: 500px;
+    height: 400px;
     width: 500px;
     left: 0;
-    position: absolute;
     top: 0;
     object-fit: scale-down;
-
-    filter: contrast(2);
+    -webkit-transform: scale(0.6, 0.6);
+    filter: contrast(1);
     
 }
+.bridgeContainer {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    /* display: flex; */
+    flex-direction: column;
+    bottom: 5%;
+    left: 48%;
+    width: 72%;
+    /* height: 90%; */
+    z-index: 2;
+}
 .bridge {
-    position: relative;
-    width: 95%;
-    left: 13%;
-    -webkit-animation: hue 20s infinite linear;
+    /* display: flex; */
+    width: 1042px;
+    -webkit-animation: hue 4s infinite linear;
+    box-shadow: 0px 35px rgba(58, 29, 29, 0.541);
+    
+}
+.water {
+    width: 100%;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 0%;
+    z-index: 1;
+    background-color: rgba(10, 10, 87, 0.972);
+
 }
 
 .bridge:hover {
@@ -272,9 +330,10 @@ div .aboutWrap {
     margin-bottom: 30px;
 }
 
-
 #Landescape {
     background-image: linear-gradient( rgb(25, 29, 40), black, rgb(25, 29, 40));
+    width: 100vw;
+    margin: 0;
     color: white;
 }
 #landescapeData {
@@ -299,7 +358,8 @@ div .aboutWrap {
     width: 90%;
     text-align: right;
     padding-right: 5%;
-    font-family: 'Major Mono Display', monospace;
+    letter-spacing: 3px;
+    font-family: 'Staatliches', cursive;
 }
 
 .prrgetVid {
@@ -329,14 +389,14 @@ div .aboutWrap {
 
 /* tools dropdown */
   .modalWrap {
-    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.904), rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0.3));
+     background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
     color: rgb(51,51,51);
-    z-index: 1000;
+    z-index: 5000;
     display: flex;
     padding: 5mm;
   
     position: fixed;
-    transition: all 1s ease;
+    transition: all 10ms ease;
     top: 40px;
     left: 0px;
     right: 0px;
@@ -348,13 +408,21 @@ div .aboutWrap {
     animation-duration: 650ms;
     height: fit-content; */
   }
+  .emptySpaceModalNavSection {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    z-index: 5000;
+    background-color: transparent;
+  }
 
   @keyframes dropMenuFadeIn {
     0% {
-      background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.204), rgba(0, 0, 0, 0.103), rgba(0, 0, 0, 0.1));
+      background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
     }
     100% {
-        background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.904), rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0.3));
+        background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
       
     }
   }
@@ -501,7 +569,8 @@ a {
     align-content: center;
     color: white;
     border: none;
-    font-family: 'Major Mono Display', monospace;
+    font-family: 'CCOverbyteOff', regular;
+    letter-spacing: 3px;
     font-weight: bold;
     background-image: linear-gradient(rgb(25, 29, 40), black, rgb(25, 29, 40));
 }
@@ -676,11 +745,9 @@ a {
         max-height: 1000px;
     }
     .name {
-        font-size: 2.5vw;
+
     }
-    .container {
-        background-size: cover;
-    }
+   
     .bridge {
         bottom: 1%;
     }
@@ -689,7 +756,7 @@ a {
 }
 @media only screen and (max-width: 1302px) {
     .name {
-        font-size: 4.5vw;
+       
     }
     .icon {
         padding: 25px;
@@ -704,31 +771,7 @@ a {
     .wrap {
         max-width: inherit;
     }
-    .moon {
-        grid-area: a;
-        margin-top: 130px;
-    }
-    .container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat( 8, 1fr);
-        grid-template-areas: 
-            ". . a ."
-            ". . . ."           
-            "d d d d "
-            "d d d d"
-            "d d d d"
-            "c c c c"
-            "c c c c"            
-            "b b b b";
-        align-items: center;
-        margin: 0;
-        min-width: inherit;
-        max-width: 100%;
-        min-height: 90%;
-        max-height: 99vh;
-        background-size: cover;
-    }
+   
     .title {
         grid-area: d;
         font-size: 60%;
@@ -738,9 +781,6 @@ a {
     }
     .titleWrap {
         height: 227px;
-    }
-    .fireworksContainer {
-        grid-area: c;
     }
 
     .fireworks2 {
@@ -753,15 +793,13 @@ a {
     .about {
         margin: 0 13%;
         font-size: 2vw;
+        
     }
 
     .subheader {
         font-size: 30px;
     } 
-    .modalWrap {
-        background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.938), rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.3));
-       
-    }
+    
     .photoRow {
         margin-left: 10%;
         margin-right: 10%;
@@ -813,6 +851,16 @@ a {
 }
 
 @media only screen and (min-width: 800px) and (max-width: 815px) {
+
+    .welcomeBtn {
+        font-size: 19px;
+        height: 32px;
+        width: 205px;
+    }
+    .welcomeBtnAnimation {
+        bottom: 47%;
+        left: 23%;
+    }
     .modalWrap {
         padding: 0;
         background-color: black;
@@ -863,20 +911,7 @@ a {
     .projectLinks {
         font-size: 16px;
     }
-    .container {
-        
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat( 4, 1fr);
-        grid-template-areas: 
-        ". . x . . . . ."
-        "c c c c b b b b"
-        "c c c c b b b b"
-        "z z z z . . . ."
-        ;
-        height: 450px;
-
-    }
+   
     .moon {
         grid-area: x;
         margin: 0;
@@ -926,13 +961,28 @@ a {
 
 @media only screen and (max-width: 600px) {
 
+    .welcomeBtn {
+        font-size: 16px;
+        height: 27px;
+        width: 177px;
+    }
+    .welcomeBtnAnimation {
+        bottom: 47%;
+        left: 25%;
+    }
+    .bridgeContainer {
+        bottom: 5%;
+        left: 0%;
+        width: 100%;
+    }
+
      /* /////////   DROP DOWN MODAL ///////////// */
     
     .modalWrap {
         top: 70px;
         padding: 0;
         background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
-    overflow-x: scroll;
+        overflow-x: scroll;
     }
 
     #photoModalBody {
@@ -1156,8 +1206,25 @@ a {
     }
 
     .name {
-        font-size: 12vw;
+        top: 37%;
+        left: 10%;
+        font-size: 23px;
+        height: 26px;
+        width: 309px;
+        
+        text-align: center;
+        word-break: break-word;
+        line-break: normal;
     }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 309px }
+      }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: rgb(255, 217, 0); }
+      }
 
     .title {
         z-index: 40;
@@ -1178,13 +1245,12 @@ a {
 
     .moon {
         position: absolute;
-        left: 2%;
-        top: 2%;
+        left: 37%;
+        top: 20%;
     }
 
     .bridge {
-        align-self: center;
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -1193,23 +1259,19 @@ a {
     .hobTable {
         margin-right: 100px;
     }
-    .container {
-        max-height: 712px;
-    }
     .bridge {
-        bottom: 6%;
-        left: 0;
         width: 100%;
+        box-shadow: none;
     }
-    .fireworks2 {
-        width: 500px;
-        height: 300px;
+    .fireworks2 { 
         margin-left: 0;
     }
     .fireworksContainer{
         display: flex;
         position: relative;
-        -webkit-transform: scale(0.4, 0.4);
+        top: 56%;
+        left: -16%;
+        bottom: 0%;
     }
     .footer {
         height: 100px;
