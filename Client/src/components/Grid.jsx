@@ -4,6 +4,7 @@ import Photo from "./Photo.jsx";
 import Search from "./search.js";
 import Footer from './footer.jsx';
 import {Animated} from "react-animated-css";
+import { NavLink } from "react-router-dom";
 
 const Grid = () => {
   const [photos, setPhotos] = React.useState([]);
@@ -25,7 +26,7 @@ const Grid = () => {
           setModalPhoto = allPhotos[i];
         }
       }
-      console.log(e.target.id);
+      //console.log(e.target.id);
       setPhotoModalData(setModalPhoto);
       setModalToggle(true);
     }
@@ -66,22 +67,22 @@ const Grid = () => {
           </div>
 
           <Photo
-            handleToggle={togglePhoto}
+            togglePhoto={togglePhoto}
             photoData={allPhotos}
             photoID={photoModalData}
             bool={modalToggle}
           />
           {photos.map((photo, i) => (
             <div key={i} className="photoRow">
-              <div className="imgTile" onClick={() => togglePhoto(event)}>
+              <div className="imgTile" to="/photo" onClick={() => togglePhoto(event)}>
                 <img id={photo[0].id} className="photo" src={photo[0].url} />
               </div>
 
-              <div className="imgTile" onClick={() => togglePhoto(event)}>
+              <div className="imgTile" to="/photo" onClick={() => togglePhoto(event)}>
                 <img id={photo[1].id} className="photo" src={photo[1].url} />
               </div>
 
-              <div className="imgTile" onClick={() => togglePhoto(event)}>
+              <div className="imgTile" to="/photo" onClick={() => togglePhoto(event)}>
                 <img id={photo[2].id} className="photo" src={photo[2].url} />
               </div>
             </div>

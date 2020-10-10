@@ -3,9 +3,11 @@ import Welcome from "./components/Welcome.js";
 import Grid from "./components/Grid.jsx";
 import Projects from "./components/Projects.jsx";
 import SearchSuggest from "./components/searchSuggestions.jsx";
+import Photo from './components/Photo.jsx';
 
 import { Animated } from "react-animated-css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 
 const App = () => {
 
@@ -16,6 +18,7 @@ const App = () => {
         <Switch>
           <div>
             <Route path="/projects"><Projects/></Route>
+            <Route path="/photo"><Photo/></Route>
             <Route path="/pics"><Grid/></Route>
             <Route path="/sharity"><Projects projectNamefromRouter={"Sharity"}/></Route>
             <Route path="/landescape"><Projects projectNamefromRouter={"Landescape"}/></Route>

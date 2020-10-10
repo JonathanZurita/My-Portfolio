@@ -659,6 +659,7 @@ a {
     /* align-items: center; */
     align-self: center;
     width: fit-content;
+    letter-spacing: 10px;
 }
 .pageHeader p {
     font-family: 'Space Mono', monospace;
@@ -743,13 +744,6 @@ a {
     filter:
         opacity(0.6);
 }
-.imageOnModalWrap {
-    grid-area: p;
-}
-.imageOnModal {
-    width: 75%;
-    height: 70%;
-}
 /* .photoBtns {
     
     top: 20%;
@@ -764,38 +758,77 @@ a {
 /* ############################################################################################################# */
 /* ############################################################################################################### */
 #photoModalBody {
-    
-    width: 83%;
-    min-height: 88%;
-    position: fixed;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 80px fit-content 100px;
-    grid-template-areas: 
-        ". c . . t ."
-        "p p p p p p"
-        ". d d d d .";
-    font-size: 16px;
-    background-color: transparent;
-    border: none;
+  width: 1000px;
+  align-items: center;
+  height: 500px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 750px repeat(2, 1fr);
+    grid-template-rows: 60px 60px 380px;
+    grid-template-areas:
+        "p c c"
+        "p t t"
+        "p d d";
+  font-size: 16px;
+  background: black;
+  border: none;
+  color: white;
+  z-index: 3000;
+}
+.photoModWrap {
+  position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+    /* align-content: center; */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    background-image: linear-gradient(to bottom right, rgba(80, 2, 100, 0.979), rgba(51, 11, 144, .7), rgba(88, 152, 158, .5));
 }
 
 .photoDeats {
-    padding: 5px;
+
+  display: flex;
+  text-align: center;
+  margin: 0;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 4px;
 }
 #picLoc {
     grid-area: c;
-    font-size: 22px;
+    font-size: 20px;
     font-family: 'Pacifico', cursive;
 }
 #picDesc {
     grid-area: d;
     font-family: 'Assistant', sans-serif;
+    padding-right: 21px;
 
 }
 #picDate {
     grid-area: t;
-    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+.imageOnModalWrap {
+  grid-area: p;
+    display: flex;
+    overflow-x: scroll;
+    height: 95%;
+    justify-content: center;
+    align-content: center;
+    margin: 0px 5px 0px 5px;
+  
+}
+.imageOnModal {
+
+  height: 100%;
+  display: flex;
+
 }
 
 
@@ -807,26 +840,34 @@ a {
 /* ############################################################################ */
 /* ############################################################################ */
 @media only screen and (min-width: 2310px) {
-    #photoModalBody {
-        max-height: 88%;
-    }
-    .imageOnModal {
-        max-width: 1400px;
-        max-height: 1000px;
-    }
-    .name {
-
-    }
-    .projectContainer {
-      grid-template-rows: 269px repeat( 3, 213px) 187px;
-    }
-   
-    .bridge {
-        bottom: 1%;
-    }
-
-
+    
+  
+  .projectContainer {
+    grid-template-rows: 269px repeat( 3, 213px) 187px;
+  }
+  .bridge {
+    bottom: 1%;
+  }
 }
+
+@media only screen and (max-width: 1004px) {
+
+  #photoModalBody {
+    width: 753px;
+    max-width: 100vh;
+    align-items: center;
+    height: 709px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 75px 500px 130px;
+    grid-template-areas:
+        "t . c"
+        "p p p"
+        "d d d";
+  }
+}
+
 @media only screen and (max-width: 1302px) {
     .projectContainer {
       height: 77vh;
@@ -895,16 +936,7 @@ a {
 
 
 @media only screen and (max-width: 945px) {
-    #photoModalBody {
-        font-size: 14px;
-        width: 100%;
-        height: 90%;
-        grid-template-areas:
-        ". c c . t ."
-        "p p p p p p"
-        ". d d d d .";
-        
-    }
+    
     .leftSide {
       margin: 0 0 0 13px;
       font-size: 16px;
@@ -1009,7 +1041,7 @@ a {
         font-size: 48px;
     }
     
-    #photoModalBody {
+    /* #photoModalBody {
         font-size: 14px;
         position: absolute;
         top: 40px;
@@ -1024,7 +1056,7 @@ a {
             ". p p p p d"
             "t p p p p d";
 
-    }
+    } */
     .imageOnModalWrap {
       padding: 18px;
     }
@@ -1137,7 +1169,49 @@ a {
       width: 100vw;
       margin: 0;
     }
+
+/* #########################################################################################################################################
+############################################################################################################################################
+############################   PHOTO MODAL   ###################PHOTO MODAL ##################PHOTO MODAL ##################################
+############################################################################################################################################
+###############################################PHOTO MODAL #####################PHOTO MODAL ################################################
+############################################################################################################################################ */
+
     #photoModalBody {
+      width: 753px;
+      margin-top: 40px;
+      max-width: 100vh;
+      align-items: center;
+      height: 709px;
+      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 20px 1fr;
+      grid-template-rows: 40px 500px 130px;
+      grid-template-areas:
+          "t . c"
+          "p p p"
+          "d d d";
+  }
+
+  .imageOnModalWrap {
+    height: 100%;
+  }
+
+    .photoDeats {
+      justify-content: center;
+      padding: 2px;
+    }
+
+    #picDesc {
+      font-size: 12px;
+    }
+    #picLoc {
+      font-size: 14px;
+    }
+    #picDate {
+      font-size: 14px;
+    }
+    /* #photoModalBody {
       display: grid;
       position: absolute;
       top: 70px;
@@ -1155,8 +1229,8 @@ a {
       border: 0;
       background-image: linear-gradient(to bottom right, rgba(80, 2, 100, 0.979), rgb(51, 11, 144), rgb(2, 98, 107));
       overflow-y: scroll;
-    }
-
+    } */
+/* 
     .imageOnModalWrap {
         grid-area: p;
         width: 100%;
@@ -1197,7 +1271,7 @@ a {
         grid-area: d;
         font-size: 18px;
         font-family: 'Righteous', cursive;
-    }
+    } */
 
     .modalBody {
       font-size: 12px;
@@ -1364,7 +1438,7 @@ a {
       font-size: 18px;
       height: 24px;
       animation:
-        typing 3.5s steps(40, end),
+        typing 2.1s steps(40, end),
         blink-caret .65s step-end ;
       animation-fill-mode: forwards;
     }
@@ -1375,7 +1449,7 @@ a {
       height: 24px;
       /* animation: name duration timing-function delay iteration-count direction fill-mode; */
       animation: 
-        typing 3.4s steps(40, end) 2.1s,
+        typing 2.4s steps(40, end) 2.1s,
         blink-caret .65s step-end 2.1s infinite ;
       animation-fill-mode: forwards;
     }
