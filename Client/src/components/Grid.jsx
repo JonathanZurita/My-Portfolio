@@ -62,7 +62,7 @@ const Grid = () => {
         <div className="gridWrap">
           <div className="pageHeader">
             <h1>Hobbies</h1>
-            <p>I enjoy Landscape Photography, Traveling and Hiking. I also used to teach Enlish in South Korea.</p>
+            <p>These include Landscape Photography, Traveling and Hiking. I was an English Instructor in South Korea and have included photos from my journey across Asia.</p>
           </div>
 
           <Photo

@@ -511,11 +511,12 @@ div .aboutWrap {
     }
 
     .toolsTable {
-        width: 120px;
-        margin-right: 50px;
-        border-color: none;
-        -webkit-animation: mymove 700ms normal forwards;
-        animation-iteration-count: 1;
+      width: 153px;
+      margin-right: 50px;
+      margin-left: 20px;
+      border-color: none;
+      -webkit-animation: mymove 700ms normal forwards;
+      animation-iteration-count: 1;
     }
     .projTable {
         width: 150px;
@@ -766,7 +767,7 @@ a {
     
     width: 83%;
     min-height: 88%;
-    position: absolute;
+    position: fixed;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 80px fit-content 100px;
@@ -1014,12 +1015,15 @@ a {
         height: 90%;
         overflow-y: scroll;
         grid-template-columns: 110px repeat(4, 125px) 180px;
-        grid-template-rows: 80px 80px 100px;
+        grid-template-rows: 110px 110px 110px;
         grid-template-areas:
             "c p p p p d"
             ". p p p p d"
             "t p p p p d";
 
+    }
+    .imageOnModalWrap {
+      padding: 18px;
     }
     #picLoc {
         font-size: 17px;
@@ -1073,6 +1077,9 @@ a {
 
     span#left {
       margin-right: 25px;
+    }
+    .modalBody img {
+      margin-bottom: 0;
     }
 }
 
@@ -1128,8 +1135,6 @@ a {
       margin: 0;
     }
     #photoModalBody {
-        width: 100vw;
-        height: 100vh;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 90px 170px 170px 170px 250px;
@@ -1143,7 +1148,6 @@ a {
         border: 0;
         background-image: linear-gradient(to bottom right, rgba(80, 2, 100, 0.979), rgb(51, 11, 144), rgb(2, 98, 107));
         overflow-y: scroll;
-        padding-top: 40px;
     }
 
     .imageOnModalWrap {
@@ -1235,7 +1239,7 @@ a {
         grid-area: r;
         font-size: 17px;
         /* margin-top: -20%; */
-        font-size: 14px;
+        font-size: 12px;
         width: 100%;
         text-align: center;
         padding: 0;
@@ -1311,7 +1315,7 @@ a {
         top: -5%;
     }
     .projectLinks {
-        font-size: 19px;
+        font-size: 14px;
         padding-top: 10px;
         position: relative;
         top: 20%;

@@ -19,7 +19,7 @@ const education = [
   "Arizona State University:",
   "Masters in Teaching English to Speakers of Other Languages",
   "Texas State University:",
-  "Business Admi/Mgmt with Entrepreneurial Concentration",
+  "Business Admin/Mgmt with Entrepreneurial Concentration",
 ];
 const hobbies = ["landscape photography", "traveling", "hiking"];
 
@@ -33,7 +33,7 @@ const Tools = ({ toolsDrop, handleToolsDrop }) => {
             <Table className="toolsTable">
               <thead>
                 <tr>
-                  <th className="table">My Toolbox</th>
+                  <th className="table">Tools I've Used</th>
                 </tr>
               </thead>
               <tbody>
@@ -45,6 +45,24 @@ const Tools = ({ toolsDrop, handleToolsDrop }) => {
               </tbody>
             </Table>
           </span>
+      
+          <span>
+            <Table className="eduTable">
+              <thead>
+                <tr>
+                  <th className="table">Education</th>
+                </tr>
+              </thead>
+              <tbody>
+                {education.map((row, i) => (
+                  <tr key={i} className="table">
+                    <td>{row}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </span>
+
           <span>
             <Table className="projTable">
               <thead>
@@ -65,28 +83,13 @@ const Tools = ({ toolsDrop, handleToolsDrop }) => {
               </tbody>
             </Table>
           </span>
-          <span>
-            <Table className="eduTable">
-              <thead>
-                <tr>
-                  <th className="table">Education</th>
-                </tr>
-              </thead>
-              <tbody>
-                {education.map((row, i) => (
-                  <tr key={i} className="table">
-                    <td>{row}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-          </span>
+
           <span>
             <NavLink to="/pics">
               <Table className="hobTable">
                 <thead>
                   <tr>
-                    <th>Hobbies</th>
+                    <th>My Hobbies</th>
                   </tr>
                 </thead>
                 <tbody>
