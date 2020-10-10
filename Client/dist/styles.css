@@ -711,6 +711,8 @@ a {
     border: none;
     margin-top: -2px;
     background: lightslategray;
+    height: 100vh;
+    overflow: scroll;
 }
 .photo {
     width: 136%;
