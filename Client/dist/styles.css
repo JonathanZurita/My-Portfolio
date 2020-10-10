@@ -1011,6 +1011,9 @@ a {
     
     #photoModalBody {
         font-size: 14px;
+        position: fixed;
+      top: 40px;
+      left: 0px;
         width: 100%;
         height: 90%;
         overflow-y: scroll;
@@ -1136,9 +1139,12 @@ a {
     }
     #photoModalBody {
       display: grid;
+      position: fixed;
+      top: 70px;
+      left: 0px;
       max-height: 700px;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 90px 121px 162px 138px 250px;
+      grid-template-rows: 90px 121px 162px 138px 160px;
       grid-template-areas:
           "l l d d"
           "p p p p"

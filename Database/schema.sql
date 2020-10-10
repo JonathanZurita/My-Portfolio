@@ -139,9 +139,6 @@ INSERT into photo(url) VALUES (
   'https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_0549.jpg'
 );
 INSERT into photo(url) VALUES (
-  'https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_0519.mov'
-);
-INSERT into photo(url) VALUES (
   'https://landscapefavpics.s3-us-west-2.amazonaws.com/FullSizeRender.jpg'
 );
 INSERT into photo(url) VALUES (
@@ -194,10 +191,7 @@ INSERT into photo(url) VALUES (
 
 "https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_3224.jpg"
 );
-INSERT into photo(url) VALUES (
 
-"https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_3483.jpg"
-);
 INSERT into photo(url) VALUES (
 
 "https://landscapefavpics.s3-us-west-2.amazonaws.com/IMG_3582.jpg"
