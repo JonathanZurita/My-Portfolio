@@ -275,18 +275,10 @@ input.search {
     grid-area: r;
     width: 100vw;
     margin-left: 0;
+    
 
   }
 
-  .searchInfoWrap div:first-child {
-    background: rgb(255, 93, 247);
-  }
-  .searchInfoWrap div:nth-child(2) {
-    background: rgb(189, 8, 180);
-  }
-  .searchInfoWrap div:last-child {
-    background: rgb(194, 41, 255);
-  }
 
   .searchInfoRow {
    margin-bottom: 0;
@@ -298,6 +290,7 @@ input.search {
     font-size: 14px;
     font-weight: bold;
     margin-top: 0;
+    background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.964), rgba(2, 98, 107, 0.919));
   
   }
 
