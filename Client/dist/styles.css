@@ -817,7 +817,6 @@ a {
 
 .imageOnModalWrap {
   grid-area: p;
-    display: flex;
     overflow-x: scroll;
     height: 95%;
     justify-content: center;
@@ -1197,7 +1196,7 @@ a {
       justify-content: center;
       display: grid;
       grid-template-columns: 1fr 20px 1fr;
-      grid-template-rows: 40px 500px 130px;
+      grid-template-rows: 60px 500px 130px;
       grid-template-areas:
           "t . c"
           "p p p"
