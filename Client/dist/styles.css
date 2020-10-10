@@ -1135,19 +1135,20 @@ a {
       margin: 0;
     }
     #photoModalBody {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 90px 170px 170px 170px 250px;
-        grid-template-areas: 
-            "l l d d"
-            "p p p p"
-            "p p p p"
-            "p p p p"
-            "x x x x";
-        font-size: 14px;
-        border: 0;
-        background-image: linear-gradient(to bottom right, rgba(80, 2, 100, 0.979), rgb(51, 11, 144), rgb(2, 98, 107));
-        overflow-y: scroll;
+      display: grid;
+      max-height: 700px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 90px 121px 162px 138px 250px;
+      grid-template-areas:
+          "l l d d"
+          "p p p p"
+          "p p p p"
+          "p p p p"
+          "x x x x";
+      font-size: 14px;
+      border: 0;
+      background-image: linear-gradient(to bottom right, rgba(80, 2, 100, 0.979), rgb(51, 11, 144), rgb(2, 98, 107));
+      overflow-y: scroll;
     }
 
     .imageOnModalWrap {
@@ -1159,8 +1160,8 @@ a {
     }
 
     .imageOnModal {
-        width: 179%;
-        height: 493px;
+      width: 150%;
+      height: 100%;
         border-color: rgb(177, 161, 161);
         border-style: solid;
         border-width: .1px 0 .1px 0;
