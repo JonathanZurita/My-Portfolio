@@ -663,7 +663,8 @@ a {
 }
 .pageHeader p {
     font-family: 'Space Mono', monospace;
-    font-size: 30px;
+    font-size: 19px;
+    padding: 0 10mm;
     letter-spacing: 1px;
 }
 
@@ -711,7 +712,6 @@ a {
     border: none;
     margin-top: -2px;
     background: lightslategray;
-    height: 100vh;
     overflow: scroll;
 }
 .photo {
@@ -1178,7 +1178,16 @@ a {
 ############################################################################################################################################
 ###############################################PHOTO MODAL #####################PHOTO MODAL ################################################
 ############################################################################################################################################ */
-
+    .gridWrap {
+      height: 90vh;
+    }
+    .footer {
+      height: 80px;
+      margin: 0;
+    }
+    .footerContent {
+      padding: 0;
+    }
     #photoModalBody {
       width: 753px;
       margin-top: 40px;
