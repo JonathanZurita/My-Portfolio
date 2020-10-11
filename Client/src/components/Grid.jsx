@@ -26,14 +26,12 @@ const Grid = () => {
           setModalPhoto = allPhotos[i];
         }
       }
-      //console.log(e.target.id);
       setPhotoModalData(setModalPhoto);
       setModalToggle(true);
     }
   };
 
   const getPhotos = () => {
-    console.log("axios get photo initiated");
     axios
       .get(`/photos`)
       .then((res) => {
@@ -52,7 +50,7 @@ const Grid = () => {
       })
 
       .catch((err) => {
-        console.log("axios error getting photos: ", err);
+        console.log("error getting photos: ", err);
       });
   };
 

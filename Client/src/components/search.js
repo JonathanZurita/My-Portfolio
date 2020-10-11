@@ -121,7 +121,7 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
         <div className="home">
           <NavLink to="/">
             <button className="homeBtn">
-              <i class="fas fa-grip-lines"></i>
+              <i className="fas fa-grip-lines"></i>
             </button>
           </NavLink>
         </div>

@@ -17,7 +17,6 @@ connection.connect(err => {
 
 
 const getProjects = (name, cb) => {
-  console.log('querying for projects', name);
   var qryStr = '';
 
   if(name === undefined) {
@@ -37,7 +36,6 @@ const getProjects = (name, cb) => {
 };
 
 const getPhotos = (cb) => {
-  console.log("getting photos db query")
   connection.query('select * from photo', (err, results) => {
     if(err) {
       console.log(err);
@@ -50,7 +48,6 @@ const getPhotos = (cb) => {
 };
 
 const getSearch = (search, cb) => {
-  console.log('querying for search', search);
   const queryString = `select * from project where info like "%${search}%" OR tech like "%${search}%" OR title like "%${search}%"`;
   connection.query(queryString, (err, results) => {
     if(err) {
