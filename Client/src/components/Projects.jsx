@@ -58,6 +58,7 @@ const Projects = ({ projectNamefromRouter }) => {
         {projectData.map((project, i) => 
           <Animated className="projectAnimation" animationIn="fadeInUp" animationOut="fadeOut" isVisible={true}>
             <Project key={i}
+              rank={i}
               data={project} 
             />
           </Animated>

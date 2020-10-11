@@ -47,6 +47,20 @@ INSERT into project(title, timeline, info, tech, url, explanation, dataclass, vi
   "landescapeVid"
 );
 
+
+INSERT into project(title, timeline, info, tech, url, explanation, dataclass, vidclass) VALUES (
+  "Portfolio",
+    "Sept 2020- Oct 2020",
+    "Front end software development project. \n Researched compatibility best practices and optimized for mobile. \n Created scalable portfolio with interactive welcome section. \n Includes photo grid and modal for hobbies section. \n Photos hosted on S3 bucket and data on mysql DB on RDS. \n
+components mapping data from DB for scalability.",
+"Tech used: React.js, Javascript, HTML, CSS, Elastic Beanstalk, AWS RDS, Mysql Workbench, S3, NodeJS, Express, Axios, Bootstrap",
+"https://www.youtube.com/embed/hJZEQbLzUZw",
+"Front End Project/My Portfolio",
+"portfolioData",
+"portfolioVid"
+);
+
+
 INSERT into project(title, timeline, info, tech, url, explanation, dataclass, vidclass) VALUES (
   "Sharity", 
   "Jul 2020 — Aug 2020", 

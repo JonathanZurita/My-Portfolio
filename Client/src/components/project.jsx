@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from 'react';
 
 
-const Project = ({ data }) => {
+const Project = ({ data, rank }) => {
   const [projectData, setProjData] = useState(data);
 
   const makeBullets = () => {
     var sentences = projectData.info.split('\n');
+    var bullets = [];
+    for(var i = 0; i < sentences.length; i++) {
+      if(sentences[i].length > 0) {
+        bullets.push(sentences[i])
+      }
+    }
     return (
       <ul className="projectBullets">
-        {sentences.map((sentence, i) => 
+        {bullets.map((bullet, i) => 
+        
           <li className="bullet"
-            key={i}>{sentence}</li>
+            key={i}>{bullet}</li>
+
         )}
         
       </ul>
@@ -18,13 +26,13 @@ const Project = ({ data }) => {
   }
  
   return (
-    <div className="projectContainer" id={projectData.title}>
+    <div className="projectContainer" id={projectData.title} id={`rank${rank % 2}`}>
       
       <div className="proTitle">{projectData.title}</div>
     
       <div className="proDate">{projectData.explanation}</div>
     
-      <div id={projectData.dataclass} className="proInfo">
+      <div id={projectData.dataclass} className="proInfo" >
           {makeBullets()}
       </div>
         
