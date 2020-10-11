@@ -41,7 +41,7 @@ INSERT into project(title, timeline, info, tech, url, explanation, dataclass, vi
   'Jul 2020 — Sept 2020', 
   "Researched react native tools and created full-stack mobile application.\n Drafted wireframes with Figma and designed/built PostgresQL DB\n Optimized components with react native elements.\n Custom-mapped photos into grid layout with Javascript.\n Designed photo markers with react native maps and Unsplash API.",
   "Tech used: React Native, Expo, PostgresQL, S3, node, Express, Axios, knexJS, Unsplash API, babel",
-  'https://interviewstuffjonathanzurita.s3.us-east-2.amazonaws.com/Landescape.mp4',
+  'https://youtube.com/embed/_h0yZfQ3jiE',
   "Photography/Hiking React Native App",
   "landescapeData",
   "landescapeVid"
