@@ -18,6 +18,10 @@ const Photo = ({bool, photoID, togglePhoto}) => {
           <p className="photoDeats" id="picDesc">{photoID.description}</p>
           <p className="photoDeats" id="picDate"><span><i class={icons[0]}></i></span> <span>{photoID.date}</span></p>
           <p className="photoDeats" id="picLoc"> <span><i class={icons[1]}></i></span> <span>{photoID.city} {photoID.state}</span></p>
+          <div className="imgBtnWrap">
+            <a className="fullSizeImg" href={photoID.url} target="_blank">Full Size Image</a>
+          </div>
+          
         </div>
       </div>
     )
