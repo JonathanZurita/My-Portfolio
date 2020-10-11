@@ -969,7 +969,6 @@ a {
 @media only screen and (max-width: 945px) {
     
     .leftSide {
-      margin: 0 0 0 13px;
       font-size: 16px;
     }
 
@@ -1040,7 +1039,13 @@ a {
 
 }
 
-@media only screen and (min-width: 810px) and (max-width: 815px) and (min-height: 350px) and (max-height: 400px) {
+@media only screen 
+  and (min-width : 635px)
+  and (min-height : 340px) 
+  and (max-height : 540px)
+  /* and (-webkit-device-pixel-ratio : 3) */
+  and (orientation : landscape)
+  {
 
   #photoModalBody {
     min-width: 100vw;
@@ -1059,6 +1064,9 @@ a {
     border: none;
     color: white;
     z-index: 3000;
+}
+span#left {
+  margin-right: 12px;
 }
 .imageOnModalWrap {
   height: 95%;
@@ -1148,7 +1156,7 @@ a {
       font-family: 'Assistant', sans-serif;
       padding-right: 21px;
       font-size: 15px;
-      height: 100%;
+      height: fit-content;
       justify-content: center;
       align-items: center;
       overflow: scroll;
@@ -1193,10 +1201,6 @@ a {
     }
     .leftSide {
       margin-top: 1.5mm;
-    }
-
-    span#left {
-      margin-right: 25px;
     }
     .modalBody img {
       margin-bottom: 0;

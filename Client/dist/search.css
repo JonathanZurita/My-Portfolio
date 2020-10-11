@@ -113,6 +113,7 @@ code {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 5px;
   margin-left: 25px;
   font-size: 18px;
   
@@ -225,11 +226,20 @@ input.search {
 
 @media only screen and (max-width: 880px) {
   span#left {
-    margin-right: 5px;
     font-size: 14px;
   }
 
 }
+
+@media only screen and (max-width: 800px) {
+  span#left {
+    margin-right: 12px;
+    margin-top: 3px;
+    font-size: 12px;
+  }
+}
+
+
 @media only screen and (max-width: 600px) {
   .navWrapper {
     min-width: inherit;
@@ -317,6 +327,10 @@ input.search {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a b c d";
     align-items: stretch;
+    height: 25px;
+    margin-top: 0px;
+    align-items: center;
+    justify-content: center;
   }
   .navBtn {
     background: transparent;
@@ -328,17 +342,12 @@ input.search {
   .homeBtn {
     color: rgba(144, 87, 87);
     font-size: 24px;
-    /* display: flex; */
-    /* position: relative; */
-    /* top: -21%; */
-    /* right: 6%; */
     margin: 0;
     width: 100%;
     text-align: center;
     -webkit-animation: hue 3s infinite linear; 
   }
   .searchBtn1 {
-    
     grid-area: a;
   }
   .searchBtn2 {
@@ -349,12 +358,6 @@ input.search {
   }
   .searchBtn4 {
     grid-area: d;
-  }
-  
-  .leftSide {
-    height: 25px;
-    align-items: center;
-    justify-content: center;
   }
   span#left {
     margin-right: 15px;
