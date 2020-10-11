@@ -14,8 +14,10 @@ const Photo = ({bool, photoID, togglePhoto}) => {
           <div className="imageOnModalWrap">
             <img className="imageOnModal" src={photoID.url} />
           </div>
-
-          <p className="photoDeats" id="picDesc">{photoID.description}</p>
+          <div className="photoDeatsWrap">
+            <p className="photoDeats" id="picDesc">{photoID.description}</p> 
+          </div>
+        
           <p className="photoDeats" id="picDate"><span><i class={icons[0]}></i></span> <span>{photoID.date}</span></p>
           <p className="photoDeats" id="picLoc"> <span><i class={icons[1]}></i></span> <span>{photoID.city} {photoID.state}</span></p>
           <div className="imgBtnWrap">

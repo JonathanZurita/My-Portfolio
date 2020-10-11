@@ -805,6 +805,15 @@ a {
     z-index: 10;
     background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.9), rgba(137, 98, 107, 0.99))
 }
+.photoDeatsWrap {
+  grid-area: d;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: scroll;
+}
 
 .photoDeats {
 
@@ -821,7 +830,6 @@ a {
     font-family: 'Pacifico', cursive;
 }
 #picDesc {
-    grid-area: d;
     font-family: 'Assistant', sans-serif;
     padding-right: 21px;
 
@@ -882,6 +890,9 @@ a {
         "t b c"
         "p p p"
         "d d d";
+  }
+  .photoDeats {
+    flex-direction: column;
   }
   .imageOnModalWrap {
     height: 100%;
@@ -1243,7 +1254,7 @@ a {
 ###############################################PHOTO MODAL #####################PHOTO MODAL ################################################
 ############################################################################################################################################ */
     .gridWrap {
-      height: 95vh;
+      height: 100vh;
       overflow: scroll;
     }
     .footer {
@@ -1261,8 +1272,8 @@ a {
       height: 100vh;
       justify-content: center;
       display: grid;
-      grid-template-columns: 1fr 95px 1fr;
-      grid-template-rows: 60px 500px 130px;
+      grid-template-columns: 1fr 80px 1fr;
+      grid-template-rows: 57px 530px 130px;
       grid-template-areas:
           "t b c"
           "p p p"
@@ -1274,11 +1285,32 @@ a {
   }
 
   .fullSizeImg {
-    width: 95px;
-    height: 27px;
-    border: 1px solid white;
-    padding: 4px;
-    font-size: 10px;
+    animation: none;
+    color: black;
+    font-family: monospace;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 13px;
+    border: none;
+  }
+  .fullSizeImg:hover {
+    border: none;
+    background: none;
+
+  }
+
+  .imgBtnWrap {
+    grid-area: b;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.7);
   }
 
   .imageOnModalWrap {
