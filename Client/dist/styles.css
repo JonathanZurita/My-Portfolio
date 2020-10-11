@@ -786,7 +786,7 @@ a {
     display: flex;
     align-items: center;
     z-index: 10;
-    background-color: black;
+    background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
 }
 
 .photoDeats {
@@ -865,6 +865,9 @@ a {
         "t . c"
         "p p p"
         "d d d";
+  }
+  .imageOnModalWrap {
+    height: 100%;
   }
 }
 
