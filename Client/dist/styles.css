@@ -142,12 +142,15 @@ div .aboutWrap {
     border: .5px solid;
     border-radius: 4px;
     padding: 0px 12px;
+    -webkit-animation: hue 2s infinite linear;
+    background-color: rgba(137, 43, 226, 0.726);
+    color: white;
 
 }
 .welcomeBtn:hover {
-    -webkit-animation: hue 6s infinite linear;
-    background-color: rgba(137, 43, 226, 0.726);
-    color: white;
+    -webkit-animation: none;
+    background-color: rgba(240, 237, 243, 0.726);
+    color: rgb(0, 0, 0);
     
 
 }
@@ -417,7 +420,7 @@ div .aboutWrap {
 
 /* tools dropdown */
   .modalWrap {
-    background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
+    background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.9), rgba(137, 98, 107, 0.99));
     color: rgb(51,51,51);
     z-index: 5000;
     display: flex;
@@ -430,8 +433,6 @@ div .aboutWrap {
     right: 0px;
     bottom: 0px;
     max-height: 100vh;
-    animation: dropMenuFadeIn 500ms;
-
     /* animation-name: dropRows;
     animation-duration: 650ms;
     height: fit-content; */
@@ -443,16 +444,6 @@ div .aboutWrap {
     top: 0;
     z-index: 5000;
     background-color: transparent;
-  }
-
-  @keyframes dropMenuFadeIn {
-    0% {
-      background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
-    }
-    100% {
-        background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
-      
-    }
   }
 
   .toolItem {
@@ -711,7 +702,7 @@ a {
 .gridWrap {
     border: none;
     margin-top: -2px;
-    background: lightslategray;
+    background: rgba(255,255,255,.56);
 }
 .photo {
     width: 136%;
@@ -764,12 +755,12 @@ a {
   height: 500px;
   justify-content: center;
   display: grid;
-  grid-template-columns: 750px repeat(2, 1fr);
-    grid-template-rows: 60px 60px 380px;
-    grid-template-areas:
-        "p c c"
-        "p t t"
-        "p d d";
+  grid-template-columns: 5px 750px repeat(2, 1fr);
+  grid-template-rows: 60px 60px 380px;
+  grid-template-areas:
+      ". p c c"
+      ". p t t"
+      ". p d d";
   font-size: 16px;
   background: black;
   border: none;
@@ -786,7 +777,7 @@ a {
     display: flex;
     align-items: center;
     z-index: 10;
-    background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.664), rgba(2, 98, 107, 0.719));
+    background-image: linear-gradient(to bottom right, rgba(81, 2, 100, 0.904), rgba(51, 11, 144, 0.9), rgba(137, 98, 107, 0.99))
 }
 
 .photoDeats {
