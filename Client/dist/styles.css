@@ -8,6 +8,20 @@ body {
     margin: 0;
     height: 100vh;
 }
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(61, 43, 60);
+  outline: 1px solid rgb(7, 7, 7);
+}
+
 .footer {
     width: 100%;
     display: flex;
@@ -210,7 +224,7 @@ div .aboutWrap {
     justify-content: center;
     /* display: flex; */
     flex-direction: column;
-    bottom: 5%;
+    bottom: 3%;
     left: 48%;
     width: 72%;
     /* height: 90%; */
@@ -746,12 +760,12 @@ a {
 /* ############################################################################################################# */
 /* ############################################################################################################### */
 #photoModalBody {
-  width: 1000px;
-  align-items: center;
-  height: 500px;
-  justify-content: center;
-  display: grid;
-  grid-template-columns: 5px 750px repeat(2, 1fr);
+  max-width: 1000px;
+    align-items: center;
+    height: 500px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 5px minmax(100px, 1fr) repeat(2, 130px);
   grid-template-rows: 60px 60px 330px 50px;
   grid-template-areas:
       ". p c c"
@@ -798,7 +812,6 @@ a {
     top: 0%;
     width: 100%;
     height: 100vh;
-    /* align-content: center; */
     justify-content: center;
     display: flex;
     align-items: center;
@@ -812,7 +825,6 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  overflow: scroll;
 }
 
 .photoDeats {
@@ -842,12 +854,11 @@ a {
 
 .imageOnModalWrap {
   grid-area: p;
-    overflow-x: scroll;
-    height: 95%;
-    justify-content: center;
-    align-content: center;
-    margin: 0px 5px 0px 5px;
-  
+  height: 95%;
+  justify-content: center;
+  align-content: center;
+  margin: 0px 5px 0px 5px;
+  display: flex;
 }
 .imageOnModal {
 
@@ -864,14 +875,33 @@ a {
 /* ################///////////MOBILE DEVICES ////////////######################*/
 /* ############################################################################ */
 /* ############################################################################ */
-@media only screen and (min-width: 2310px) {
-    
+@media only screen and (min-width: 2000px) {
+  #photoModalBody {
+    max-width: 90vw;
+    width: 1900px;
+    align-items: center;
+    height: 1000px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 5px minmax(100px, 1fr) repeat(2, 150px);
+    grid-template-rows: 60px 60px 828px 50px;
+    grid-template-areas:
+        ". p c c"
+        ". p t t"
+        ". p d d"
+        ". p b b";
+    font-size: 16px;
+    background: black;
+    border: none;
+    color: white;
+    z-index: 3000;
+}
   
   .projectContainer {
     grid-template-rows: 269px repeat( 3, 213px) 187px;
   }
-  .bridge {
-    bottom: 1%;
+  .bridgeContainer {
+    bottom: 3%;
   }
 }
 
@@ -884,18 +914,48 @@ a {
     height: 709px;
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 5px repeat(3, 1fr) 5px;
     grid-template-rows: 75px 500px 130px;
     grid-template-areas:
-        "t b c"
-        "p p p"
-        "d d d";
+        ". t b c ."
+        ". p p p ."
+        ". d d d .";
   }
   .photoDeats {
     flex-direction: column;
   }
   .imageOnModalWrap {
     height: 100%;
+    overflow: scroll;
+    margin: 0;
+  }
+  .photoDeatsWrap {
+    overflow: scroll;
+  }
+  .imageOnModalWrap::-webkit-scrollbar {
+    width: .5px;
+    color: black;
+  }
+   
+  .imageOnModalWrap::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 .4px rgba(0, 0, 0, 0.3);
+  }
+   
+  .imageOnModalWrap::-webkit-scrollbar-thumb {
+    background-color: rgb(61, 43, 60);
+    outline: .5px solid rgb(7, 7, 7);
+  }
+  .photoDeatsWrap::-webkit-scrollbar {
+    width: .5px;
+  }
+   
+  .photoDeatsWrap::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 .4px rgba(0, 0, 0, 0.3);
+  }
+   
+  .photoDeatsWrap::-webkit-scrollbar-thumb {
+    background-color: rgb(61, 43, 60);
+    outline: .5px solid rgb(7, 7, 7);
   }
 }
 
@@ -962,6 +1022,7 @@ a {
       bottom: 21%;
       left: 50%;
     }
+
     
 }
 
@@ -1038,6 +1099,33 @@ a {
     }
 
 }
+/* @media only screen and (max-width : 800px) {
+  .imageOnModalWrap::-webkit-scrollbar {
+    width: .5px;
+    color: black;
+  }
+   
+  .imageOnModalWrap::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 .4px rgba(0, 0, 0, 0.3);
+  }
+   
+  .imageOnModalWrap::-webkit-scrollbar-thumb {
+    background-color: rgb(61, 43, 60);
+    outline: .5px solid rgb(7, 7, 7);
+  }
+  .photoDeatsWrap::-webkit-scrollbar {
+    width: .5px;
+  }
+   
+  .photoDeatsWrap::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 .4px rgba(0, 0, 0, 0.3);
+  }
+   
+  .photoDeatsWrap::-webkit-scrollbar-thumb {
+    background-color: rgb(61, 43, 60);
+    outline: .5px solid rgb(7, 7, 7);
+  }
+} */
 
 @media only screen 
   and (min-width : 635px)
