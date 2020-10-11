@@ -87,8 +87,8 @@ const Grid = () => {
               </div>
             </div>
           ))}
-        </div> 
-        <Footer />
+          <Footer />
+        </div>
       </Animated>
     </div>
   );
