@@ -1263,6 +1263,7 @@ a {
       align-items: center;
       height: 709px;
       justify-content: center;
+      background: black;
       display: grid;
       grid-template-columns: 1fr 91px 1fr;
       grid-template-rows: 60px 500px 130px;
@@ -1275,9 +1276,9 @@ a {
   .fullSizeImg {
     width: 91px;
     height: 27px;
-    border: .6px solid white;
-    padding: 6px;
-    font-size: 9px;
+    border: 1px solid white;
+    padding: 4px;
+    font-size: 10px;
   }
 
   .imageOnModalWrap {
