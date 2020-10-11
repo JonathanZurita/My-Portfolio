@@ -101,7 +101,7 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
               onChange={(e) => changeSearch(e.target.value)}
               type="search"
               id="search"
-              placeholder="Search for a tool or project..."
+              placeholder="Search tool name..."
               name="catName"
               value={search}
               aria-label="Search: suggestions appear below"

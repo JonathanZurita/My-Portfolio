@@ -532,24 +532,20 @@ div .aboutWrap {
 /* ###################################### */
 
 .modalBody {
-   
-    width: 413px;
-    height: 338px;
-    background-color: rgb(22, 2, 27);
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: monospace;
-    border: 2px solid white;
-    border-top: none;
-    border-bottom: none;
-    border-radius: 17px;
+  width: 418px;
+  height: 348px;
+  letter-spacing: -1px;
+  background-color: rgb(22, 2, 27);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: monospace;
 }
 .modalBody a {
   padding: 2px 0px;
@@ -1184,6 +1180,7 @@ a {
     }
     .modalBody img {
       margin-bottom: 0;
+      opacity: .9;
     }
 }
 
@@ -1258,12 +1255,11 @@ a {
     }
     #photoModalBody {
       width: 753px;
-      margin-top: 20px;
-      max-width: 100vh;
+      max-width: 100vw;
       align-items: center;
-      height: 709px;
+      min-height: 709px;
+      height: 100vh;
       justify-content: center;
-      background: black;
       display: grid;
       grid-template-columns: 1fr 95px 1fr;
       grid-template-rows: 60px 500px 130px;
@@ -1271,6 +1267,10 @@ a {
           "t b c"
           "p p p"
           "d d d";
+  }
+  .photoModWrap {
+    background: black;
+    margin-top: 70px;
   }
 
   .fullSizeImg {
@@ -1363,6 +1363,8 @@ a {
 
     .modalBody {
       font-size: 12px;
+      width: 313px;
+      height: 338px;
 
     }
 

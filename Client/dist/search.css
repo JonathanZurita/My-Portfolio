@@ -151,11 +151,11 @@ span#left {
 input.search {
   width: 100%;
   border-radius: 5mm;
-  padding-top: 1mm;
-  padding-bottom: 1mm;
-  padding-left: 14px;
+  padding-top: 0mm;
+  padding-bottom: 0mm;
+  padding-left: 9px;
   border-style: none;
-  font-size: 13px;
+  font-size: 16px;
   border-color: none;
   outline: none;
   -webkit-appearance: none;

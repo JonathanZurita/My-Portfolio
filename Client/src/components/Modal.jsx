@@ -10,8 +10,6 @@ const Modal = ({ contactInfoModal, handleContactInfoModal }) => {
         id="contactModal"
         onClick={()=> handleContactInfoModal()}
       >
-        <div className="contactModalBodyDetail">
-          <div className="contactModalBodyDetail2">
             <div className="modalBody">
               <img src="https://interviewstuffjonathanzurita.s3.us-east-2.amazonaws.com/profile+circle+pic.png"  height='100px' width='100px' />
               <a href="https://github.com/JonathanZurita">
@@ -31,8 +29,6 @@ const Modal = ({ contactInfoModal, handleContactInfoModal }) => {
               <a>Austin, TX</a>
             </div>
           </div>
-        </div>
-      </div>
     )
   } else return null;
 }
