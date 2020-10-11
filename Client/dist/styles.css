@@ -1014,12 +1014,12 @@ a {
   #photoModalBody {
     min-width: 100vw;
     align-items: center;
-    min-height: 305px;
-    max-height: 340px;
+    /* min-height: 305px; */
+    max-height: 300px;
     margin-top: 40px;
     justify-content: center;
     display: grid;
-    grid-template-columns: 140px 1fr 155px;
+    grid-template-columns: 171px 1fr 188px;
     grid-template-rows: 120px 1fr 120px;
     grid-template-areas:
         "c p d"
@@ -1032,12 +1032,11 @@ a {
     z-index: 3000;
 }
 .gridWrap {
-  height: 100vh;
+  height: 99vh;
   overflow: scroll;
 }
 .imageOnModal {
-  
-  max-height: 335px;
+  max-height: 290px;
 }
 
     .welcomeBtn {
