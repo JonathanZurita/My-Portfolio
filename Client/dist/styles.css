@@ -1045,29 +1045,41 @@ a {
   #photoModalBody {
     min-width: 100vw;
     align-items: center;
-    /* min-height: 305px; */
-    max-height: 300px;
-    margin-top: 40px;
+    max-height: 333px;
     justify-content: center;
     display: grid;
-    grid-template-columns: 171px 1fr 188px;
-    grid-template-rows: 120px 1fr 120px;
+    grid-template-columns: 160px 1fr 188px;
+    grid-template-rows: 100px 1fr 100px;
     grid-template-areas:
         "c p d"
         ". p d"
-        "t p d";
+        "t p b";
     font-size: 16px;
     background: black;
     border: none;
     color: white;
     z-index: 3000;
 }
+.imageOnModalWrap {
+  height: 95%;
+}
+#picLoc {
+  font-size: 15px;
+}
+#picDate {
+  font-size: 15px;
+}
+.photoModWrap {
+  background: black;
+  top: 40px;
+  align-items: flex-start;
+}
 .gridWrap {
-  height: 99vh;
+  height: 100vh;
   overflow: scroll;
 }
 .imageOnModal {
-  max-height: 290px;
+  max-height: 300px;
 }
 
     .welcomeBtn {
@@ -1089,6 +1101,7 @@ a {
       from { width: 0; }
       to { width: 370px;  }
     }
+    
     .modalWrap {
         padding: 0;
         background-color: black;
@@ -1129,10 +1142,6 @@ a {
     }
     .pageHeader {
       height: 177px;
-    }
-
-    #picLoc {
-        font-size: 18px;
     }
     #picDesc {
       grid-area: d;
@@ -1254,7 +1263,7 @@ a {
 ###############################################PHOTO MODAL #####################PHOTO MODAL ################################################
 ############################################################################################################################################ */
     .gridWrap {
-      height: 100vh;
+      max-height: 100vh;
       overflow: scroll;
     }
     .footer {
@@ -1265,15 +1274,16 @@ a {
       padding: 0;
     }
     #photoModalBody {
-      width: 753px;
+      width: 100vw;
       max-width: 100vw;
       align-items: center;
-      min-height: 709px;
-      height: 100vh;
+      min-height: 680px;
+      max-height: 640px;
       justify-content: center;
       display: grid;
+      overflow: scroll;
       grid-template-columns: 1fr 80px 1fr;
-      grid-template-rows: 57px 530px 130px;
+      grid-template-rows: 50px 520px 70px;
       grid-template-areas:
           "t b c"
           "p p p"
@@ -1281,7 +1291,8 @@ a {
   }
   .photoModWrap {
     background: black;
-    margin-top: 70px;
+    top: 70px;
+    align-items: flex-start;
   }
 
   .fullSizeImg {
