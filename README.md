@@ -11,7 +11,7 @@ Jul 2020 — Sept 2020
  Tech used: React Native, Expo, PostgresQL, S3, node, Express, Axios, knexJS, Unsplash API, babel
 # Sharity
 
-Jul 2020 — Aug 2020"
+Jul 2020 — Aug 2020
   
   Was delegated as the UI Manager in agile workflow with team of 8 engineers.\n Researched user lifecycle and created element tree to visualize relationship of services.\n Built wireframes using Figma to depict features of each UI component.\n Created list components and sorting algorithm to allow user to sort through data easily.
   
@@ -20,6 +20,7 @@ Jul 2020 — Aug 2020"
 # Prrget
 
   Jun 2020 — Jul 2020
+  
   Collaborated in agile workflow with team of 4 engineers using a SOA. \n Redesigned shopping cart modal, increasing  initial load speed. \n Researched AWS and deployed on elastic beanstalk due to speed and compatibility. \n  Dynamically rendered shopping cart items by listening to other services.
  
  Tech used: JavaScript, React, Express, NodeJS, HTML/CSS, AWS S3, RDS and Elastic Beanstalk.
