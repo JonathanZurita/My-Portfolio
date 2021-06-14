@@ -60,35 +60,51 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
       <div className="background" />
       <ToolsDrop toolsDrop={toolsDrop} handleToolsDrop={toggleToolsDropModal} />
       <ContactModal 
+        id="contactModal"
+        aria-labeledby="leftBtn4"
         contactInfoModal={contactInfoModal}
         handleContactInfoModal={toggleContactInfoModal}
       />
-      <div className="navWrapper">
-        {/* CATEGORY DROP DOWN */}
-        <div className="leftSide">
-          <span id="left" className="searchBtn1">
-            <a className="navBtn" onClick={() => toggleToolsDropModal()}>
-              Toolbox
-            </a>
-          </span>
+      <nav className="navWrapper">
+        {/* LEFT SIDE NAVIGATION */}
+        <div aria-roledescription="navigation" className="leftSide">
+          <button  
+            className="leftButtonOption" 
+            id="leftBtn1" 
+            aria-expanded="false"
+            onClick={() => toggleToolsDropModal()}
+          >
+            Toolbox
+          </button>
 
-          <span id="left" className="searchBtn2">
-            <NavLink className="navBtn" to="/projects">
-              Projects
-            </NavLink>
-          </span>
+          <NavLink  
+            className="leftButtonOption"
+            id="leftBtn2"
+            role="link"
+            to="/projects"
+          >
+            Projects
+          </NavLink>
 
-          <span id="left" className="searchBtn3">
-            <NavLink className="navBtn" to="/pics">
-              Hobbies
-            </NavLink>
-          </span>
+          <NavLink 
+            role="link" 
+            className="leftButtonOption"
+            id="leftBtn3"
+            to="/pics"
+          >
+            Hobbies
+          </NavLink>
 
-          <span id="left" className="searchBtn4">
-            <a className="navBtn" onClick={() => toggleContactInfoModal()}>
-              Contact
-            </a>
-          </span>
+          <button 
+            aria-expanded="false"
+            aria-owns="contactModal"
+            className="leftButtonOption" 
+            id="leftBtn4"
+
+            onClick={() => toggleContactInfoModal()}
+          >
+            Contact
+          </button>
         </div>
 
         {/* SEARCH BAR */}
@@ -118,14 +134,14 @@ const Search = ({ onSearch, handleToolsDrop, handleContactInfoModal }) => {
           data={data}
         />
 
-        <div className="home">
+        <div role="button" className="home">
           <NavLink to="/">
             <button className="homeBtn">
               <i className="fas fa-grip-lines"></i>
             </button>
           </NavLink>
         </div>
-      </div>
+      </nav>
     </div>
   );
 };

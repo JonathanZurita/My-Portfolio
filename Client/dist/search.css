@@ -51,17 +51,11 @@ code {
 
 }
 
-.navBtn {
-  background: transparent;
-  border: none;
-  color: white
-}
 .home {
   grid-area: z;
   display: flex;
   justify-content: center;
   font-size: 22px;
-
 }
 .homeBtn {
   background: transparent;
@@ -97,16 +91,16 @@ code {
 ###################################################################################
 ################################################################################### */
 
-.leftSide span#left:hover {
+.leftButtonOption:hover {
   -webkit-animation: hue .6s infinite linear;
   text-decoration: underline;
   cursor: pointer;
   color: rgb(60, 60, 173);
 }
-.navBtn:hover {
+/* .leftButtonOption:hover {
     color: rgb(60, 60, 173);
     -webkit-animation: hue .6s infinite linear;
-}
+} */
 
 .leftSide{
   grid-area: x;
@@ -122,10 +116,13 @@ code {
   justify-content: left;
 }
 
-span#left {
+.leftButtonOption {
   margin-right: 25px;
   background-color: transparent;
   border: none;
+  font-weight: bold;
+  font-family: 'Space Mono', monospace;
+  color: white
 }
 
 /* ################################################################################
@@ -225,14 +222,14 @@ input.search {
 }
 
 @media only screen and (max-width: 880px) {
-  span#left {
+  .leftButtonOption {
     font-size: 14px;
   }
 
 }
 
 @media only screen and (max-width: 800px) {
-  span#left {
+  .leftButtonOption {
     margin-right: 12px;
     margin-top: 3px;
     font-size: 12px;
@@ -332,12 +329,12 @@ input.search {
     align-items: center;
     justify-content: center;
   }
-  .navBtn {
+  /* .leftButtonOption {
     background: transparent;
     border: none;
     font-weight: bold;
     font-family: 'Space Mono', monospace;
-  }
+  } */
 
   .homeBtn {
     color: rgba(144, 87, 87);
@@ -347,19 +344,19 @@ input.search {
     text-align: center;
     -webkit-animation: hue 3s infinite linear; 
   }
-  .searchBtn1 {
+  #leftBtn1 {
     grid-area: a;
   }
-  .searchBtn2 {
+  #leftBtn2 {
     grid-area: b;
   }
-  .searchBtn3 {
+  #leftBtn3 {
     grid-area: c;
   }
-  .searchBtn4 {
+  #leftBtn4 {
     grid-area: d;
   }
-  span#left {
+  .leftButtonOption {
     margin-right: 15px;
     font-size: 15px;
   }
