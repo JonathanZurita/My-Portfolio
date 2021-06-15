@@ -6,11 +6,11 @@
   "private": true,
   "scripts": {
     "setup": "npm install && webpack --mode=production",
-    "test": "cd ./client && npm test",
-    "dev-s": "nodemon server/server.js",
+    "test": "cd ./Client && npm test",
+    "dev-s": "nodemon Server/server.js",
     "dev-c": "webpack -d -w",
-    "start": "node ./index.compiled.js",
-    "compile": "babel Server/server.js --out-file index.compiled.js"
+    "start": "node Server/index.compiled.js",
+    "compile": "babel Server/server.js --out-file Server/index.compiled.js"
   },
   "engines": {
     "node": "12.16.1"
