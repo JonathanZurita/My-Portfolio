@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded( {extended: true}));
-app.use(express.static(path.join(__dirname, '../Client/dist')));
+app.use(express.static(path.join(__dirname, '../public/dist')));
 
 app.get(`/project`, (req, res) => {
   var name = req.query.name;
@@ -51,7 +51,7 @@ app.get(`/photos`, (req, res) => {
 });
 
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, '../Client/dist/index.html'), function(err) {
+  res.sendFile(path.join(__dirname, '../public/dist/index.html'), function(err) {
     if (err) {
       res.status(500).send(err)
     }

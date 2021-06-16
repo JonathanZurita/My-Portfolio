@@ -3,8 +3,8 @@ const webpack = require('webpack');
 const dotenv = require('dotenv').config( {
   path: path.join(__dirname, '.env')
 } );
-const SRC_DIR = path.join(__dirname, '/Client/src');
-const DIST_DIR = path.join(__dirname, '/Client/dist');
+const SRC_DIR = path.join(__dirname, './src/');
+const DIST_DIR = path.join(__dirname, './public/dist');
 module.exports = {
   entry: `${SRC_DIR}/index.js`,
   output: {
