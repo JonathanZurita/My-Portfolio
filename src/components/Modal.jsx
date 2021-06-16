@@ -15,7 +15,7 @@ const Modal = ({ contactInfoModal, handleContactInfoModal }) => {
             aria-roledescription="this is a modal with my contact information on it"
             >
               <img 
-                src="https://interviewstuffjonathanzurita.s3.us-east-2.amazonaws.com/profile+circle+pic.png"  
+                src="https://media-exp3.licdn.com/dms/image/C5603AQGc2l9blgd78g/profile-displayphoto-shrink_400_400/0/1620319365297?e=1629331200&v=beta&t=Y9HanzFTR93RHwDyysQWbYXCHYcBaJPBN4iHVmTwBmg"  
                 height='100px' width='100px'
                 alt="A professional head shot of me" />
               <a 
