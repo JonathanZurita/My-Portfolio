@@ -15,7 +15,7 @@ const ProjectList = [
     'tech': "Tech used: JavaScript, React, Express, NodeJS, HTML/CSS, AWS S3, RDS and Elastic Beanstalk.",
     'url': "https://www.youtube.com/embed/LqqZ-tMqGM4",
     'explanation': "Replicated Target Website",
-    'dataclass': "landescapeData",
+    'dataclass': "prrgetData",
     'vidclass': "prrgetVid"
   }, {
     'title': "Landescape", 
